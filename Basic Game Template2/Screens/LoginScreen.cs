@@ -25,7 +25,7 @@ namespace Basic_Game_Template2
             label4.Visible = true;
             loadingbarLabel.Visible = true;
 
-
+            //
             for (int i = 1; i <= 490; i++)
 
             {
