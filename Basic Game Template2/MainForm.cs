@@ -22,7 +22,7 @@ namespace Basic_Game_Template2
             //Cursor.Hide();
 
             // open the main menu for the game
-            MenuScreen ms = new MenuScreen();
+            LoginScreen ms = new LoginScreen();
             this.Controls.Add(ms);
 
             #region open in full screen or not
@@ -61,19 +61,13 @@ namespace Basic_Game_Template2
             ///be added within this switch block as well.
             switch (next)
             {
-                case "MenuScreen":
-                    ns = new MenuScreen();
-                    break;
-                case "GameScreen":
-                    ns = new GameScreen();
-                    break;
-                case "ScoreScreen":
-                    ns = new ScoreScreen();
-                    break;
                 case "LoginScreen":
                     ns = new LoginScreen();
                     break;
                 case "LoadingScreen":
+                    ns = new LoadingScreen();
+                    break;
+                case "test":
                     ns = new LoadingScreen();
                     break;
             }

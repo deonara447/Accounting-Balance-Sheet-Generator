@@ -20,7 +20,7 @@ namespace Basic_Game_Template2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            button1.Visible = false;
+            LoginButton.Visible = false;
             label3.Visible = true;
             label4.Visible = true;
             loadingbarLabel.Visible = true;
@@ -31,10 +31,28 @@ namespace Basic_Game_Template2
             {
 
                 loadingbarLabel.Width++;
-                Thread.Sleep(20);
+                Thread.Sleep(10);
                 Refresh();
+                if (i==151)
+                {
+                    label3.Text = "Initializing Components...";
+                }
+
+                if (i==325)
+                {
+                    label3.Text = "Retrieving Data...";
+                }
+
+                if (i == 461)
+                {
+                    Thread.Sleep(5000);
+                    Refresh();
+                }
+
+
 
             }
+            MainForm.ChangeScreen(this, "test");
         }
     }
 }
