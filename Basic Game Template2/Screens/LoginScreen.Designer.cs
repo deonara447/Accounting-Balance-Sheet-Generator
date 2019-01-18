@@ -39,7 +39,7 @@
             // label3
             // 
             this.label3.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label3.Location = new System.Drawing.Point(460, 627);
+            this.label3.Location = new System.Drawing.Point(496, 613);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(369, 33);
             this.label3.TabIndex = 16;
@@ -49,7 +49,7 @@
             // loadingbarLabel
             // 
             this.loadingbarLabel.BackColor = System.Drawing.Color.Black;
-            this.loadingbarLabel.Location = new System.Drawing.Point(400, 494);
+            this.loadingbarLabel.Location = new System.Drawing.Point(436, 480);
             this.loadingbarLabel.Name = "loadingbarLabel";
             this.loadingbarLabel.Size = new System.Drawing.Size(10, 49);
             this.loadingbarLabel.TabIndex = 14;
@@ -59,7 +59,7 @@
             // 
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label4.Location = new System.Drawing.Point(399, 494);
+            this.label4.Location = new System.Drawing.Point(435, 480);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(500, 49);
             this.label4.TabIndex = 15;
@@ -69,7 +69,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.875F);
-            this.label2.Location = new System.Drawing.Point(1108, 314);
+            this.label2.Location = new System.Drawing.Point(1144, 300);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 51);
             this.label2.TabIndex = 13;
@@ -78,7 +78,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Constantia", 30.875F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(139, 329);
+            this.label1.Location = new System.Drawing.Point(175, 315);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1007, 191);
             this.label1.TabIndex = 12;
@@ -88,7 +88,7 @@
             // 
             this.LoginButton.BackColor = System.Drawing.Color.LimeGreen;
             this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.875F);
-            this.LoginButton.Location = new System.Drawing.Point(493, 519);
+            this.LoginButton.Location = new System.Drawing.Point(529, 505);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(268, 105);
             this.LoginButton.TabIndex = 17;
@@ -108,7 +108,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "LoginScreen";
-            this.Size = new System.Drawing.Size(1300, 1000);
+            this.Size = new System.Drawing.Size(1400, 1000);
             this.ResumeLayout(false);
             this.PerformLayout();
 

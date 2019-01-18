@@ -76,6 +76,24 @@
     <Compile Include="Screens\MainScreen.Designer.cs">
       <DependentUpon>MainScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\NewScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\NewScreen.Designer.cs">
+      <DependentUpon>NewScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\FeedbackScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\FeedbackScreen.Designer.cs">
+      <DependentUpon>FeedbackScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\HelpScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\HelpScreen.Designer.cs">
+      <DependentUpon>HelpScreen.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Screens\LoginScreen.resx">
       <DependentUpon>LoginScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,6 +112,15 @@
     </Compile>
     <EmbeddedResource Include="Screens\MainScreen.resx">
       <DependentUpon>MainScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\NewScreen.resx">
+      <DependentUpon>NewScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\FeedbackScreen.resx">
+      <DependentUpon>FeedbackScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\HelpScreen.resx">
+      <DependentUpon>HelpScreen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="Properties\Settings.settings">

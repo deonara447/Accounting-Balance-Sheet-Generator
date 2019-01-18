@@ -26,7 +26,7 @@ namespace Basic_Game_Template2
             loadingbarLabel.Visible = true;
 
             //
-            for (int i = 1; i <= 490; i++)
+            for (int i = 450; i <= 490; i++)
 
             {
 
@@ -45,14 +45,14 @@ namespace Basic_Game_Template2
 
                 if (i == 461)
                 {
-                    Thread.Sleep(5000);
-                    Refresh();
+                    //Thread.Sleep(5000);
+                  //  Refresh();
                 }
 
 
 
             }
-            MainForm.ChangeScreen(this, "test");
+            MainForm.ChangeScreen(this, "MainScreen");
         }
     }
 }

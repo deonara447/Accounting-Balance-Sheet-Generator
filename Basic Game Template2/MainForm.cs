@@ -64,12 +64,19 @@ namespace Basic_Game_Template2
                 case "LoginScreen":
                     ns = new LoginScreen();
                     break;
-                case "LoadingScreen":
-                    ns = new LoadingScreen();
+                case "MainScreen":
+                    ns = new MainScreen();
                     break;
-                case "test":
-                    ns = new LoadingScreen();
+                case "NewScreen":
+                    ns = new NewScreen();
                     break;
+                case "FeedbackScreen":
+                    ns = new FeedbackScreen();
+                    break;
+                case "HelpScreen":
+                    ns = new HelpScreen();
+                    break;
+
             }
 
             //centres the control on the screen
@@ -77,6 +84,8 @@ namespace Basic_Game_Template2
 
             f.Controls.Add(ns);
             ns.Focus();
+
+            
         }
     }
 }
