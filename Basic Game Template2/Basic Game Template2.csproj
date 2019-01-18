@@ -94,6 +94,18 @@
     <Compile Include="Screens\HelpScreen.Designer.cs">
       <DependentUpon>HelpScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\BalanceSheetInformationScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\BalanceSheetInformationScreen.Designer.cs">
+      <DependentUpon>BalanceSheetInformationScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\BalanceSheetTemplateScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\BalanceSheetTemplateScreen.Designer.cs">
+      <DependentUpon>BalanceSheetTemplateScreen.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Screens\LoginScreen.resx">
       <DependentUpon>LoginScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,6 +133,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\HelpScreen.resx">
       <DependentUpon>HelpScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\BalanceSheetInformationScreen.resx">
+      <DependentUpon>BalanceSheetInformationScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\BalanceSheetTemplateScreen.resx">
+      <DependentUpon>BalanceSheetTemplateScreen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="Properties\Settings.settings">

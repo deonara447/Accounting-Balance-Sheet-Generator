@@ -37,15 +37,48 @@ namespace Basic_Game_Template2
             MainForm.ChangeScreen(this, "FeedbackScreen");
         }
 
-        private void closeButton_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-            
-        }
+
 
         private void helpButton_Click(object sender, EventArgs e)
         {
             MainForm.ChangeScreen(this, "HelpScreen");
+        }
+
+        private void sidebarLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void homeButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void newButton_Click_1(object sender, EventArgs e)
+        {
+            MainForm.ChangeScreen(this, "NewScreen");
+        }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
+        }
+
+        private void feedbackButton_Click_1(object sender, EventArgs e)
+        {
+            MainForm.ChangeScreen(this, "FeedbackScreen");
+        }
+
+        private void helpButton_Click_1(object sender, EventArgs e)
+        {
+            MainForm.ChangeScreen(this, "HelpScreen");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MainForm.ChangeScreen(this, "BalanceSheetInformationScreen");
         }
     }
 }

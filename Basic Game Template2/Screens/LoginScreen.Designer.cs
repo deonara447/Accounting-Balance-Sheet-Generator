@@ -86,7 +86,11 @@
             // 
             // LoginButton
             // 
-            this.LoginButton.BackColor = System.Drawing.Color.LimeGreen;
+            this.LoginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(130)))), ((int)(((byte)(50)))));
+            this.LoginButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.LoginButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.LoginButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.875F);
             this.LoginButton.Location = new System.Drawing.Point(529, 505);
             this.LoginButton.Name = "LoginButton";

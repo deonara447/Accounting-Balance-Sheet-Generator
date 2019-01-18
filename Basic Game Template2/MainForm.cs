@@ -76,6 +76,12 @@ namespace Basic_Game_Template2
                 case "HelpScreen":
                     ns = new HelpScreen();
                     break;
+                case "BalanceSheetInformationScreen":
+                    ns = new BalanceSheetInformationScreen();
+                    break;
+                case "BalanceSheetTemplateScreen":
+                    ns = new BalanceSheetTemplateScreen();
+                    break;
 
             }
 

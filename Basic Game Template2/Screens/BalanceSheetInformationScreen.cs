@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Basic_Game_Template2
 {
-    public partial class FeedbackScreen: UserControl
+    public partial class BalanceSheetInformationScreen : UserControl
     {
-        public FeedbackScreen()
+        public BalanceSheetInformationScreen()
         {
             InitializeComponent();
         }
@@ -32,9 +32,19 @@ namespace Basic_Game_Template2
             Application.Exit();
         }
 
+        private void feedbackButton_Click(object sender, EventArgs e)
+        {
+            MainForm.ChangeScreen(this, "FeedbackScreen");
+        }
+
         private void helpButton_Click(object sender, EventArgs e)
         {
             MainForm.ChangeScreen(this, "HelpScreen");
+        }
+
+        private void balanceSheetButton_Click(object sender, EventArgs e)
+        {
+            MainForm.ChangeScreen(this, "BalanceSheetTemplateScreen");
         }
     }
 }

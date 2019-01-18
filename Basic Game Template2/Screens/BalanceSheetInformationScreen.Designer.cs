@@ -1,6 +1,6 @@
 ﻿namespace Basic_Game_Template2
 {
-    partial class NewScreen
+    partial class BalanceSheetInformationScreen
     {
         /// <summary> 
         /// Required designer variable.
@@ -38,6 +38,9 @@
             this.titleLabel = new System.Windows.Forms.Label();
             this.closeButton = new System.Windows.Forms.Button();
             this.sidebarLabel = new System.Windows.Forms.Label();
+            this.tabLabel = new System.Windows.Forms.Label();
+            this.businessInformationButton = new System.Windows.Forms.Button();
+            this.balanceSheetButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -56,7 +59,7 @@
             // 
             // newButton
             // 
-            this.newButton.BackColor = System.Drawing.Color.DarkGreen;
+            this.newButton.BackColor = System.Drawing.Color.SeaGreen;
             this.newButton.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen;
             this.newButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSeaGreen;
             this.newButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSeaGreen;
@@ -70,6 +73,7 @@
             this.newButton.TabIndex = 51;
             this.newButton.Text = "New";
             this.newButton.UseVisualStyleBackColor = false;
+            this.newButton.Click += new System.EventHandler(this.newButton_Click);
             // 
             // homeButton
             // 
@@ -173,11 +177,52 @@
             this.sidebarLabel.Size = new System.Drawing.Size(240, 850);
             this.sidebarLabel.TabIndex = 47;
             // 
-            // NewScreen
+            // tabLabel
+            // 
+            this.tabLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(130)))), ((int)(((byte)(50)))));
+            this.tabLabel.Location = new System.Drawing.Point(237, 937);
+            this.tabLabel.Name = "tabLabel";
+            this.tabLabel.Size = new System.Drawing.Size(1191, 63);
+            this.tabLabel.TabIndex = 54;
+            // 
+            // businessInformationButton
+            // 
+            this.businessInformationButton.BackColor = System.Drawing.Color.White;
+            this.businessInformationButton.FlatAppearance.BorderSize = 0;
+            this.businessInformationButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
+            this.businessInformationButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.businessInformationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.businessInformationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.businessInformationButton.Location = new System.Drawing.Point(304, 937);
+            this.businessInformationButton.Name = "businessInformationButton";
+            this.businessInformationButton.Size = new System.Drawing.Size(254, 49);
+            this.businessInformationButton.TabIndex = 55;
+            this.businessInformationButton.Text = "Business Information";
+            this.businessInformationButton.UseVisualStyleBackColor = false;
+            // 
+            // balanceSheetButton
+            // 
+            this.balanceSheetButton.BackColor = System.Drawing.Color.White;
+            this.balanceSheetButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
+            this.balanceSheetButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.balanceSheetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.balanceSheetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.balanceSheetButton.Location = new System.Drawing.Point(558, 937);
+            this.balanceSheetButton.Name = "balanceSheetButton";
+            this.balanceSheetButton.Size = new System.Drawing.Size(254, 49);
+            this.balanceSheetButton.TabIndex = 56;
+            this.balanceSheetButton.Text = "Balance Sheet";
+            this.balanceSheetButton.UseVisualStyleBackColor = false;
+            this.balanceSheetButton.Click += new System.EventHandler(this.balanceSheetButton_Click);
+            // 
+            // BalanceSheetInformationScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.balanceSheetButton);
+            this.Controls.Add(this.businessInformationButton);
+            this.Controls.Add(this.tabLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.line1Label);
             this.Controls.Add(this.newButton);
@@ -188,7 +233,7 @@
             this.Controls.Add(this.titleLabel);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.sidebarLabel);
-            this.Name = "NewScreen";
+            this.Name = "BalanceSheetInformationScreen";
             this.Size = new System.Drawing.Size(1400, 1000);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -207,5 +252,8 @@
         private System.Windows.Forms.Label titleLabel;
         private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.Label sidebarLabel;
+        private System.Windows.Forms.Label tabLabel;
+        private System.Windows.Forms.Button businessInformationButton;
+        private System.Windows.Forms.Button balanceSheetButton;
     }
 }
