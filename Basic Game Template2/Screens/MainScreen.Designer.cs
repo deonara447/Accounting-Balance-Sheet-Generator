@@ -37,7 +37,7 @@
             this.homeButton = new System.Windows.Forms.Button();
             this.newButton = new System.Windows.Forms.Button();
             this.line1Label = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.line2Label = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -170,12 +170,12 @@
             this.line1Label.Size = new System.Drawing.Size(192, 2);
             this.line1Label.TabIndex = 22;
             // 
-            // label1
+            // line2Label
             // 
-            this.label1.Location = new System.Drawing.Point(25, 760);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 2);
-            this.label1.TabIndex = 23;
+            this.line2Label.Location = new System.Drawing.Point(25, 760);
+            this.line2Label.Name = "line2Label";
+            this.line2Label.Size = new System.Drawing.Size(192, 2);
+            this.line2Label.TabIndex = 23;
             // 
             // button1
             // 
@@ -193,7 +193,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.line2Label);
             this.Controls.Add(this.line1Label);
             this.Controls.Add(this.newButton);
             this.Controls.Add(this.homeButton);
@@ -221,7 +221,7 @@
         private System.Windows.Forms.Button homeButton;
         private System.Windows.Forms.Button newButton;
         private System.Windows.Forms.Label line1Label;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label line2Label;
         private System.Windows.Forms.Button button1;
     }
 }

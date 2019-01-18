@@ -36,5 +36,11 @@ namespace Basic_Game_Template2
         {
             MainForm.ChangeScreen(this, "HelpScreen");
         }
+
+        private void submitButton_Click(object sender, EventArgs e)
+        {
+            appreciateLabel.Visible = true;
+            feedbackTextBox.Text = "";
+        }
     }
 }

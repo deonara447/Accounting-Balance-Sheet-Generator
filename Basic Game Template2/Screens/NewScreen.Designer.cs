@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.line2Label = new System.Windows.Forms.Label();
             this.line1Label = new System.Windows.Forms.Label();
             this.newButton = new System.Windows.Forms.Button();
             this.homeButton = new System.Windows.Forms.Button();
@@ -40,12 +40,12 @@
             this.sidebarLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // line2Label
             // 
-            this.label1.Location = new System.Drawing.Point(25, 760);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 2);
-            this.label1.TabIndex = 53;
+            this.line2Label.Location = new System.Drawing.Point(25, 760);
+            this.line2Label.Name = "line2Label";
+            this.line2Label.Size = new System.Drawing.Size(192, 2);
+            this.line2Label.TabIndex = 53;
             // 
             // line1Label
             // 
@@ -178,7 +178,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.line2Label);
             this.Controls.Add(this.line1Label);
             this.Controls.Add(this.newButton);
             this.Controls.Add(this.homeButton);
@@ -197,7 +197,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label line2Label;
         private System.Windows.Forms.Label line1Label;
         private System.Windows.Forms.Button newButton;
         private System.Windows.Forms.Button homeButton;

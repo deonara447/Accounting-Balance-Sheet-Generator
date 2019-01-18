@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.line2Label = new System.Windows.Forms.Label();
             this.line1Label = new System.Windows.Forms.Label();
             this.newButton = new System.Windows.Forms.Button();
             this.homeButton = new System.Windows.Forms.Button();
@@ -38,14 +38,15 @@
             this.titleLabel = new System.Windows.Forms.Label();
             this.closeButton = new System.Windows.Forms.Button();
             this.sidebarLabel = new System.Windows.Forms.Label();
+            this.informationLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // line2Label
             // 
-            this.label1.Location = new System.Drawing.Point(25, 760);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 2);
-            this.label1.TabIndex = 33;
+            this.line2Label.Location = new System.Drawing.Point(25, 760);
+            this.line2Label.Name = "line2Label";
+            this.line2Label.Size = new System.Drawing.Size(192, 2);
+            this.line2Label.TabIndex = 33;
             // 
             // line1Label
             // 
@@ -173,12 +174,21 @@
             this.sidebarLabel.Size = new System.Drawing.Size(240, 850);
             this.sidebarLabel.TabIndex = 27;
             // 
+            // informationLabel
+            // 
+            this.informationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.875F);
+            this.informationLabel.Location = new System.Drawing.Point(244, 172);
+            this.informationLabel.Name = "informationLabel";
+            this.informationLabel.Size = new System.Drawing.Size(1154, 828);
+            this.informationLabel.TabIndex = 34;
+            // 
             // HelpScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.informationLabel);
+            this.Controls.Add(this.line2Label);
             this.Controls.Add(this.line1Label);
             this.Controls.Add(this.newButton);
             this.Controls.Add(this.homeButton);
@@ -190,6 +200,7 @@
             this.Controls.Add(this.sidebarLabel);
             this.Name = "HelpScreen";
             this.Size = new System.Drawing.Size(1400, 1000);
+            this.Load += new System.EventHandler(this.HelpScreen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,7 +208,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label line2Label;
         private System.Windows.Forms.Label line1Label;
         private System.Windows.Forms.Button newButton;
         private System.Windows.Forms.Button homeButton;
@@ -207,5 +218,6 @@
         private System.Windows.Forms.Label titleLabel;
         private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.Label sidebarLabel;
+        private System.Windows.Forms.Label informationLabel;
     }
 }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.line2Label = new System.Windows.Forms.Label();
             this.line1Label = new System.Windows.Forms.Label();
             this.newButton = new System.Windows.Forms.Button();
             this.homeButton = new System.Windows.Forms.Button();
@@ -38,14 +38,22 @@
             this.titleLabel = new System.Windows.Forms.Label();
             this.closeButton = new System.Windows.Forms.Button();
             this.sidebarLabel = new System.Windows.Forms.Label();
+            this.ratingLabel = new System.Windows.Forms.Label();
+            this.terribleButton = new System.Windows.Forms.Button();
+            this.mediocreButton = new System.Windows.Forms.Button();
+            this.excellentButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.feedbackTextBox = new System.Windows.Forms.TextBox();
+            this.submitButton = new System.Windows.Forms.Button();
+            this.appreciateLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // line2Label
             // 
-            this.label1.Location = new System.Drawing.Point(25, 760);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 2);
-            this.label1.TabIndex = 43;
+            this.line2Label.Location = new System.Drawing.Point(25, 760);
+            this.line2Label.Name = "line2Label";
+            this.line2Label.Size = new System.Drawing.Size(192, 2);
+            this.line2Label.TabIndex = 43;
             // 
             // line1Label
             // 
@@ -173,12 +181,111 @@
             this.sidebarLabel.Size = new System.Drawing.Size(240, 850);
             this.sidebarLabel.TabIndex = 37;
             // 
+            // ratingLabel
+            // 
+            this.ratingLabel.AutoSize = true;
+            this.ratingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.875F);
+            this.ratingLabel.Location = new System.Drawing.Point(290, 182);
+            this.ratingLabel.Name = "ratingLabel";
+            this.ratingLabel.Size = new System.Drawing.Size(1072, 37);
+            this.ratingLabel.TabIndex = 44;
+            this.ratingLabel.Text = "How would you rate your experience with Balance Sheet Generator so far?";
+            // 
+            // terribleButton
+            // 
+            this.terribleButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.terribleButton.Location = new System.Drawing.Point(387, 255);
+            this.terribleButton.Name = "terribleButton";
+            this.terribleButton.Size = new System.Drawing.Size(187, 63);
+            this.terribleButton.TabIndex = 45;
+            this.terribleButton.Text = "Terrible";
+            this.terribleButton.UseVisualStyleBackColor = false;
+            // 
+            // mediocreButton
+            // 
+            this.mediocreButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.mediocreButton.Location = new System.Drawing.Point(705, 255);
+            this.mediocreButton.Name = "mediocreButton";
+            this.mediocreButton.Size = new System.Drawing.Size(187, 63);
+            this.mediocreButton.TabIndex = 46;
+            this.mediocreButton.Text = "Mediocre";
+            this.mediocreButton.UseVisualStyleBackColor = false;
+            // 
+            // excellentButton
+            // 
+            this.excellentButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.excellentButton.Location = new System.Drawing.Point(1026, 255);
+            this.excellentButton.Name = "excellentButton";
+            this.excellentButton.Size = new System.Drawing.Size(187, 63);
+            this.excellentButton.TabIndex = 47;
+            this.excellentButton.Text = "Excellent";
+            this.excellentButton.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.875F);
+            this.label1.Location = new System.Drawing.Point(355, 376);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(930, 37);
+            this.label1.TabIndex = 48;
+            this.label1.Text = "Do you have any suggestions to make this program even better?";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // feedbackTextBox
+            // 
+            this.feedbackTextBox.Location = new System.Drawing.Point(527, 441);
+            this.feedbackTextBox.Multiline = true;
+            this.feedbackTextBox.Name = "feedbackTextBox";
+            this.feedbackTextBox.Size = new System.Drawing.Size(595, 245);
+            this.feedbackTextBox.TabIndex = 49;
+            this.feedbackTextBox.Text = "INSERT TEXT HERE";
+            // 
+            // submitButton
+            // 
+            this.submitButton.BackColor = System.Drawing.Color.SeaGreen;
+            this.submitButton.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen;
+            this.submitButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.submitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.submitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.submitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.submitButton.ForeColor = System.Drawing.Color.White;
+            this.submitButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.submitButton.Location = new System.Drawing.Point(717, 717);
+            this.submitButton.Name = "submitButton";
+            this.submitButton.Size = new System.Drawing.Size(241, 45);
+            this.submitButton.TabIndex = 50;
+            this.submitButton.Text = "Submit";
+            this.submitButton.UseVisualStyleBackColor = false;
+            this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
+            // 
+            // appreciateLabel
+            // 
+            this.appreciateLabel.AutoSize = true;
+            this.appreciateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.875F);
+            this.appreciateLabel.Location = new System.Drawing.Point(612, 840);
+            this.appreciateLabel.Name = "appreciateLabel";
+            this.appreciateLabel.Size = new System.Drawing.Size(423, 37);
+            this.appreciateLabel.TabIndex = 51;
+            this.appreciateLabel.Tag = "";
+            this.appreciateLabel.Text = "We appreciate the feedback!";
+            this.appreciateLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.appreciateLabel.Visible = false;
+            // 
             // FeedbackScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.appreciateLabel);
+            this.Controls.Add(this.submitButton);
+            this.Controls.Add(this.feedbackTextBox);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.excellentButton);
+            this.Controls.Add(this.mediocreButton);
+            this.Controls.Add(this.terribleButton);
+            this.Controls.Add(this.ratingLabel);
+            this.Controls.Add(this.line2Label);
             this.Controls.Add(this.line1Label);
             this.Controls.Add(this.newButton);
             this.Controls.Add(this.homeButton);
@@ -197,7 +304,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label line2Label;
         private System.Windows.Forms.Label line1Label;
         private System.Windows.Forms.Button newButton;
         private System.Windows.Forms.Button homeButton;
@@ -207,5 +314,13 @@
         private System.Windows.Forms.Label titleLabel;
         private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.Label sidebarLabel;
+        private System.Windows.Forms.Label ratingLabel;
+        private System.Windows.Forms.Button terribleButton;
+        private System.Windows.Forms.Button mediocreButton;
+        private System.Windows.Forms.Button excellentButton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox feedbackTextBox;
+        private System.Windows.Forms.Button submitButton;
+        private System.Windows.Forms.Label appreciateLabel;
     }
 }

@@ -46,5 +46,10 @@ namespace Basic_Game_Template2
         {
             MainForm.ChangeScreen(this, "BalanceSheetTemplateScreen");
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

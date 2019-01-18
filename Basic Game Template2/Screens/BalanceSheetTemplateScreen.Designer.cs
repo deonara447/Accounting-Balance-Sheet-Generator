@@ -31,7 +31,7 @@
             this.balanceSheetButton = new System.Windows.Forms.Button();
             this.businessInformationButton = new System.Windows.Forms.Button();
             this.tabLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.line2Label = new System.Windows.Forms.Label();
             this.line1Label = new System.Windows.Forms.Label();
             this.newButton = new System.Windows.Forms.Button();
             this.homeButton = new System.Windows.Forms.Button();
@@ -40,8 +40,11 @@
             this.registeredLabel = new System.Windows.Forms.Label();
             this.titleLabel = new System.Windows.Forms.Label();
             this.closeButton = new System.Windows.Forms.Button();
+            this.saveButton = new System.Windows.Forms.Button();
+            this.deleteButton = new System.Windows.Forms.Button();
+            this.printButton = new System.Windows.Forms.Button();
+            this.clearButton = new System.Windows.Forms.Button();
             this.sidebarLabel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // balanceSheetButton
@@ -82,12 +85,12 @@
             this.tabLabel.Size = new System.Drawing.Size(1191, 63);
             this.tabLabel.TabIndex = 67;
             // 
-            // label1
+            // line2Label
             // 
-            this.label1.Location = new System.Drawing.Point(11, 760);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 2);
-            this.label1.TabIndex = 66;
+            this.line2Label.Location = new System.Drawing.Point(11, 760);
+            this.line2Label.Name = "line2Label";
+            this.line2Label.Size = new System.Drawing.Size(192, 2);
+            this.line2Label.TabIndex = 66;
             // 
             // line1Label
             // 
@@ -108,7 +111,7 @@
             this.newButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.newButton.Location = new System.Drawing.Point(3, 221);
             this.newButton.Name = "newButton";
-            this.newButton.Size = new System.Drawing.Size(223, 63);
+            this.newButton.Size = new System.Drawing.Size(237, 63);
             this.newButton.TabIndex = 64;
             this.newButton.Text = "New";
             this.newButton.UseVisualStyleBackColor = false;
@@ -126,7 +129,7 @@
             this.homeButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.homeButton.Location = new System.Drawing.Point(3, 156);
             this.homeButton.Name = "homeButton";
-            this.homeButton.Size = new System.Drawing.Size(223, 63);
+            this.homeButton.Size = new System.Drawing.Size(237, 63);
             this.homeButton.TabIndex = 63;
             this.homeButton.Text = "Home";
             this.homeButton.UseVisualStyleBackColor = false;
@@ -144,7 +147,7 @@
             this.feedbackButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.feedbackButton.Location = new System.Drawing.Point(3, 760);
             this.feedbackButton.Name = "feedbackButton";
-            this.feedbackButton.Size = new System.Drawing.Size(223, 117);
+            this.feedbackButton.Size = new System.Drawing.Size(237, 117);
             this.feedbackButton.TabIndex = 62;
             this.feedbackButton.Text = "Feedback";
             this.feedbackButton.UseVisualStyleBackColor = false;
@@ -162,7 +165,7 @@
             this.helpButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.helpButton.Location = new System.Drawing.Point(3, 883);
             this.helpButton.Name = "helpButton";
-            this.helpButton.Size = new System.Drawing.Size(223, 117);
+            this.helpButton.Size = new System.Drawing.Size(237, 117);
             this.helpButton.TabIndex = 61;
             this.helpButton.Text = "Help";
             this.helpButton.UseVisualStyleBackColor = false;
@@ -185,7 +188,7 @@
             this.titleLabel.Font = new System.Drawing.Font("Constantia", 20.875F, System.Drawing.FontStyle.Bold);
             this.titleLabel.Location = new System.Drawing.Point(-14, 0);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(1400, 153);
+            this.titleLabel.Size = new System.Drawing.Size(1414, 153);
             this.titleLabel.TabIndex = 58;
             this.titleLabel.Text = "Balance Sheet Generator";
             this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -202,47 +205,101 @@
             this.closeButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.closeButton.Location = new System.Drawing.Point(3, 350);
             this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(223, 63);
+            this.closeButton.Size = new System.Drawing.Size(237, 63);
             this.closeButton.TabIndex = 57;
             this.closeButton.Text = "Close";
             this.closeButton.UseVisualStyleBackColor = false;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
+            // saveButton
+            // 
+            this.saveButton.BackColor = System.Drawing.Color.SeaGreen;
+            this.saveButton.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen;
+            this.saveButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.saveButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveButton.ForeColor = System.Drawing.Color.White;
+            this.saveButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.saveButton.Location = new System.Drawing.Point(3, 419);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(237, 63);
+            this.saveButton.TabIndex = 70;
+            this.saveButton.Text = "Save";
+            this.saveButton.UseVisualStyleBackColor = false;
+            // 
+            // deleteButton
+            // 
+            this.deleteButton.BackColor = System.Drawing.Color.SeaGreen;
+            this.deleteButton.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen;
+            this.deleteButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.deleteButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteButton.ForeColor = System.Drawing.Color.White;
+            this.deleteButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.deleteButton.Location = new System.Drawing.Point(0, 497);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(240, 63);
+            this.deleteButton.TabIndex = 71;
+            this.deleteButton.Text = "Delete";
+            this.deleteButton.UseVisualStyleBackColor = false;
+            this.deleteButton.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // printButton
+            // 
+            this.printButton.BackColor = System.Drawing.Color.SeaGreen;
+            this.printButton.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen;
+            this.printButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.printButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.printButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.printButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.printButton.ForeColor = System.Drawing.Color.White;
+            this.printButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.printButton.Location = new System.Drawing.Point(0, 575);
+            this.printButton.Name = "printButton";
+            this.printButton.Size = new System.Drawing.Size(240, 63);
+            this.printButton.TabIndex = 72;
+            this.printButton.Text = "Print";
+            this.printButton.UseVisualStyleBackColor = false;
+            // 
+            // clearButton
+            // 
+            this.clearButton.BackColor = System.Drawing.Color.SeaGreen;
+            this.clearButton.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen;
+            this.clearButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.clearButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.clearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearButton.ForeColor = System.Drawing.Color.White;
+            this.clearButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.clearButton.Location = new System.Drawing.Point(5, 644);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(235, 63);
+            this.clearButton.TabIndex = 73;
+            this.clearButton.Text = "Clear";
+            this.clearButton.UseVisualStyleBackColor = false;
+            // 
             // sidebarLabel
             // 
             this.sidebarLabel.BackColor = System.Drawing.Color.SeaGreen;
-            this.sidebarLabel.Location = new System.Drawing.Point(-14, 150);
+            this.sidebarLabel.Location = new System.Drawing.Point(0, 150);
             this.sidebarLabel.Name = "sidebarLabel";
             this.sidebarLabel.Size = new System.Drawing.Size(240, 850);
-            this.sidebarLabel.TabIndex = 60;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.SeaGreen;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSeaGreen;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSeaGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 419);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(224, 63);
-            this.button1.TabIndex = 70;
-            this.button1.Text = "Close";
-            this.button1.UseVisualStyleBackColor = false;
+            this.sidebarLabel.TabIndex = 74;
             // 
             // BalanceSheetTemplateScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.printButton);
+            this.Controls.Add(this.clearButton);
+            this.Controls.Add(this.deleteButton);
+            this.Controls.Add(this.saveButton);
             this.Controls.Add(this.balanceSheetButton);
             this.Controls.Add(this.businessInformationButton);
-            this.Controls.Add(this.tabLabel);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.line2Label);
             this.Controls.Add(this.line1Label);
             this.Controls.Add(this.newButton);
             this.Controls.Add(this.homeButton);
@@ -252,6 +309,7 @@
             this.Controls.Add(this.titleLabel);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.sidebarLabel);
+            this.Controls.Add(this.tabLabel);
             this.Name = "BalanceSheetTemplateScreen";
             this.Size = new System.Drawing.Size(1400, 1000);
             this.ResumeLayout(false);
@@ -264,7 +322,7 @@
         private System.Windows.Forms.Button balanceSheetButton;
         private System.Windows.Forms.Button businessInformationButton;
         private System.Windows.Forms.Label tabLabel;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label line2Label;
         private System.Windows.Forms.Label line1Label;
         private System.Windows.Forms.Button newButton;
         private System.Windows.Forms.Button homeButton;
@@ -273,7 +331,10 @@
         private System.Windows.Forms.Label registeredLabel;
         private System.Windows.Forms.Label titleLabel;
         private System.Windows.Forms.Button closeButton;
+        private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.Button deleteButton;
+        private System.Windows.Forms.Button printButton;
+        private System.Windows.Forms.Button clearButton;
         private System.Windows.Forms.Label sidebarLabel;
-        private System.Windows.Forms.Button button1;
     }
 }

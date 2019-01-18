@@ -46,5 +46,10 @@ namespace Basic_Game_Template2
         {
             MainForm.ChangeScreen(this, "BusinessInformationScreen");
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
