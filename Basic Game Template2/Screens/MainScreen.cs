@@ -13,6 +13,7 @@ namespace Basic_Game_Template2
         public partial class MainScreen : UserControl
     {
         int Min, Hour, Day, Month, Year;
+        
 
         public MainScreen()
         {
@@ -32,6 +33,11 @@ namespace Basic_Game_Template2
         {
             Application.Exit();
 
+        }
+
+        private void MainScreen_Load(object sender, EventArgs e)
+        {
+            balanceSheetInformationButton.Text = MainForm.businessName + "\t" + "\t" + MainForm.modifiedDate;
         }
 
         private void feedbackButton_Click_1(object sender, EventArgs e)
@@ -61,7 +67,7 @@ namespace Basic_Game_Template2
 
 
 
-            MainForm.testInt = 5;
+            
         }
     }
 }

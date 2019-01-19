@@ -39,9 +39,11 @@
             this.newButton = new System.Windows.Forms.Button();
             this.line1Label = new System.Windows.Forms.Label();
             this.line2Label = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.balanceSheetInformationButton = new System.Windows.Forms.Button();
             this.timeLabel = new System.Windows.Forms.Label();
             this.timeTimer = new System.Windows.Forms.Timer(this.components);
+            this.templateNameLabel = new System.Windows.Forms.Label();
+            this.dateModifiedLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // closeButton
@@ -177,15 +179,16 @@
             this.line2Label.Size = new System.Drawing.Size(192, 2);
             this.line2Label.TabIndex = 23;
             // 
-            // button1
+            // balanceSheetInformationButton
             // 
-            this.button1.Location = new System.Drawing.Point(642, 423);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(136, 52);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.balanceSheetInformationButton.Location = new System.Drawing.Point(239, 215);
+            this.balanceSheetInformationButton.Name = "balanceSheetInformationButton";
+            this.balanceSheetInformationButton.Size = new System.Drawing.Size(590, 57);
+            this.balanceSheetInformationButton.TabIndex = 24;
+            this.balanceSheetInformationButton.Text = "Untitled Document";
+            this.balanceSheetInformationButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.balanceSheetInformationButton.UseVisualStyleBackColor = true;
+            this.balanceSheetInformationButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // timeLabel
             // 
@@ -203,13 +206,35 @@
             this.timeTimer.Enabled = true;
             this.timeTimer.Tick += new System.EventHandler(this.timeTimer_Tick);
             // 
+            // templateNameLabel
+            // 
+            this.templateNameLabel.AutoSize = true;
+            this.templateNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.875F);
+            this.templateNameLabel.Location = new System.Drawing.Point(316, 178);
+            this.templateNameLabel.Name = "templateNameLabel";
+            this.templateNameLabel.Size = new System.Drawing.Size(86, 31);
+            this.templateNameLabel.TabIndex = 26;
+            this.templateNameLabel.Text = "Name";
+            // 
+            // dateModifiedLabel
+            // 
+            this.dateModifiedLabel.AutoSize = true;
+            this.dateModifiedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.875F);
+            this.dateModifiedLabel.Location = new System.Drawing.Point(634, 173);
+            this.dateModifiedLabel.Name = "dateModifiedLabel";
+            this.dateModifiedLabel.Size = new System.Drawing.Size(181, 31);
+            this.dateModifiedLabel.TabIndex = 27;
+            this.dateModifiedLabel.Text = "Date Modified";
+            // 
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.dateModifiedLabel);
+            this.Controls.Add(this.templateNameLabel);
             this.Controls.Add(this.timeLabel);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.balanceSheetInformationButton);
             this.Controls.Add(this.line2Label);
             this.Controls.Add(this.line1Label);
             this.Controls.Add(this.newButton);
@@ -222,6 +247,7 @@
             this.Controls.Add(this.sidebarLabel);
             this.Name = "MainScreen";
             this.Size = new System.Drawing.Size(1400, 1000);
+            this.Load += new System.EventHandler(this.MainScreen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,8 +264,10 @@
         private System.Windows.Forms.Button newButton;
         private System.Windows.Forms.Label line1Label;
         private System.Windows.Forms.Label line2Label;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button balanceSheetInformationButton;
         private System.Windows.Forms.Label timeLabel;
         private System.Windows.Forms.Timer timeTimer;
+        private System.Windows.Forms.Label templateNameLabel;
+        private System.Windows.Forms.Label dateModifiedLabel;
     }
 }

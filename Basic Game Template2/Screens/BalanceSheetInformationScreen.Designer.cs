@@ -61,7 +61,7 @@
             this.drawingsLabel = new System.Windows.Forms.Label();
             this.beginningOfThePeriodTextBox = new System.Windows.Forms.TextBox();
             this.netIncomeTextBox = new System.Windows.Forms.TextBox();
-            this.drawingTextBox = new System.Windows.Forms.TextBox();
+            this.drawingsTextBox = new System.Windows.Forms.TextBox();
             this.removeCurrentAssetButton = new System.Windows.Forms.Button();
             this.addCurrentAssetsAccountNameTextBox = new System.Windows.Forms.TextBox();
             this.addCurrentAssetsAccountAmountTextBox = new System.Windows.Forms.TextBox();
@@ -290,6 +290,7 @@
             this.saveButton.TabIndex = 71;
             this.saveButton.Text = "Save";
             this.saveButton.UseVisualStyleBackColor = false;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // deleteButton
             // 
@@ -431,7 +432,7 @@
             this.beginningOfPeriodLabel.Name = "beginningOfPeriodLabel";
             this.beginningOfPeriodLabel.Size = new System.Drawing.Size(409, 42);
             this.beginningOfPeriodLabel.TabIndex = 87;
-            this.beginningOfPeriodLabel.Text = "Equity, Beginning of the Period";
+            this.beginningOfPeriodLabel.Text = "Equity, Beginning of the Period $";
             // 
             // netIncomeLabel
             // 
@@ -440,40 +441,37 @@
             this.netIncomeLabel.Name = "netIncomeLabel";
             this.netIncomeLabel.Size = new System.Drawing.Size(409, 42);
             this.netIncomeLabel.TabIndex = 88;
-            this.netIncomeLabel.Text = "Net Income";
+            this.netIncomeLabel.Text = "Net Income                                  $";
             // 
             // drawingsLabel
             // 
             this.drawingsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.875F);
-            this.drawingsLabel.Location = new System.Drawing.Point(852, 883);
+            this.drawingsLabel.Location = new System.Drawing.Point(851, 883);
             this.drawingsLabel.Name = "drawingsLabel";
             this.drawingsLabel.Size = new System.Drawing.Size(409, 42);
             this.drawingsLabel.TabIndex = 89;
-            this.drawingsLabel.Text = "Drawings";
+            this.drawingsLabel.Text = "Drawings                                      $";
             // 
             // beginningOfThePeriodTextBox
             // 
-            this.beginningOfThePeriodTextBox.Location = new System.Drawing.Point(1240, 799);
+            this.beginningOfThePeriodTextBox.Location = new System.Drawing.Point(1266, 799);
             this.beginningOfThePeriodTextBox.Name = "beginningOfThePeriodTextBox";
-            this.beginningOfThePeriodTextBox.Size = new System.Drawing.Size(156, 31);
+            this.beginningOfThePeriodTextBox.Size = new System.Drawing.Size(130, 31);
             this.beginningOfThePeriodTextBox.TabIndex = 90;
-            this.beginningOfThePeriodTextBox.Text = "$";
             // 
             // netIncomeTextBox
             // 
-            this.netIncomeTextBox.Location = new System.Drawing.Point(1240, 843);
+            this.netIncomeTextBox.Location = new System.Drawing.Point(1267, 843);
             this.netIncomeTextBox.Name = "netIncomeTextBox";
-            this.netIncomeTextBox.Size = new System.Drawing.Size(156, 31);
+            this.netIncomeTextBox.Size = new System.Drawing.Size(129, 31);
             this.netIncomeTextBox.TabIndex = 91;
-            this.netIncomeTextBox.Text = "$";
             // 
-            // drawingTextBox
+            // drawingsTextBox
             // 
-            this.drawingTextBox.Location = new System.Drawing.Point(1240, 885);
-            this.drawingTextBox.Name = "drawingTextBox";
-            this.drawingTextBox.Size = new System.Drawing.Size(156, 31);
-            this.drawingTextBox.TabIndex = 92;
-            this.drawingTextBox.Text = "$";
+            this.drawingsTextBox.Location = new System.Drawing.Point(1267, 885);
+            this.drawingsTextBox.Name = "drawingsTextBox";
+            this.drawingsTextBox.Size = new System.Drawing.Size(129, 31);
+            this.drawingsTextBox.TabIndex = 92;
             // 
             // removeCurrentAssetButton
             // 
@@ -752,7 +750,7 @@
             this.Controls.Add(this.addCurrentAssetsAccountAmountTextBox);
             this.Controls.Add(this.addCurrentAssetsAccountNameTextBox);
             this.Controls.Add(this.removeCurrentAssetButton);
-            this.Controls.Add(this.drawingTextBox);
+            this.Controls.Add(this.drawingsTextBox);
             this.Controls.Add(this.netIncomeTextBox);
             this.Controls.Add(this.beginningOfThePeriodTextBox);
             this.Controls.Add(this.drawingsLabel);
@@ -826,7 +824,7 @@
         private System.Windows.Forms.Label drawingsLabel;
         private System.Windows.Forms.TextBox beginningOfThePeriodTextBox;
         private System.Windows.Forms.TextBox netIncomeTextBox;
-        private System.Windows.Forms.TextBox drawingTextBox;
+        private System.Windows.Forms.TextBox drawingsTextBox;
         private System.Windows.Forms.Button removeCurrentAssetButton;
         private System.Windows.Forms.TextBox addCurrentAssetsAccountNameTextBox;
         private System.Windows.Forms.TextBox addCurrentAssetsAccountAmountTextBox;

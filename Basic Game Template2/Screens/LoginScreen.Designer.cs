@@ -114,6 +114,7 @@
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "LoginScreen";
             this.Size = new System.Drawing.Size(1400, 1000);
+            this.Load += new System.EventHandler(this.LoginScreen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

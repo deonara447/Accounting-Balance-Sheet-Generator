@@ -14,7 +14,23 @@ namespace Basic_Game_Template2
     public partial class MainForm : Form
     {
         bool fullScreen = false;  // true: program runs fullscreen || false: program runs in window
-        public static int testInt;
+        public static List<double> currentAssetAmounts = new List<double>();
+        public static List<string> currentAssetNames = new List<string>();
+        public static List<double> fixedAssetAmounts = new List<double>();
+        public static List<string> fixedAssetNames = new List<string>();
+        public static List<double> currentLiabilityAmounts = new List<double>();
+        public static List<string> currentLiabilityNames = new List<string>();
+        public static List<double> longTermLiabilityAmounts = new List<double>();
+        public static List<string> longTermLiabilityNames = new List<string>();
+
+        public static string businessName;
+        public static string fiscalMonthEnd;
+        public static double beginningOfPeriod;
+        public static double netIncome;
+        public static double drawings;
+
+        public static string modifiedDate;
+
 
         public MainForm()
         {
