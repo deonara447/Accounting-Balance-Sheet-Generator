@@ -269,7 +269,7 @@ namespace Basic_Game_Template2
             MainForm.currentLiabilityAmounts.Clear();
             MainForm.currentLiabilityNames.Clear();
             MainForm.longTermLiabilityAmounts.Clear();
-            MainForm.longTermLiabilityNames.Clear(); 
+            MainForm.longTermLiabilityNames.Clear();
 
             businessNameTextBox.Text = "";
             fiscalMonthEndTextBox.Text = "(Month Day, Year)";
@@ -298,30 +298,42 @@ namespace Basic_Game_Template2
 
         private void BalanceSheetInformationScreen_Load(object sender, EventArgs e)
         {
-            if (MainForm.reset == true)
+            if (MainForm.reset == false)
             {
-                businessNameTextBox.Text = "";
-                fiscalMonthEndTextBox.Text = "(Month Day, Year)";
-                addCurrentAssetsAccountAmountTextBox.Text = "";
-                removeCurrentAssetsAccountAmountTextBox.Text = "";
-                addCurrentAssetsAccountNameTextBox.Text = "";
-                removeCurrentAssetsAccountNameTextBox.Text = "";
-                addFixedAssetsAccountAmountTextBox.Text = "";
-                removeFixedAssetsAccountAmountTextBox.Text = "";
-                addFixedAssetsAccountNameTextBox.Text = "";
-                removeFixedAssetsAccountNameTextBox.Text = "";
-                addCurrentLiabilitiesAccountAmountTextBox.Text = "";
-                removeCurrentLiabilitiesAccountAmountTextBox.Text = "";
-                addCurrentLiabilitiesAccountNameTextBox.Text = "";
-                removeCurrentLiabilitiesAccountNameTextBox.Text = "";
-                addLongTermLiabilitiesAccountAmountTextBox.Text = "";
-                removeLongTermLiabilitiesAccountAmountTextBox.Text = "";
-                addLongTermLiabilitiesAccountNameTextBox.Text = "";
-                removeLongTermLiabilitiesAccountNameTextBox.Text = "";
-                beginningOfThePeriodTextBox.Text = "";
-                netIncomeTextBox.Text = "";
-                drawingsTextBox.Text = "";
 
+                businessNameTextBox.Text = MainForm.businessName;
+                fiscalMonthEndTextBox.Text = MainForm.fiscalMonthEnd;
+                beginningOfThePeriodTextBox.Text = MainForm.beginningOfPeriod + "";
+                netIncomeTextBox.Text = MainForm.netIncome + "";
+                drawingsTextBox.Text = MainForm.drawings + "";
+
+                for (int i = 0; i < MainForm.currentAssetAmounts.Count(); i++)
+                {
+
+                    currentAssetsAccountInformationLabel.Text += MainForm.currentAssetNames[i] + " $" + MainForm.currentAssetAmounts[i] + "\n";
+                }
+
+                for (int i = 0; i < MainForm.fixedAssetAmounts.Count(); i++)
+                {
+
+                    fixedAssetsAccountInformationLabel.Text += MainForm.fixedAssetNames[i] + " $" + MainForm.fixedAssetAmounts[i] + "\n";
+                }
+
+                for (int i = 0; i < MainForm.currentLiabilityAmounts.Count(); i++)
+                {
+
+                    currentLiabilitiesAccountInformationLabel.Text += MainForm.currentLiabilityNames[i] + " $" + MainForm.currentLiabilityAmounts[i] + "\n";
+                }
+
+                for (int i = 0; i < MainForm.longTermLiabilityAmounts.Count(); i++)
+                {
+
+                    longTermLiabilitiesAccountInformationLabel.Text += MainForm.longTermLiabilityNames[i] + " $" + MainForm.longTermLiabilityAmounts[i] + "\n";
+                }
+
+            }
+            else
+            {
                 MainForm.reset = false;
             }
         }

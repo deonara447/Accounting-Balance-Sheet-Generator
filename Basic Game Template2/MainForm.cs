@@ -31,7 +31,7 @@ namespace Basic_Game_Template2
 
         public static string modifiedDate;
 
-        public static bool reset;
+        public static bool reset = true;
 
 
         public MainForm()
