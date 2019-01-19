@@ -58,10 +58,8 @@
             this.equityLabel = new System.Windows.Forms.Label();
             this.beginningOfPeriodLabel = new System.Windows.Forms.Label();
             this.netIncomeLabel = new System.Windows.Forms.Label();
-            this.drawingsLabel = new System.Windows.Forms.Label();
             this.beginningOfThePeriodTextBox = new System.Windows.Forms.TextBox();
             this.netIncomeTextBox = new System.Windows.Forms.TextBox();
-            this.drawingsTextBox = new System.Windows.Forms.TextBox();
             this.removeCurrentAssetButton = new System.Windows.Forms.Button();
             this.addCurrentAssetsAccountNameTextBox = new System.Windows.Forms.TextBox();
             this.addCurrentAssetsAccountAmountTextBox = new System.Windows.Forms.TextBox();
@@ -92,6 +90,8 @@
             this.timeLabel = new System.Windows.Forms.Label();
             this.timeTimer = new System.Windows.Forms.Timer(this.components);
             this.dateLabel = new System.Windows.Forms.Label();
+            this.drawingsTextBox = new System.Windows.Forms.TextBox();
+            this.drawingsLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // line2Label
@@ -446,15 +446,6 @@
             this.netIncomeLabel.TabIndex = 88;
             this.netIncomeLabel.Text = "Net Income                                  $";
             // 
-            // drawingsLabel
-            // 
-            this.drawingsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.875F);
-            this.drawingsLabel.Location = new System.Drawing.Point(851, 883);
-            this.drawingsLabel.Name = "drawingsLabel";
-            this.drawingsLabel.Size = new System.Drawing.Size(409, 42);
-            this.drawingsLabel.TabIndex = 89;
-            this.drawingsLabel.Text = "Drawings                                      $";
-            // 
             // beginningOfThePeriodTextBox
             // 
             this.beginningOfThePeriodTextBox.Location = new System.Drawing.Point(1266, 799);
@@ -468,13 +459,6 @@
             this.netIncomeTextBox.Name = "netIncomeTextBox";
             this.netIncomeTextBox.Size = new System.Drawing.Size(129, 31);
             this.netIncomeTextBox.TabIndex = 91;
-            // 
-            // drawingsTextBox
-            // 
-            this.drawingsTextBox.Location = new System.Drawing.Point(1267, 885);
-            this.drawingsTextBox.Name = "drawingsTextBox";
-            this.drawingsTextBox.Size = new System.Drawing.Size(129, 31);
-            this.drawingsTextBox.TabIndex = 92;
             // 
             // removeCurrentAssetButton
             // 
@@ -730,6 +714,22 @@
             this.dateLabel.Size = new System.Drawing.Size(0, 25);
             this.dateLabel.TabIndex = 121;
             // 
+            // drawingsTextBox
+            // 
+            this.drawingsTextBox.Location = new System.Drawing.Point(1267, 885);
+            this.drawingsTextBox.Name = "drawingsTextBox";
+            this.drawingsTextBox.Size = new System.Drawing.Size(129, 31);
+            this.drawingsTextBox.TabIndex = 92;
+            // 
+            // drawingsLabel
+            // 
+            this.drawingsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.875F);
+            this.drawingsLabel.Location = new System.Drawing.Point(851, 883);
+            this.drawingsLabel.Name = "drawingsLabel";
+            this.drawingsLabel.Size = new System.Drawing.Size(409, 42);
+            this.drawingsLabel.TabIndex = 89;
+            this.drawingsLabel.Text = "Drawings                                      $";
+            // 
             // BalanceSheetInformationScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -836,10 +836,8 @@
         private System.Windows.Forms.Label equityLabel;
         private System.Windows.Forms.Label beginningOfPeriodLabel;
         private System.Windows.Forms.Label netIncomeLabel;
-        private System.Windows.Forms.Label drawingsLabel;
         private System.Windows.Forms.TextBox beginningOfThePeriodTextBox;
         private System.Windows.Forms.TextBox netIncomeTextBox;
-        private System.Windows.Forms.TextBox drawingsTextBox;
         private System.Windows.Forms.Button removeCurrentAssetButton;
         private System.Windows.Forms.TextBox addCurrentAssetsAccountNameTextBox;
         private System.Windows.Forms.TextBox addCurrentAssetsAccountAmountTextBox;
@@ -870,5 +868,7 @@
         private System.Windows.Forms.Label timeLabel;
         private System.Windows.Forms.Timer timeTimer;
         private System.Windows.Forms.Label dateLabel;
+        private System.Windows.Forms.TextBox drawingsTextBox;
+        private System.Windows.Forms.Label drawingsLabel;
     }
 }

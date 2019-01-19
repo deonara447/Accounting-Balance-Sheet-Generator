@@ -125,6 +125,13 @@ namespace Basic_Game_Template2
 
         private void BalanceSheetTemplateScreen_Load(object sender, EventArgs e)
         {
+            businessNameLabel.Text = MainForm.businessName;
+            endOfMonthLabel.Text = MainForm.fiscalMonthEnd;
+            beginningEquityAmountLabel.Text = MainForm.beginningOfPeriod + "";
+            netIncomeAmountLabel.Text = MainForm.netIncome + "";
+            drawingsAmountLabel.Text = MainForm.drawings + "";
+            changeInEquityAmount.Text = MainForm.netIncome - MainForm.drawings + "";
+
             for (int i = 0; i < MainForm.currentAssetNames.Count(); i++)
             {
 
@@ -185,6 +192,11 @@ namespace Basic_Game_Template2
             longTermLiabilityAmountsLabel.Text += MainForm.longTermLiabilityAmounts.Sum().ToString("#.#0");
 
             totalLiabilitiesAmountLabel.Text += MainForm.longTermLiabilityAmounts.Sum() + MainForm.currentLiabilityAmounts.Sum();
+
+            
+
         }
+
+  
     }
 }

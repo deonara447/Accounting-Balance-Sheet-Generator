@@ -80,6 +80,19 @@
             this.changeInEquityLabel = new System.Windows.Forms.Label();
             this.endOfPeriodEquity = new System.Windows.Forms.Label();
             this.totalEquityLiabilityLabel = new System.Windows.Forms.Label();
+            this.beginningEquityAmountLabel = new System.Windows.Forms.Label();
+            this.netIncomeAmountLabel = new System.Windows.Forms.Label();
+            this.drawingsAmountLabel = new System.Windows.Forms.Label();
+            this.changeInEquityAmount = new System.Windows.Forms.Label();
+            this.netIncomeDollarSignLabel = new System.Windows.Forms.Label();
+            this.equityDollarSignLabel = new System.Windows.Forms.Label();
+            this.changeInEquityAmountLabel = new System.Windows.Forms.Label();
+            this.totalLiabilitiesAndEquityAmountLabel = new System.Windows.Forms.Label();
+            this.endEquityAmountLabel = new System.Windows.Forms.Label();
+            this.TotalLiabilitiesAndEquityDollarSignLabel = new System.Windows.Forms.Label();
+            this.EndEquityDollarSignLabel = new System.Windows.Forms.Label();
+            this.TotalLiabilitiesDollarSignLabel = new System.Windows.Forms.Label();
+            this.totalAssetsDollarSignLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // balanceSheetButton
@@ -469,11 +482,10 @@
             // TotalAssetAmountLabel
             // 
             this.TotalAssetAmountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalAssetAmountLabel.Location = new System.Drawing.Point(1228, 504);
+            this.TotalAssetAmountLabel.Location = new System.Drawing.Point(1277, 504);
             this.TotalAssetAmountLabel.Name = "TotalAssetAmountLabel";
-            this.TotalAssetAmountLabel.Size = new System.Drawing.Size(144, 25);
+            this.TotalAssetAmountLabel.Size = new System.Drawing.Size(108, 25);
             this.TotalAssetAmountLabel.TabIndex = 132;
-            this.TotalAssetAmountLabel.Text = "$";
             this.TotalAssetAmountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.TotalAssetAmountLabel.UseWaitCursor = true;
             // 
@@ -561,11 +573,10 @@
             // totalLiabilitiesAmountLabel
             // 
             this.totalLiabilitiesAmountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalLiabilitiesAmountLabel.Location = new System.Drawing.Point(1234, 751);
+            this.totalLiabilitiesAmountLabel.Location = new System.Drawing.Point(1272, 751);
             this.totalLiabilitiesAmountLabel.Name = "totalLiabilitiesAmountLabel";
             this.totalLiabilitiesAmountLabel.Size = new System.Drawing.Size(144, 25);
             this.totalLiabilitiesAmountLabel.TabIndex = 143;
-            this.totalLiabilitiesAmountLabel.Text = "$";
             this.totalLiabilitiesAmountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.totalLiabilitiesAmountLabel.UseWaitCursor = true;
             // 
@@ -686,7 +697,7 @@
             this.endOfPeriodEquity.Name = "endOfPeriodEquity";
             this.endOfPeriodEquity.Size = new System.Drawing.Size(300, 25);
             this.endOfPeriodEquity.TabIndex = 152;
-            this.endOfPeriodEquity.Text = "Equity, End of Peiod";
+            this.endOfPeriodEquity.Text = "Equity, End of Period";
             this.endOfPeriodEquity.UseWaitCursor = true;
             // 
             // totalEquityLiabilityLabel
@@ -699,11 +710,151 @@
             this.totalEquityLiabilityLabel.Text = "Total Liabilities and Equity";
             this.totalEquityLiabilityLabel.UseWaitCursor = true;
             // 
+            // beginningEquityAmountLabel
+            // 
+            this.beginningEquityAmountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.beginningEquityAmountLabel.Location = new System.Drawing.Point(1002, 795);
+            this.beginningEquityAmountLabel.Name = "beginningEquityAmountLabel";
+            this.beginningEquityAmountLabel.Size = new System.Drawing.Size(226, 25);
+            this.beginningEquityAmountLabel.TabIndex = 154;
+            this.beginningEquityAmountLabel.UseWaitCursor = true;
+            // 
+            // netIncomeAmountLabel
+            // 
+            this.netIncomeAmountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.netIncomeAmountLabel.Location = new System.Drawing.Point(757, 817);
+            this.netIncomeAmountLabel.Name = "netIncomeAmountLabel";
+            this.netIncomeAmountLabel.Size = new System.Drawing.Size(203, 22);
+            this.netIncomeAmountLabel.TabIndex = 155;
+            this.netIncomeAmountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.netIncomeAmountLabel.UseWaitCursor = true;
+            // 
+            // drawingsAmountLabel
+            // 
+            this.drawingsAmountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drawingsAmountLabel.Location = new System.Drawing.Point(757, 839);
+            this.drawingsAmountLabel.Name = "drawingsAmountLabel";
+            this.drawingsAmountLabel.Size = new System.Drawing.Size(144, 22);
+            this.drawingsAmountLabel.TabIndex = 156;
+            this.drawingsAmountLabel.Text = "  ";
+            this.drawingsAmountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.drawingsAmountLabel.UseWaitCursor = true;
+            // 
+            // changeInEquityAmount
+            // 
+            this.changeInEquityAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.changeInEquityAmount.Location = new System.Drawing.Point(966, 861);
+            this.changeInEquityAmount.Name = "changeInEquityAmount";
+            this.changeInEquityAmount.Size = new System.Drawing.Size(232, 22);
+            this.changeInEquityAmount.TabIndex = 157;
+            this.changeInEquityAmount.Text = "  ";
+            this.changeInEquityAmount.UseWaitCursor = true;
+            // 
+            // netIncomeDollarSignLabel
+            // 
+            this.netIncomeDollarSignLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.netIncomeDollarSignLabel.Location = new System.Drawing.Point(727, 817);
+            this.netIncomeDollarSignLabel.Name = "netIncomeDollarSignLabel";
+            this.netIncomeDollarSignLabel.Size = new System.Drawing.Size(24, 22);
+            this.netIncomeDollarSignLabel.TabIndex = 158;
+            this.netIncomeDollarSignLabel.Text = "$";
+            this.netIncomeDollarSignLabel.UseWaitCursor = true;
+            // 
+            // equityDollarSignLabel
+            // 
+            this.equityDollarSignLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.equityDollarSignLabel.Location = new System.Drawing.Point(965, 795);
+            this.equityDollarSignLabel.Name = "equityDollarSignLabel";
+            this.equityDollarSignLabel.Size = new System.Drawing.Size(31, 25);
+            this.equityDollarSignLabel.TabIndex = 159;
+            this.equityDollarSignLabel.Text = "$";
+            this.equityDollarSignLabel.UseWaitCursor = true;
+            // 
+            // changeInEquityAmountLabel
+            // 
+            this.changeInEquityAmountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.changeInEquityAmountLabel.Location = new System.Drawing.Point(972, 861);
+            this.changeInEquityAmountLabel.Name = "changeInEquityAmountLabel";
+            this.changeInEquityAmountLabel.Size = new System.Drawing.Size(226, 25);
+            this.changeInEquityAmountLabel.TabIndex = 160;
+            this.changeInEquityAmountLabel.UseWaitCursor = true;
+            // 
+            // totalLiabilitiesAndEquityAmountLabel
+            // 
+            this.totalLiabilitiesAndEquityAmountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalLiabilitiesAndEquityAmountLabel.Location = new System.Drawing.Point(1272, 905);
+            this.totalLiabilitiesAndEquityAmountLabel.Name = "totalLiabilitiesAndEquityAmountLabel";
+            this.totalLiabilitiesAndEquityAmountLabel.Size = new System.Drawing.Size(188, 25);
+            this.totalLiabilitiesAndEquityAmountLabel.TabIndex = 161;
+            this.totalLiabilitiesAndEquityAmountLabel.UseWaitCursor = true;
+            // 
+            // endEquityAmountLabel
+            // 
+            this.endEquityAmountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.endEquityAmountLabel.Location = new System.Drawing.Point(1277, 883);
+            this.endEquityAmountLabel.Name = "endEquityAmountLabel";
+            this.endEquityAmountLabel.Size = new System.Drawing.Size(183, 25);
+            this.endEquityAmountLabel.TabIndex = 162;
+            this.endEquityAmountLabel.UseWaitCursor = true;
+            // 
+            // TotalLiabilitiesAndEquityDollarSignLabel
+            // 
+            this.TotalLiabilitiesAndEquityDollarSignLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalLiabilitiesAndEquityDollarSignLabel.Location = new System.Drawing.Point(1239, 905);
+            this.TotalLiabilitiesAndEquityDollarSignLabel.Name = "TotalLiabilitiesAndEquityDollarSignLabel";
+            this.TotalLiabilitiesAndEquityDollarSignLabel.Size = new System.Drawing.Size(27, 25);
+            this.TotalLiabilitiesAndEquityDollarSignLabel.TabIndex = 163;
+            this.TotalLiabilitiesAndEquityDollarSignLabel.Text = "$";
+            this.TotalLiabilitiesAndEquityDollarSignLabel.UseWaitCursor = true;
+            // 
+            // EndEquityDollarSignLabel
+            // 
+            this.EndEquityDollarSignLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EndEquityDollarSignLabel.Location = new System.Drawing.Point(1239, 883);
+            this.EndEquityDollarSignLabel.Name = "EndEquityDollarSignLabel";
+            this.EndEquityDollarSignLabel.Size = new System.Drawing.Size(27, 25);
+            this.EndEquityDollarSignLabel.TabIndex = 164;
+            this.EndEquityDollarSignLabel.Text = "$";
+            this.EndEquityDollarSignLabel.UseWaitCursor = true;
+            // 
+            // TotalLiabilitiesDollarSignLabel
+            // 
+            this.TotalLiabilitiesDollarSignLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalLiabilitiesDollarSignLabel.Location = new System.Drawing.Point(1239, 751);
+            this.TotalLiabilitiesDollarSignLabel.Name = "TotalLiabilitiesDollarSignLabel";
+            this.TotalLiabilitiesDollarSignLabel.Size = new System.Drawing.Size(27, 25);
+            this.TotalLiabilitiesDollarSignLabel.TabIndex = 165;
+            this.TotalLiabilitiesDollarSignLabel.Text = "$";
+            this.TotalLiabilitiesDollarSignLabel.UseWaitCursor = true;
+            // 
+            // totalAssetsDollarSignLabel
+            // 
+            this.totalAssetsDollarSignLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalAssetsDollarSignLabel.Location = new System.Drawing.Point(1239, 504);
+            this.totalAssetsDollarSignLabel.Name = "totalAssetsDollarSignLabel";
+            this.totalAssetsDollarSignLabel.Size = new System.Drawing.Size(27, 25);
+            this.totalAssetsDollarSignLabel.TabIndex = 166;
+            this.totalAssetsDollarSignLabel.Text = "$";
+            this.totalAssetsDollarSignLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.totalAssetsDollarSignLabel.UseWaitCursor = true;
+            // 
             // BalanceSheetTemplateScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.TotalLiabilitiesDollarSignLabel);
+            this.Controls.Add(this.EndEquityDollarSignLabel);
+            this.Controls.Add(this.TotalLiabilitiesAndEquityDollarSignLabel);
+            this.Controls.Add(this.endEquityAmountLabel);
+            this.Controls.Add(this.totalLiabilitiesAndEquityAmountLabel);
+            this.Controls.Add(this.changeInEquityAmountLabel);
+            this.Controls.Add(this.equityDollarSignLabel);
+            this.Controls.Add(this.netIncomeDollarSignLabel);
+            this.Controls.Add(this.changeInEquityAmount);
+            this.Controls.Add(this.drawingsAmountLabel);
+            this.Controls.Add(this.netIncomeAmountLabel);
+            this.Controls.Add(this.beginningEquityAmountLabel);
             this.Controls.Add(this.totalEquityLiabilityLabel);
             this.Controls.Add(this.LiabilitiesLabel);
             this.Controls.Add(this.assetsLabel);
@@ -754,6 +905,7 @@
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.sidebarLabel);
             this.Controls.Add(this.tabLabel);
+            this.Controls.Add(this.totalAssetsDollarSignLabel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "BalanceSheetTemplateScreen";
             this.Size = new System.Drawing.Size(1517, 1000);
@@ -817,5 +969,18 @@
         private System.Windows.Forms.Label changeInEquityLabel;
         private System.Windows.Forms.Label endOfPeriodEquity;
         private System.Windows.Forms.Label totalEquityLiabilityLabel;
+        private System.Windows.Forms.Label beginningEquityAmountLabel;
+        private System.Windows.Forms.Label netIncomeAmountLabel;
+        private System.Windows.Forms.Label drawingsAmountLabel;
+        private System.Windows.Forms.Label changeInEquityAmount;
+        private System.Windows.Forms.Label netIncomeDollarSignLabel;
+        private System.Windows.Forms.Label equityDollarSignLabel;
+        private System.Windows.Forms.Label changeInEquityAmountLabel;
+        private System.Windows.Forms.Label totalLiabilitiesAndEquityAmountLabel;
+        private System.Windows.Forms.Label endEquityAmountLabel;
+        private System.Windows.Forms.Label TotalLiabilitiesAndEquityDollarSignLabel;
+        private System.Windows.Forms.Label EndEquityDollarSignLabel;
+        private System.Windows.Forms.Label TotalLiabilitiesDollarSignLabel;
+        private System.Windows.Forms.Label totalAssetsDollarSignLabel;
     }
 }
