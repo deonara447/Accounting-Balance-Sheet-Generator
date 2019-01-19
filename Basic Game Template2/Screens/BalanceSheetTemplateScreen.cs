@@ -122,5 +122,69 @@ namespace Basic_Game_Template2
 
             MainForm.ChangeScreen(this, "MainScreen");
         }
+
+        private void BalanceSheetTemplateScreen_Load(object sender, EventArgs e)
+        {
+            for (int i = 0; i < MainForm.currentAssetNames.Count(); i++)
+            {
+
+                currentAssetNamesLabel.Text += MainForm.currentAssetNames[i] + "\n";
+            }
+            currentAssetNamesLabel.Text += "Total Current Assets";
+
+            for (int i = 0; i < MainForm.currentAssetAmounts.Count(); i++)
+            {
+
+                currentAssetAmountsLabel.Text += MainForm.currentAssetAmounts[i].ToString("#.#0") + "\n";
+            }
+            currentAssetAmountsLabel.Text += MainForm.currentAssetAmounts.Sum().ToString("#.#0");
+
+            for (int i = 0; i < MainForm.fixedAssetNames.Count(); i++)
+            {
+
+                fixedAssetNamesLabel.Text += MainForm.fixedAssetNames[i] + "\n";
+            }
+            fixedAssetNamesLabel.Text += "Total Fixed Assets";
+
+            for (int i = 0; i < MainForm.fixedAssetAmounts.Count(); i++)
+            {
+
+                fixedAssetAmountsLabel.Text += MainForm.fixedAssetAmounts[i].ToString("#.#0") + "\n";
+            }
+            fixedAssetAmountsLabel.Text += MainForm.fixedAssetAmounts.Sum().ToString("#.#0");
+
+            TotalAssetAmountLabel.Text += MainForm.fixedAssetAmounts.Sum() + MainForm.currentAssetAmounts.Sum();
+
+            for (int i = 0; i < MainForm.currentLiabilityNames.Count(); i++)
+            {
+
+                currentLiabilityNamesLabel.Text += MainForm.currentLiabilityNames[i] + "\n";
+            }
+            currentLiabilityNamesLabel.Text += "Total Current Liabilities";
+
+            for (int i = 0; i < MainForm.currentLiabilityAmounts.Count(); i++)
+            {
+
+                currentLiabilityAmountsLabel.Text += MainForm.currentLiabilityAmounts[i].ToString("#.#0") + "\n";
+            }
+            currentLiabilityAmountsLabel.Text += MainForm.currentLiabilityAmounts.Sum().ToString("#.#0");
+
+
+            for (int i = 0; i < MainForm.longTermLiabilityNames.Count(); i++)
+            {
+
+                longTermLiabilityNamesLabel.Text += MainForm.longTermLiabilityNames[i] + "\n";
+            }
+            longTermLiabilityNamesLabel.Text += "Total Long Term Liabilities";
+
+            for (int i = 0; i < MainForm.longTermLiabilityAmounts.Count(); i++)
+            {
+
+                longTermLiabilityAmountsLabel.Text += MainForm.longTermLiabilityAmounts[i].ToString("#.#0") + "\n";
+            }
+            longTermLiabilityAmountsLabel.Text += MainForm.longTermLiabilityAmounts.Sum().ToString("#.#0");
+
+            totalLiabilitiesAmountLabel.Text += MainForm.longTermLiabilityAmounts.Sum() + MainForm.currentLiabilityAmounts.Sum();
+        }
     }
 }
