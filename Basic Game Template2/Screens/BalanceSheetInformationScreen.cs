@@ -12,8 +12,15 @@ namespace Basic_Game_Template2
 {
     public partial class BalanceSheetInformationScreen : UserControl
     {
-        List<double> friendName = new List<double>();
-        List<string> freindName = new List<string>();
+        List<double> currentAssetAmounts = new List<double>();
+        List<string> currentAssetNames = new List<string>();
+        List<double> fixedAssetAmounts = new List<double>();
+        List<string> fixedAssetNames = new List<string>();
+        List<double> currentLiabilityAmounts = new List<double>();
+        List<string> currentLiabilityNames = new List<string>();
+        List<double> longTermLiabilityAmounts = new List<double>();
+        List<string> longTermLiabilityNames = new List<string>();
+
         public BalanceSheetInformationScreen()
         {
 
@@ -53,28 +60,102 @@ namespace Basic_Game_Template2
         private void addCurrentAssetButton_Click(object sender, EventArgs e)
         {
             
-            friendName.Add(Convert.ToDouble(addCurrentAssetsAccountAmountTextBox.Text));
+            currentAssetAmounts.Add(Convert.ToDouble(addCurrentAssetsAccountAmountTextBox.Text));
             
-            freindName.Add(addCurrentAssetsAccountNameTextBox.Text);
+            currentAssetNames.Add(addCurrentAssetsAccountNameTextBox.Text);
 
             currentAssetsAccountInformationLabel.Text = "";
-            for (int i = 0; i < friendName.Count(); i++)
+            for (int i = 0; i < currentAssetAmounts.Count(); i++)
             {
                 
-                currentAssetsAccountInformationLabel.Text += freindName[i] + " $" + friendName[i] + "\n";
+                currentAssetsAccountInformationLabel.Text += currentAssetNames[i] + " $" + currentAssetAmounts[i] + "\n";
             }
 
         }
 
         private void removeCurrentAssetButton_Click(object sender, EventArgs e)
         {
-            friendName.Remove(Convert.ToDouble(removeCurrentAssetsAccountAmountTextBox.Text));
-            freindName.Remove(Convert.ToString(removeCurrentAssetsAccountNameTextBox.Text));
+            currentAssetAmounts.Remove(Convert.ToDouble(removeCurrentAssetsAccountAmountTextBox.Text));
+            currentAssetNames.Remove(Convert.ToString(removeCurrentAssetsAccountNameTextBox.Text));
             currentAssetsAccountInformationLabel.Text = "";
-            for (int i = 0; i < friendName.Count(); i++)
+            for (int i = 0; i < currentAssetAmounts.Count(); i++)
             {
-                
-                currentAssetsAccountInformationLabel.Text += freindName[i] + " $" + friendName[i] + "\n";
+                currentAssetsAccountInformationLabel.Text += currentAssetNames[i] + " $" + currentAssetAmounts[i] + "\n";
+            }
+        }
+
+        private void addFixedAssetButton_Click(object sender, EventArgs e)
+        {
+            fixedAssetAmounts.Add(Convert.ToDouble(addFixedAssetsAccountAmountTextBox.Text));
+
+            fixedAssetNames.Add(addFixedAssetsAccountNameTextBox.Text);
+
+            fixedAssetsAccountInformationLabel.Text = "";
+            for (int i = 0; i < fixedAssetAmounts.Count(); i++)
+            {
+
+                fixedAssetsAccountInformationLabel.Text += fixedAssetNames[i] + " $" + fixedAssetAmounts[i] + "\n";
+            }
+        }
+
+        private void removeFixedAssetButton_Click(object sender, EventArgs e)
+        {
+            fixedAssetAmounts.Remove(Convert.ToDouble(removeFixedAssetsAccountAmountTextBox.Text));
+            fixedAssetNames.Remove(Convert.ToString(removeFixedAssetsAccountNameTextBox.Text));
+            fixedAssetsAccountInformationLabel.Text = "";
+            for (int i = 0; i < fixedAssetAmounts.Count(); i++)
+            {
+                fixedAssetsAccountInformationLabel.Text += fixedAssetNames[i] + " $" + fixedAssetAmounts[i] + "\n";
+            }
+        }
+
+        private void addCurrentLiabilityButton_Click(object sender, EventArgs e)
+        {
+            currentLiabilityAmounts.Add(Convert.ToDouble(addCurrentLiabilitiesAccountAmountTextBox.Text));
+
+            currentLiabilityNames.Add(addCurrentLiabilitiesAccountNameTextBox.Text);
+
+            currentLiabilitiesAccountInformationLabel.Text = "";
+            for (int i = 0; i < currentLiabilityAmounts.Count(); i++)
+            {
+
+                currentLiabilitiesAccountInformationLabel.Text += currentLiabilityNames[i] + " $" + currentLiabilityAmounts[i] + "\n";
+            }
+        }
+
+        private void removeCurrentLiabilityButton_Click(object sender, EventArgs e)
+        {
+            currentLiabilityAmounts.Remove(Convert.ToDouble(removeCurrentLiabilitiesAccountAmountTextBox.Text));
+            currentLiabilityNames.Remove(Convert.ToString(removeCurrentLiabilitiesAccountNameTextBox.Text));
+            currentLiabilitiesAccountInformationLabel.Text = "";
+            for (int i = 0; i < currentLiabilityAmounts.Count(); i++)
+            {
+                currentLiabilitiesAccountInformationLabel.Text += currentLiabilityNames[i] + " $" + currentLiabilityAmounts[i] + "\n";
+            }
+        }
+
+        private void addLongTermLiabilitiyButton_Click(object sender, EventArgs e)
+        {
+            longTermLiabilityAmounts.Add(Convert.ToDouble(addLongTermLiabilitiesAccountAmountTextBox.Text));
+
+            longTermLiabilityNames.Add(addLongTermLiabilitiesAccountNameTextBox.Text);
+
+            longTermLiabilitiesAccountInformationLabel.Text = "";
+            for (int i = 0; i < longTermLiabilityAmounts.Count(); i++)
+            {
+
+                longTermLiabilitiesAccountInformationLabel.Text += longTermLiabilityNames[i] + " $" + longTermLiabilityAmounts[i] + "\n";
+            }
+        }
+
+        private void removeLongTermLiabilityButton_Click(object sender, EventArgs e)
+        {
+            longTermLiabilityAmounts.Remove(Convert.ToDouble(removeLongTermLiabilitiesAccountAmountTextBox.Text));
+            longTermLiabilityNames.Remove(Convert.ToString(removeLongTermLiabilitiesAccountNameTextBox.Text));
+            longTermLiabilitiesAccountInformationLabel.Text = "";
+            for (int i = 0; i < longTermLiabilityAmounts.Count(); i++)
+            {
+                longTermLiabilitiesAccountInformationLabel.Text += longTermLiabilityNames[i] + " $" + longTermLiabilityAmounts[i] + "\n";
             }
         }
     }
