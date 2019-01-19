@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.line2Label = new System.Windows.Forms.Label();
             this.line1Label = new System.Windows.Forms.Label();
             this.newButton = new System.Windows.Forms.Button();
@@ -46,6 +47,8 @@
             this.feedbackTextBox = new System.Windows.Forms.TextBox();
             this.submitButton = new System.Windows.Forms.Button();
             this.appreciateLabel = new System.Windows.Forms.Label();
+            this.timeLabel = new System.Windows.Forms.Label();
+            this.timeTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // line2Label
@@ -272,11 +275,28 @@
             this.appreciateLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.appreciateLabel.Visible = false;
             // 
+            // timeLabel
+            // 
+            this.timeLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(130)))), ((int)(((byte)(50)))));
+            this.timeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F);
+            this.timeLabel.ForeColor = System.Drawing.Color.White;
+            this.timeLabel.Location = new System.Drawing.Point(1095, 0);
+            this.timeLabel.Name = "timeLabel";
+            this.timeLabel.Size = new System.Drawing.Size(305, 51);
+            this.timeLabel.TabIndex = 121;
+            this.timeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // timeTimer
+            // 
+            this.timeTimer.Enabled = true;
+            this.timeTimer.Tick += new System.EventHandler(this.timeTimer_Tick);
+            // 
             // FeedbackScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.timeLabel);
             this.Controls.Add(this.appreciateLabel);
             this.Controls.Add(this.submitButton);
             this.Controls.Add(this.feedbackTextBox);
@@ -322,5 +342,7 @@
         private System.Windows.Forms.TextBox feedbackTextBox;
         private System.Windows.Forms.Button submitButton;
         private System.Windows.Forms.Label appreciateLabel;
+        private System.Windows.Forms.Label timeLabel;
+        private System.Windows.Forms.Timer timeTimer;
     }
 }

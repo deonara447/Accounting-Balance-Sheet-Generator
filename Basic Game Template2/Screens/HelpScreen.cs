@@ -25,7 +25,7 @@ namespace Basic_Game_Template2
 
         private void newButton_Click(object sender, EventArgs e)
         {
-            MainForm.ChangeScreen(this, "NewScreen");
+            MainForm.ChangeScreen(this, "BusinessInformationScreen");
         }
 
         private void closeButton_Click(object sender, EventArgs e)
@@ -55,6 +55,17 @@ namespace Basic_Game_Template2
                 "2. Input all you business information requires into the indicated placess \n" +
                 "3. When you are ready, select 'Save' in the task bar and then select 'Balance Sheet' in the tabs at the bottom \n" +
                 "4. If you wish, select 'Print' in the taskbar to print your completed balance sheet";
+        }
+
+        private void timeTimer_Tick(object sender, EventArgs e)
+        {
+            int Min = DateTime.Now.Minute;
+            int Hour = DateTime.Now.Hour;
+            int Day = DateTime.Now.Day;
+            int Month = DateTime.Now.Month;
+            int Year = DateTime.Now.Year;
+            timeLabel.Text = Month + "/" + Day + "/" + Year + "  " + Hour + ":" + Min;
+            Refresh();
         }
     }
 }

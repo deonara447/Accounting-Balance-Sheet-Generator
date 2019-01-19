@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.balanceSheetButton = new System.Windows.Forms.Button();
             this.businessInformationButton = new System.Windows.Forms.Button();
             this.tabLabel = new System.Windows.Forms.Label();
@@ -45,6 +46,8 @@
             this.printButton = new System.Windows.Forms.Button();
             this.clearButton = new System.Windows.Forms.Button();
             this.sidebarLabel = new System.Windows.Forms.Label();
+            this.timeTimer = new System.Windows.Forms.Timer(this.components);
+            this.timeLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // balanceSheetButton
@@ -244,7 +247,6 @@
             this.deleteButton.TabIndex = 71;
             this.deleteButton.Text = "Delete";
             this.deleteButton.UseVisualStyleBackColor = false;
-            
             // 
             // printButton
             // 
@@ -288,11 +290,28 @@
             this.sidebarLabel.Size = new System.Drawing.Size(240, 850);
             this.sidebarLabel.TabIndex = 74;
             // 
+            // timeTimer
+            // 
+            this.timeTimer.Enabled = true;
+            this.timeTimer.Tick += new System.EventHandler(this.timeTimer_Tick);
+            // 
+            // timeLabel
+            // 
+            this.timeLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(130)))), ((int)(((byte)(50)))));
+            this.timeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F);
+            this.timeLabel.ForeColor = System.Drawing.Color.White;
+            this.timeLabel.Location = new System.Drawing.Point(1095, 0);
+            this.timeLabel.Name = "timeLabel";
+            this.timeLabel.Size = new System.Drawing.Size(305, 51);
+            this.timeLabel.TabIndex = 121;
+            this.timeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // BalanceSheetTemplateScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.timeLabel);
             this.Controls.Add(this.printButton);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.deleteButton);
@@ -336,5 +355,7 @@
         private System.Windows.Forms.Button printButton;
         private System.Windows.Forms.Button clearButton;
         private System.Windows.Forms.Label sidebarLabel;
+        private System.Windows.Forms.Timer timeTimer;
+        private System.Windows.Forms.Label timeLabel;
     }
 }

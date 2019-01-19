@@ -12,7 +12,7 @@ namespace Basic_Game_Template2
 {
         public partial class MainScreen : UserControl
     {
-        int Min, Hour;
+        int Min, Hour, Day, Month, Year;
 
         public MainScreen()
         {
@@ -23,8 +23,9 @@ namespace Basic_Game_Template2
         
         private void newButton_Click_1(object sender, EventArgs e)
         {
-            MainForm.ChangeScreen(this, "NewScreen");
-            
+            MainForm.ChangeScreen(this, "BusinessInformationScreen");
+
+
         }
 
         private void closeButton_Click(object sender, EventArgs e)
@@ -52,8 +53,14 @@ namespace Basic_Game_Template2
         {
             Min = DateTime.Now.Minute;
             Hour = DateTime.Now.Hour;
-            timeLabel.Text = "" + Hour + ":" + Min;
+            Day = DateTime.Now.Day;
+            Month = DateTime.Now.Month;
+            Year = DateTime.Now.Year;
+            timeLabel.Text = Month + "/" + Day + "/" + Year + "  " + Hour + ":" + Min;
             Refresh();
+
+
+
             MainForm.testInt = 5;
         }
     }

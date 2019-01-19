@@ -76,12 +76,6 @@
     <Compile Include="Screens\MainScreen.Designer.cs">
       <DependentUpon>MainScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\NewScreen.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Screens\NewScreen.Designer.cs">
-      <DependentUpon>NewScreen.cs</DependentUpon>
-    </Compile>
     <Compile Include="Screens\FeedbackScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -124,9 +118,6 @@
     </Compile>
     <EmbeddedResource Include="Screens\MainScreen.resx">
       <DependentUpon>MainScreen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Screens\NewScreen.resx">
-      <DependentUpon>NewScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\FeedbackScreen.resx">
       <DependentUpon>FeedbackScreen.cs</DependentUpon>

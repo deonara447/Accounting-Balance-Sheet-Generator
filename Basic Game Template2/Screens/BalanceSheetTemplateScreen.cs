@@ -24,7 +24,7 @@ namespace Basic_Game_Template2
 
         private void newButton_Click(object sender, EventArgs e)
         {
-            MainForm.ChangeScreen(this, "NewScreen");
+            MainForm.ChangeScreen(this, "BusinessInformationScreen");
         }
 
         private void closeButton_Click(object sender, EventArgs e)
@@ -45,6 +45,17 @@ namespace Basic_Game_Template2
         private void businessInformationButton_Click(object sender, EventArgs e)
         {
             MainForm.ChangeScreen(this, "BusinessInformationScreen");
+        }
+
+        private void timeTimer_Tick(object sender, EventArgs e)
+        {
+            int Min = DateTime.Now.Minute;
+            int Hour = DateTime.Now.Hour;
+            int Day = DateTime.Now.Day;
+            int Month = DateTime.Now.Month;
+            int Year = DateTime.Now.Year;
+            timeLabel.Text = Month + "/" + Day + "/" + Year + "  " + Hour + ":" + Min;
+            Refresh();
         }
     }
 }

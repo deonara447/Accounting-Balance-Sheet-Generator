@@ -68,9 +68,6 @@ namespace Basic_Game_Template2
                 case "MainScreen":
                     ns = new MainScreen();
                     break;
-                case "NewScreen":
-                    ns = new NewScreen();
-                    break;
                 case "FeedbackScreen":
                     ns = new FeedbackScreen();
                     break;

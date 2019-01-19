@@ -192,11 +192,11 @@
             this.timeLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(130)))), ((int)(((byte)(50)))));
             this.timeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F);
             this.timeLabel.ForeColor = System.Drawing.Color.White;
-            this.timeLabel.Location = new System.Drawing.Point(1204, 0);
+            this.timeLabel.Location = new System.Drawing.Point(1095, 0);
             this.timeLabel.Name = "timeLabel";
-            this.timeLabel.Size = new System.Drawing.Size(196, 51);
+            this.timeLabel.Size = new System.Drawing.Size(305, 51);
             this.timeLabel.TabIndex = 25;
-            this.timeLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.timeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // timeTimer
             // 

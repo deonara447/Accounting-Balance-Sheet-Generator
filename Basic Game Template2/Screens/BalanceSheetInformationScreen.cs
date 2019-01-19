@@ -29,7 +29,7 @@ namespace Basic_Game_Template2
 
         private void homeButton_Click(object sender, EventArgs e)
         {
-            MainForm.ChangeScreen(this, "MainScreen");
+            //clear all data
         }
 
         private void newButton_Click(object sender, EventArgs e)
@@ -157,6 +157,17 @@ namespace Basic_Game_Template2
             {
                 longTermLiabilitiesAccountInformationLabel.Text += longTermLiabilityNames[i] + " $" + longTermLiabilityAmounts[i] + "\n";
             }
+        }
+
+        private void timeTimer_Tick(object sender, EventArgs e)
+        {
+            int Min = DateTime.Now.Minute;
+            int Hour = DateTime.Now.Hour;
+            int Day = DateTime.Now.Day;
+            int Month = DateTime.Now.Month;
+            int Year = DateTime.Now.Year;
+            timeLabel.Text = Month + "/" + Day + "/" + Year + "  " + Hour + ":" + Min;
+            Refresh();
         }
     }
 }
