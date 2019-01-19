@@ -12,11 +12,6 @@ namespace Basic_Game_Template2
 {
     public partial class BalanceSheetInformationScreen : UserControl
     {
-        int Min;
-        int Hour;
-        int Day;
-        int Month;
-        int Year;
 
         public BalanceSheetInformationScreen()
         {
@@ -31,7 +26,43 @@ namespace Basic_Game_Template2
 
         private void newButton_Click(object sender, EventArgs e)
         {
-            MainForm.ChangeScreen(this, "NewScreen");
+            MainForm.businessName = "Untitled Template";
+            MainForm.fiscalMonthEnd = "";
+            MainForm.beginningOfPeriod = 0;
+            MainForm.netIncome = 0;
+            MainForm.drawings = 0;
+            MainForm.modifiedDate = "1/19/19";
+            MainForm.currentAssetAmounts.Clear();
+            MainForm.currentAssetNames.Clear();
+            MainForm.fixedAssetAmounts.Clear();
+            MainForm.fixedAssetNames.Clear();
+            MainForm.currentLiabilityAmounts.Clear();
+            MainForm.currentLiabilityNames.Clear();
+            MainForm.longTermLiabilityAmounts.Clear();
+            MainForm.longTermLiabilityNames.Clear();
+            MainForm.ChangeScreen(this, "BalanceSheetInformationScreen");
+
+            businessNameTextBox.Text = "";
+            fiscalMonthEndTextBox.Text = "(Month Day, Year)";
+            addCurrentAssetsAccountAmountTextBox.Text = "";
+            removeCurrentAssetsAccountAmountTextBox.Text = "";
+            addCurrentAssetsAccountNameTextBox.Text = "";
+            removeCurrentAssetsAccountNameTextBox.Text = "";
+            addFixedAssetsAccountAmountTextBox.Text = "";
+            removeFixedAssetsAccountAmountTextBox.Text = "";
+            addFixedAssetsAccountNameTextBox.Text = "";
+            removeFixedAssetsAccountNameTextBox.Text = "";
+            addCurrentLiabilitiesAccountAmountTextBox.Text = "";
+            removeCurrentLiabilitiesAccountAmountTextBox.Text = "";
+            addCurrentLiabilitiesAccountNameTextBox.Text = "";
+            removeCurrentLiabilitiesAccountNameTextBox.Text = "";
+            addLongTermLiabilitiesAccountAmountTextBox.Text = "";
+            removeLongTermLiabilitiesAccountAmountTextBox.Text = "";
+            addLongTermLiabilitiesAccountNameTextBox.Text = "";
+            removeLongTermLiabilitiesAccountNameTextBox.Text = "";
+            beginningOfThePeriodTextBox.Text = "";
+            netIncomeTextBox.Text = "";
+            drawingsTextBox.Text = "";
         }
 
         private void closeButton_Click(object sender, EventArgs e)
@@ -164,6 +195,7 @@ namespace Basic_Game_Template2
             int Month = DateTime.Now.Month;
             int Year = DateTime.Now.Year;
             timeLabel.Text = Month + "/" + Day + "/" + Year + "  " + Hour + ":" + Min;
+            dateLabel.Text = Month + "/" + Day + "/" + Year;
             Refresh();
         }
 
@@ -174,9 +206,124 @@ namespace Basic_Game_Template2
             MainForm.beginningOfPeriod = Convert.ToDouble(beginningOfThePeriodTextBox.Text);
             MainForm.netIncome = Convert.ToDouble(netIncomeTextBox.Text);
             MainForm.drawings = Convert.ToDouble(drawingsTextBox.Text);
-            timeLabel.Text = Month + "/" + Day + "/" + Year;
-            MainForm.modifiedDate = timeLabel.Text;
+            MainForm.modifiedDate = dateLabel.Text;
             
+           
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            MainForm.businessName = "Untitled Template";
+            MainForm.fiscalMonthEnd = "";
+            MainForm.beginningOfPeriod = 0;
+            MainForm.netIncome = 0;
+            MainForm.drawings = 0;
+            MainForm.modifiedDate = "1/19/19";
+            MainForm.currentAssetAmounts.Clear();
+            MainForm.currentAssetNames.Clear();
+            MainForm.fixedAssetAmounts.Clear();
+            MainForm.fixedAssetNames.Clear();
+            MainForm.currentLiabilityAmounts.Clear();
+            MainForm.currentLiabilityNames.Clear();
+            MainForm.longTermLiabilityAmounts.Clear();
+            MainForm.longTermLiabilityNames.Clear();
+
+            businessNameTextBox.Text = "";
+            fiscalMonthEndTextBox.Text = "(Month Day, Year)";
+            addCurrentAssetsAccountAmountTextBox.Text = "";
+            removeCurrentAssetsAccountAmountTextBox.Text = "";
+            addCurrentAssetsAccountNameTextBox.Text = "";
+            removeCurrentAssetsAccountNameTextBox.Text = "";
+            addFixedAssetsAccountAmountTextBox.Text = "";
+            removeFixedAssetsAccountAmountTextBox.Text = "";
+            addFixedAssetsAccountNameTextBox.Text = "";
+            removeFixedAssetsAccountNameTextBox.Text = "";
+            addCurrentLiabilitiesAccountAmountTextBox.Text = "";
+            removeCurrentLiabilitiesAccountAmountTextBox.Text = "";
+            addCurrentLiabilitiesAccountNameTextBox.Text = "";
+            removeCurrentLiabilitiesAccountNameTextBox.Text = "";
+            addLongTermLiabilitiesAccountAmountTextBox.Text = "";
+            removeLongTermLiabilitiesAccountAmountTextBox.Text = "";
+            addLongTermLiabilitiesAccountNameTextBox.Text = "";
+            removeLongTermLiabilitiesAccountNameTextBox.Text = "";
+            beginningOfThePeriodTextBox.Text = "";
+            netIncomeTextBox.Text = "";
+            drawingsTextBox.Text = "";
+
+            MainForm.ChangeScreen(this, "MainScreen");
+
+        }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            MainForm.businessName = "Untitled Template";
+            MainForm.fiscalMonthEnd = "";
+            MainForm.beginningOfPeriod = 0;
+            MainForm.netIncome = 0;
+            MainForm.drawings = 0;
+            MainForm.modifiedDate = "1/19/19";
+            MainForm.currentAssetAmounts.Clear();
+            MainForm.currentAssetNames.Clear();
+            MainForm.fixedAssetAmounts.Clear();
+            MainForm.fixedAssetNames.Clear();
+            MainForm.currentLiabilityAmounts.Clear();
+            MainForm.currentLiabilityNames.Clear();
+            MainForm.longTermLiabilityAmounts.Clear();
+            MainForm.longTermLiabilityNames.Clear(); 
+
+            businessNameTextBox.Text = "";
+            fiscalMonthEndTextBox.Text = "(Month Day, Year)";
+            addCurrentAssetsAccountAmountTextBox.Text = "";
+            removeCurrentAssetsAccountAmountTextBox.Text = "";
+            addCurrentAssetsAccountNameTextBox.Text = "";
+            removeCurrentAssetsAccountNameTextBox.Text = "";
+            addFixedAssetsAccountAmountTextBox.Text = "";
+            removeFixedAssetsAccountAmountTextBox.Text = "";
+            addFixedAssetsAccountNameTextBox.Text = "";
+            removeFixedAssetsAccountNameTextBox.Text = "";
+            addCurrentLiabilitiesAccountAmountTextBox.Text = "";
+            removeCurrentLiabilitiesAccountAmountTextBox.Text = "";
+            addCurrentLiabilitiesAccountNameTextBox.Text = "";
+            removeCurrentLiabilitiesAccountNameTextBox.Text = "";
+            addLongTermLiabilitiesAccountAmountTextBox.Text = "";
+            removeLongTermLiabilitiesAccountAmountTextBox.Text = "";
+            addLongTermLiabilitiesAccountNameTextBox.Text = "";
+            removeLongTermLiabilitiesAccountNameTextBox.Text = "";
+            beginningOfThePeriodTextBox.Text = "";
+            netIncomeTextBox.Text = "";
+            drawingsTextBox.Text = "";
+
+
+        }
+
+        private void BalanceSheetInformationScreen_Load(object sender, EventArgs e)
+        {
+            if (MainForm.reset == true)
+            {
+                businessNameTextBox.Text = "";
+                fiscalMonthEndTextBox.Text = "(Month Day, Year)";
+                addCurrentAssetsAccountAmountTextBox.Text = "";
+                removeCurrentAssetsAccountAmountTextBox.Text = "";
+                addCurrentAssetsAccountNameTextBox.Text = "";
+                removeCurrentAssetsAccountNameTextBox.Text = "";
+                addFixedAssetsAccountAmountTextBox.Text = "";
+                removeFixedAssetsAccountAmountTextBox.Text = "";
+                addFixedAssetsAccountNameTextBox.Text = "";
+                removeFixedAssetsAccountNameTextBox.Text = "";
+                addCurrentLiabilitiesAccountAmountTextBox.Text = "";
+                removeCurrentLiabilitiesAccountAmountTextBox.Text = "";
+                addCurrentLiabilitiesAccountNameTextBox.Text = "";
+                removeCurrentLiabilitiesAccountNameTextBox.Text = "";
+                addLongTermLiabilitiesAccountAmountTextBox.Text = "";
+                removeLongTermLiabilitiesAccountAmountTextBox.Text = "";
+                addLongTermLiabilitiesAccountNameTextBox.Text = "";
+                removeLongTermLiabilitiesAccountNameTextBox.Text = "";
+                beginningOfThePeriodTextBox.Text = "";
+                netIncomeTextBox.Text = "";
+                drawingsTextBox.Text = "";
+
+                MainForm.reset = false;
+            }
         }
     }
 }

@@ -24,7 +24,27 @@ namespace Basic_Game_Template2
 
         private void newButton_Click(object sender, EventArgs e)
         {
+            MainForm.businessName = "Untitled Template";
+            MainForm.fiscalMonthEnd = "";
+            MainForm.beginningOfPeriod = 0;
+            MainForm.netIncome = 0;
+            MainForm.drawings = 0;
+            MainForm.modifiedDate = "1/19/19";
+            MainForm.currentAssetAmounts.Clear();
+            MainForm.currentAssetNames.Clear();
+            MainForm.fixedAssetAmounts.Clear();
+            MainForm.fixedAssetNames.Clear();
+            MainForm.currentLiabilityAmounts.Clear();
+            MainForm.currentLiabilityNames.Clear();
+            MainForm.longTermLiabilityAmounts.Clear();
+            MainForm.longTermLiabilityNames.Clear();
+
+            MainForm.reset = true;
+
+
             MainForm.ChangeScreen(this, "BusinessInformationScreen");
+
+
         }
 
         private void closeButton_Click(object sender, EventArgs e)
@@ -44,7 +64,7 @@ namespace Basic_Game_Template2
 
         private void businessInformationButton_Click(object sender, EventArgs e)
         {
-            MainForm.ChangeScreen(this, "BusinessInformationScreen");
+            MainForm.ChangeScreen(this, "BalanceSheetInformationScreen");
         }
 
         private void timeTimer_Tick(object sender, EventArgs e)
@@ -56,6 +76,51 @@ namespace Basic_Game_Template2
             int Year = DateTime.Now.Year;
             timeLabel.Text = Month + "/" + Day + "/" + Year + "  " + Hour + ":" + Min;
             Refresh();
+        }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            MainForm.businessName = "Untitled Template";
+            MainForm.fiscalMonthEnd = "";
+            MainForm.beginningOfPeriod = 0;
+            MainForm.netIncome = 0;
+            MainForm.drawings = 0;
+            MainForm.modifiedDate = "1/19/19";
+            MainForm.currentAssetAmounts.Clear();
+            MainForm.currentAssetNames.Clear();
+            MainForm.fixedAssetAmounts.Clear();
+            MainForm.fixedAssetNames.Clear();
+            MainForm.currentLiabilityAmounts.Clear();
+            MainForm.currentLiabilityNames.Clear();
+            MainForm.longTermLiabilityAmounts.Clear();
+            MainForm.longTermLiabilityNames.Clear();
+
+            MainForm.reset = true;
+
+
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            MainForm.businessName = "Untitled Template";
+            MainForm.fiscalMonthEnd = "";
+            MainForm.beginningOfPeriod = 0;
+            MainForm.netIncome = 0;
+            MainForm.drawings = 0;
+            MainForm.modifiedDate = "1/19/19";
+            MainForm.currentAssetAmounts.Clear();
+            MainForm.currentAssetNames.Clear();
+            MainForm.fixedAssetAmounts.Clear();
+            MainForm.fixedAssetNames.Clear();
+            MainForm.currentLiabilityAmounts.Clear();
+            MainForm.currentLiabilityNames.Clear();
+            MainForm.longTermLiabilityAmounts.Clear();
+            MainForm.longTermLiabilityNames.Clear();
+            MainForm.ChangeScreen(this, "MainScreen");
+
+            MainForm.reset = true;
+
+            MainForm.ChangeScreen(this, "MainScreen");
         }
     }
 }

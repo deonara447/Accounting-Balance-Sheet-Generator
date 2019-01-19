@@ -247,6 +247,7 @@
             this.deleteButton.TabIndex = 71;
             this.deleteButton.Text = "Delete";
             this.deleteButton.UseVisualStyleBackColor = false;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // printButton
             // 
@@ -281,6 +282,7 @@
             this.clearButton.TabIndex = 73;
             this.clearButton.Text = "Clear";
             this.clearButton.UseVisualStyleBackColor = false;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // sidebarLabel
             // 

@@ -57,7 +57,7 @@ namespace Basic_Game_Template2
 
         private void LoginScreen_Load(object sender, EventArgs e)
         {
-            MainForm.businessName = "Untitled Document";
+            MainForm.businessName = "Untitled Template";
             MainForm.modifiedDate = "1/19/19";
 
         }

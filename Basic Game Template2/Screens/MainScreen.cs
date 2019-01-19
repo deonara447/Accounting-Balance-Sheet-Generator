@@ -24,9 +24,23 @@ namespace Basic_Game_Template2
         
         private void newButton_Click_1(object sender, EventArgs e)
         {
+            MainForm.businessName = "Untitled Template";
+            MainForm.fiscalMonthEnd = "";
+            MainForm.beginningOfPeriod = 0;
+            MainForm.netIncome = 0;
+            MainForm.drawings = 0;
+            MainForm.modifiedDate = "1/19/19";
+            MainForm.currentAssetAmounts.Clear();
+            MainForm.currentAssetNames.Clear();
+            MainForm.fixedAssetAmounts.Clear();
+            MainForm.fixedAssetNames.Clear();
+            MainForm.currentLiabilityAmounts.Clear();
+            MainForm.currentLiabilityNames.Clear();
+            MainForm.longTermLiabilityAmounts.Clear();
+            MainForm.longTermLiabilityNames.Clear();
             MainForm.ChangeScreen(this, "BusinessInformationScreen");
 
-
+            MainForm.reset = true;
         }
 
         private void closeButton_Click(object sender, EventArgs e)
@@ -37,7 +51,7 @@ namespace Basic_Game_Template2
 
         private void MainScreen_Load(object sender, EventArgs e)
         {
-            balanceSheetInformationButton.Text = MainForm.businessName + "\t" + "\t" + MainForm.modifiedDate;
+            balanceSheetInformationButton.Text = MainForm.businessName + "                                         " + MainForm.modifiedDate;
         }
 
         private void feedbackButton_Click_1(object sender, EventArgs e)

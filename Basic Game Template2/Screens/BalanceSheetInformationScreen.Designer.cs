@@ -91,6 +91,7 @@
             this.addLongTermLiabilitiyButton = new System.Windows.Forms.Button();
             this.timeLabel = new System.Windows.Forms.Label();
             this.timeTimer = new System.Windows.Forms.Timer(this.components);
+            this.dateLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // line2Label
@@ -308,6 +309,7 @@
             this.deleteButton.TabIndex = 72;
             this.deleteButton.Text = "Delete";
             this.deleteButton.UseVisualStyleBackColor = false;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // printButton
             // 
@@ -342,6 +344,7 @@
             this.clearButton.TabIndex = 74;
             this.clearButton.Text = "Clear";
             this.clearButton.UseVisualStyleBackColor = false;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // businessNameLabel
             // 
@@ -717,11 +720,22 @@
             this.timeTimer.Enabled = true;
             this.timeTimer.Tick += new System.EventHandler(this.timeTimer_Tick);
             // 
+            // dateLabel
+            // 
+            this.dateLabel.AutoSize = true;
+            this.dateLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(130)))), ((int)(((byte)(50)))));
+            this.dateLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(130)))), ((int)(((byte)(50)))));
+            this.dateLabel.Location = new System.Drawing.Point(180, 75);
+            this.dateLabel.Name = "dateLabel";
+            this.dateLabel.Size = new System.Drawing.Size(0, 25);
+            this.dateLabel.TabIndex = 121;
+            // 
             // BalanceSheetInformationScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.dateLabel);
             this.Controls.Add(this.timeLabel);
             this.Controls.Add(this.longTermLiabilitiesAccountInformationLabel);
             this.Controls.Add(this.removeLongTermLiabilitiesAccountAmountTextBox);
@@ -785,6 +799,7 @@
             this.Controls.Add(this.sidebarLabel);
             this.Name = "BalanceSheetInformationScreen";
             this.Size = new System.Drawing.Size(1400, 1000);
+            this.Load += new System.EventHandler(this.BalanceSheetInformationScreen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -854,5 +869,6 @@
         private System.Windows.Forms.Button addLongTermLiabilitiyButton;
         private System.Windows.Forms.Label timeLabel;
         private System.Windows.Forms.Timer timeTimer;
+        private System.Windows.Forms.Label dateLabel;
     }
 }
