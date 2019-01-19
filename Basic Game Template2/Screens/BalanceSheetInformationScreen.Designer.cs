@@ -56,7 +56,7 @@
             this.currentLiabilitiesLabel = new System.Windows.Forms.Label();
             this.addCurrentLiabilityButton = new System.Windows.Forms.Button();
             this.longTermLiabilitiesLabel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.longTermLiabilitiesButton = new System.Windows.Forms.Button();
             this.equityLabel = new System.Windows.Forms.Label();
             this.beginningOfPeriodLabel = new System.Windows.Forms.Label();
             this.netIncomeLabel = new System.Windows.Forms.Label();
@@ -64,6 +64,12 @@
             this.beginningOfThePeriodTextBox = new System.Windows.Forms.TextBox();
             this.netIncomeTextBox = new System.Windows.Forms.TextBox();
             this.drawingTextBox = new System.Windows.Forms.TextBox();
+            this.removeCurrentAssetButton = new System.Windows.Forms.Button();
+            this.addCurrentAssetsAccountNameTextBox = new System.Windows.Forms.TextBox();
+            this.addCurrentAssetsAccountAmountTextBox = new System.Windows.Forms.TextBox();
+            this.removeCurrentAssetsAccountNameTextBox = new System.Windows.Forms.TextBox();
+            this.currentAssetsAccountInformationLabel = new System.Windows.Forms.Label();
+            this.removeCurrentAssetsAccountAmountTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // line2Label
@@ -241,7 +247,7 @@
             // currentAssetsLabel
             // 
             this.currentAssetsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.875F);
-            this.currentAssetsLabel.Location = new System.Drawing.Point(431, 363);
+            this.currentAssetsLabel.Location = new System.Drawing.Point(431, 253);
             this.currentAssetsLabel.Name = "currentAssetsLabel";
             this.currentAssetsLabel.Size = new System.Drawing.Size(233, 42);
             this.currentAssetsLabel.TabIndex = 57;
@@ -330,7 +336,6 @@
             this.businessNameTextBox.Name = "businessNameTextBox";
             this.businessNameTextBox.Size = new System.Drawing.Size(270, 31);
             this.businessNameTextBox.TabIndex = 76;
-            this.businessNameTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // balanceSheetDateLabel
             // 
@@ -352,7 +357,7 @@
             // fixedAssetsLabel
             // 
             this.fixedAssetsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.875F);
-            this.fixedAssetsLabel.Location = new System.Drawing.Point(431, 647);
+            this.fixedAssetsLabel.Location = new System.Drawing.Point(431, 578);
             this.fixedAssetsLabel.Name = "fixedAssetsLabel";
             this.fixedAssetsLabel.Size = new System.Drawing.Size(233, 42);
             this.fixedAssetsLabel.TabIndex = 79;
@@ -363,12 +368,13 @@
             // 
             this.addCurrentAssetButton.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.addCurrentAssetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F);
-            this.addCurrentAssetButton.Location = new System.Drawing.Point(289, 410);
+            this.addCurrentAssetButton.Location = new System.Drawing.Point(246, 295);
             this.addCurrentAssetButton.Name = "addCurrentAssetButton";
-            this.addCurrentAssetButton.Size = new System.Drawing.Size(539, 49);
+            this.addCurrentAssetButton.Size = new System.Drawing.Size(70, 49);
             this.addCurrentAssetButton.TabIndex = 80;
             this.addCurrentAssetButton.Text = "+";
             this.addCurrentAssetButton.UseVisualStyleBackColor = false;
+            this.addCurrentAssetButton.Click += new System.EventHandler(this.addCurrentAssetButton_Click);
             // 
             // addFixedAssetButton
             // 
@@ -404,27 +410,27 @@
             // longTermLiabilitiesLabel
             // 
             this.longTermLiabilitiesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.875F);
-            this.longTermLiabilitiesLabel.Location = new System.Drawing.Point(962, 363);
+            this.longTermLiabilitiesLabel.Location = new System.Drawing.Point(958, 488);
             this.longTermLiabilitiesLabel.Name = "longTermLiabilitiesLabel";
             this.longTermLiabilitiesLabel.Size = new System.Drawing.Size(318, 42);
             this.longTermLiabilitiesLabel.TabIndex = 84;
             this.longTermLiabilitiesLabel.Text = "Long-Term Liabilities";
             // 
-            // button1
+            // longTermLiabilitiesButton
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F);
-            this.button1.Location = new System.Drawing.Point(858, 410);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(539, 49);
-            this.button1.TabIndex = 85;
-            this.button1.Text = "+";
-            this.button1.UseVisualStyleBackColor = false;
+            this.longTermLiabilitiesButton.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.longTermLiabilitiesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F);
+            this.longTermLiabilitiesButton.Location = new System.Drawing.Point(857, 537);
+            this.longTermLiabilitiesButton.Name = "longTermLiabilitiesButton";
+            this.longTermLiabilitiesButton.Size = new System.Drawing.Size(539, 49);
+            this.longTermLiabilitiesButton.TabIndex = 85;
+            this.longTermLiabilitiesButton.Text = "+";
+            this.longTermLiabilitiesButton.UseVisualStyleBackColor = false;
             // 
             // equityLabel
             // 
             this.equityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.875F);
-            this.equityLabel.Location = new System.Drawing.Point(1069, 639);
+            this.equityLabel.Location = new System.Drawing.Point(1074, 751);
             this.equityLabel.Name = "equityLabel";
             this.equityLabel.Size = new System.Drawing.Size(118, 42);
             this.equityLabel.TabIndex = 86;
@@ -433,7 +439,7 @@
             // beginningOfPeriodLabel
             // 
             this.beginningOfPeriodLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.875F);
-            this.beginningOfPeriodLabel.Location = new System.Drawing.Point(851, 684);
+            this.beginningOfPeriodLabel.Location = new System.Drawing.Point(851, 799);
             this.beginningOfPeriodLabel.Name = "beginningOfPeriodLabel";
             this.beginningOfPeriodLabel.Size = new System.Drawing.Size(409, 42);
             this.beginningOfPeriodLabel.TabIndex = 87;
@@ -442,7 +448,7 @@
             // netIncomeLabel
             // 
             this.netIncomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.875F);
-            this.netIncomeLabel.Location = new System.Drawing.Point(852, 720);
+            this.netIncomeLabel.Location = new System.Drawing.Point(852, 841);
             this.netIncomeLabel.Name = "netIncomeLabel";
             this.netIncomeLabel.Size = new System.Drawing.Size(409, 42);
             this.netIncomeLabel.TabIndex = 88;
@@ -451,7 +457,7 @@
             // drawingsLabel
             // 
             this.drawingsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.875F);
-            this.drawingsLabel.Location = new System.Drawing.Point(851, 762);
+            this.drawingsLabel.Location = new System.Drawing.Point(852, 883);
             this.drawingsLabel.Name = "drawingsLabel";
             this.drawingsLabel.Size = new System.Drawing.Size(409, 42);
             this.drawingsLabel.TabIndex = 89;
@@ -459,7 +465,7 @@
             // 
             // beginningOfThePeriodTextBox
             // 
-            this.beginningOfThePeriodTextBox.Location = new System.Drawing.Point(1241, 686);
+            this.beginningOfThePeriodTextBox.Location = new System.Drawing.Point(1240, 799);
             this.beginningOfThePeriodTextBox.Name = "beginningOfThePeriodTextBox";
             this.beginningOfThePeriodTextBox.Size = new System.Drawing.Size(156, 31);
             this.beginningOfThePeriodTextBox.TabIndex = 90;
@@ -467,7 +473,7 @@
             // 
             // netIncomeTextBox
             // 
-            this.netIncomeTextBox.Location = new System.Drawing.Point(1241, 731);
+            this.netIncomeTextBox.Location = new System.Drawing.Point(1240, 843);
             this.netIncomeTextBox.Name = "netIncomeTextBox";
             this.netIncomeTextBox.Size = new System.Drawing.Size(156, 31);
             this.netIncomeTextBox.TabIndex = 91;
@@ -475,17 +481,71 @@
             // 
             // drawingTextBox
             // 
-            this.drawingTextBox.Location = new System.Drawing.Point(1241, 773);
+            this.drawingTextBox.Location = new System.Drawing.Point(1240, 885);
             this.drawingTextBox.Name = "drawingTextBox";
             this.drawingTextBox.Size = new System.Drawing.Size(156, 31);
             this.drawingTextBox.TabIndex = 92;
             this.drawingTextBox.Text = "$";
+            // 
+            // removeCurrentAssetButton
+            // 
+            this.removeCurrentAssetButton.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.removeCurrentAssetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F);
+            this.removeCurrentAssetButton.Location = new System.Drawing.Point(246, 353);
+            this.removeCurrentAssetButton.Name = "removeCurrentAssetButton";
+            this.removeCurrentAssetButton.Size = new System.Drawing.Size(70, 49);
+            this.removeCurrentAssetButton.TabIndex = 93;
+            this.removeCurrentAssetButton.Text = "-";
+            this.removeCurrentAssetButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.removeCurrentAssetButton.UseVisualStyleBackColor = false;
+            this.removeCurrentAssetButton.Click += new System.EventHandler(this.removeCurrentAssetButton_Click);
+            // 
+            // addCurrentAssetsAccountNameTextBox
+            // 
+            this.addCurrentAssetsAccountNameTextBox.Location = new System.Drawing.Point(322, 310);
+            this.addCurrentAssetsAccountNameTextBox.Name = "addCurrentAssetsAccountNameTextBox";
+            this.addCurrentAssetsAccountNameTextBox.Size = new System.Drawing.Size(337, 31);
+            this.addCurrentAssetsAccountNameTextBox.TabIndex = 94;
+            // 
+            // addCurrentAssetsAccountAmountTextBox
+            // 
+            this.addCurrentAssetsAccountAmountTextBox.Location = new System.Drawing.Point(670, 310);
+            this.addCurrentAssetsAccountAmountTextBox.Name = "addCurrentAssetsAccountAmountTextBox";
+            this.addCurrentAssetsAccountAmountTextBox.Size = new System.Drawing.Size(158, 31);
+            this.addCurrentAssetsAccountAmountTextBox.TabIndex = 95;
+            // 
+            // removeCurrentAssetsAccountNameTextBox
+            // 
+            this.removeCurrentAssetsAccountNameTextBox.Location = new System.Drawing.Point(322, 369);
+            this.removeCurrentAssetsAccountNameTextBox.Name = "removeCurrentAssetsAccountNameTextBox";
+            this.removeCurrentAssetsAccountNameTextBox.Size = new System.Drawing.Size(337, 31);
+            this.removeCurrentAssetsAccountNameTextBox.TabIndex = 96;
+            // 
+            // currentAssetsAccountInformationLabel
+            // 
+            this.currentAssetsAccountInformationLabel.Location = new System.Drawing.Point(322, 403);
+            this.currentAssetsAccountInformationLabel.Name = "currentAssetsAccountInformationLabel";
+            this.currentAssetsAccountInformationLabel.Size = new System.Drawing.Size(506, 183);
+            this.currentAssetsAccountInformationLabel.TabIndex = 97;
+            // 
+            // removeCurrentAssetsAccountAmountTextBox
+            // 
+            this.removeCurrentAssetsAccountAmountTextBox.Location = new System.Drawing.Point(670, 371);
+            this.removeCurrentAssetsAccountAmountTextBox.Name = "removeCurrentAssetsAccountAmountTextBox";
+            this.removeCurrentAssetsAccountAmountTextBox.Size = new System.Drawing.Size(158, 31);
+            this.removeCurrentAssetsAccountAmountTextBox.TabIndex = 98;
             // 
             // BalanceSheetInformationScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.removeCurrentAssetsAccountAmountTextBox);
+            this.Controls.Add(this.currentAssetsAccountInformationLabel);
+            this.Controls.Add(this.removeCurrentAssetsAccountNameTextBox);
+            this.Controls.Add(this.addCurrentAssetsAccountAmountTextBox);
+            this.Controls.Add(this.addCurrentAssetsAccountNameTextBox);
+            this.Controls.Add(this.removeCurrentAssetButton);
             this.Controls.Add(this.drawingTextBox);
             this.Controls.Add(this.netIncomeTextBox);
             this.Controls.Add(this.beginningOfThePeriodTextBox);
@@ -493,7 +553,7 @@
             this.Controls.Add(this.netIncomeLabel);
             this.Controls.Add(this.beginningOfPeriodLabel);
             this.Controls.Add(this.equityLabel);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.longTermLiabilitiesButton);
             this.Controls.Add(this.longTermLiabilitiesLabel);
             this.Controls.Add(this.addCurrentLiabilityButton);
             this.Controls.Add(this.currentLiabilitiesLabel);
@@ -559,7 +619,7 @@
         private System.Windows.Forms.Label currentLiabilitiesLabel;
         private System.Windows.Forms.Button addCurrentLiabilityButton;
         private System.Windows.Forms.Label longTermLiabilitiesLabel;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button longTermLiabilitiesButton;
         private System.Windows.Forms.Label equityLabel;
         private System.Windows.Forms.Label beginningOfPeriodLabel;
         private System.Windows.Forms.Label netIncomeLabel;
@@ -567,5 +627,11 @@
         private System.Windows.Forms.TextBox beginningOfThePeriodTextBox;
         private System.Windows.Forms.TextBox netIncomeTextBox;
         private System.Windows.Forms.TextBox drawingTextBox;
+        private System.Windows.Forms.Button removeCurrentAssetButton;
+        private System.Windows.Forms.TextBox addCurrentAssetsAccountNameTextBox;
+        private System.Windows.Forms.TextBox addCurrentAssetsAccountAmountTextBox;
+        private System.Windows.Forms.TextBox removeCurrentAssetsAccountNameTextBox;
+        private System.Windows.Forms.Label currentAssetsAccountInformationLabel;
+        private System.Windows.Forms.TextBox removeCurrentAssetsAccountAmountTextBox;
     }
 }

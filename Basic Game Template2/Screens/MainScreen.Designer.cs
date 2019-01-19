@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.closeButton = new System.Windows.Forms.Button();
             this.titleLabel = new System.Windows.Forms.Label();
             this.registeredLabel = new System.Windows.Forms.Label();
@@ -39,6 +40,8 @@
             this.line1Label = new System.Windows.Forms.Label();
             this.line2Label = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.timeLabel = new System.Windows.Forms.Label();
+            this.timeTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // closeButton
@@ -69,7 +72,6 @@
             this.titleLabel.TabIndex = 13;
             this.titleLabel.Text = "Balance Sheet Generator";
             this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.titleLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // registeredLabel
             // 
@@ -89,7 +91,6 @@
             this.sidebarLabel.Name = "sidebarLabel";
             this.sidebarLabel.Size = new System.Drawing.Size(240, 850);
             this.sidebarLabel.TabIndex = 17;
-            this.sidebarLabel.Click += new System.EventHandler(this.sidebarLabel_Click);
             // 
             // helpButton
             // 
@@ -143,7 +144,6 @@
             this.homeButton.TabIndex = 20;
             this.homeButton.Text = "Home";
             this.homeButton.UseVisualStyleBackColor = false;
-            this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
             // 
             // newButton
             // 
@@ -187,11 +187,28 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // timeLabel
+            // 
+            this.timeLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(130)))), ((int)(((byte)(50)))));
+            this.timeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F);
+            this.timeLabel.ForeColor = System.Drawing.Color.White;
+            this.timeLabel.Location = new System.Drawing.Point(1204, 0);
+            this.timeLabel.Name = "timeLabel";
+            this.timeLabel.Size = new System.Drawing.Size(196, 51);
+            this.timeLabel.TabIndex = 25;
+            this.timeLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // timeTimer
+            // 
+            this.timeTimer.Enabled = true;
+            this.timeTimer.Tick += new System.EventHandler(this.timeTimer_Tick);
+            // 
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.timeLabel);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.line2Label);
             this.Controls.Add(this.line1Label);
@@ -205,7 +222,6 @@
             this.Controls.Add(this.sidebarLabel);
             this.Name = "MainScreen";
             this.Size = new System.Drawing.Size(1400, 1000);
-            this.Load += new System.EventHandler(this.UserControl1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,5 +239,7 @@
         private System.Windows.Forms.Label line1Label;
         private System.Windows.Forms.Label line2Label;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label timeLabel;
+        private System.Windows.Forms.Timer timeTimer;
     }
 }

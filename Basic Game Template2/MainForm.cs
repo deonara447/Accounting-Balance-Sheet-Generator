@@ -14,6 +14,7 @@ namespace Basic_Game_Template2
     public partial class MainForm : Form
     {
         bool fullScreen = false;  // true: program runs fullscreen || false: program runs in window
+        public static int testInt;
 
         public MainForm()
         {

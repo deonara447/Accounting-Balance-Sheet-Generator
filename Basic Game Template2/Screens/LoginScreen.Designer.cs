@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label3 = new System.Windows.Forms.Label();
+            this.progressInformationLabel = new System.Windows.Forms.Label();
             this.loadingbarLabel = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.progressBox = new System.Windows.Forms.Label();
+            this.registeredLabel = new System.Windows.Forms.Label();
+            this.titleLabel = new System.Windows.Forms.Label();
             this.LoginButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label3
+            // progressInformationLabel
             // 
-            this.label3.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label3.Location = new System.Drawing.Point(496, 613);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(369, 33);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Logging In...";
-            this.label3.Visible = false;
+            this.progressInformationLabel.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.progressInformationLabel.Location = new System.Drawing.Point(496, 613);
+            this.progressInformationLabel.Name = "progressInformationLabel";
+            this.progressInformationLabel.Size = new System.Drawing.Size(369, 33);
+            this.progressInformationLabel.TabIndex = 16;
+            this.progressInformationLabel.Text = "Logging In...";
+            this.progressInformationLabel.Visible = false;
             // 
             // loadingbarLabel
             // 
@@ -55,34 +55,34 @@
             this.loadingbarLabel.TabIndex = 14;
             this.loadingbarLabel.Visible = false;
             // 
-            // label4
+            // progressBox
             // 
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label4.Location = new System.Drawing.Point(435, 480);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(500, 49);
-            this.label4.TabIndex = 15;
-            this.label4.Visible = false;
+            this.progressBox.BackColor = System.Drawing.Color.White;
+            this.progressBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.progressBox.Location = new System.Drawing.Point(435, 480);
+            this.progressBox.Name = "progressBox";
+            this.progressBox.Size = new System.Drawing.Size(500, 49);
+            this.progressBox.TabIndex = 15;
+            this.progressBox.Visible = false;
             // 
-            // label2
+            // registeredLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.875F);
-            this.label2.Location = new System.Drawing.Point(1144, 300);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 51);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "®️";
+            this.registeredLabel.AutoSize = true;
+            this.registeredLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.875F);
+            this.registeredLabel.Location = new System.Drawing.Point(1144, 300);
+            this.registeredLabel.Name = "registeredLabel";
+            this.registeredLabel.Size = new System.Drawing.Size(54, 51);
+            this.registeredLabel.TabIndex = 13;
+            this.registeredLabel.Text = "®️";
             // 
-            // label1
+            // titleLabel
             // 
-            this.label1.Font = new System.Drawing.Font("Constantia", 30.875F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(175, 315);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1007, 191);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Balance Sheet Generator";
+            this.titleLabel.Font = new System.Drawing.Font("Constantia", 30.875F, System.Drawing.FontStyle.Bold);
+            this.titleLabel.Location = new System.Drawing.Point(175, 315);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(1007, 191);
+            this.titleLabel.TabIndex = 12;
+            this.titleLabel.Text = "Balance Sheet Generator";
             // 
             // LoginButton
             // 
@@ -107,10 +107,11 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.loadingbarLabel);
             this.Controls.Add(this.LoginButton);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.progressInformationLabel);
+            this.Controls.Add(this.progressBox);
+            this.Controls.Add(this.registeredLabel);
+            this.Controls.Add(this.titleLabel);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "LoginScreen";
             this.Size = new System.Drawing.Size(1400, 1000);
             this.ResumeLayout(false);
@@ -120,11 +121,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label progressInformationLabel;
         private System.Windows.Forms.Label loadingbarLabel;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label progressBox;
+        private System.Windows.Forms.Label registeredLabel;
+        private System.Windows.Forms.Label titleLabel;
         private System.Windows.Forms.Button LoginButton;
     }
 }

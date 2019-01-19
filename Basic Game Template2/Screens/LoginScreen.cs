@@ -21,8 +21,8 @@ namespace Basic_Game_Template2
         private void button1_Click(object sender, EventArgs e)
         {
             LoginButton.Visible = false;
-            label3.Visible = true;
-            label4.Visible = true;
+            progressInformationLabel.Visible = true;
+            progressBox.Visible = true;
             loadingbarLabel.Visible = true;
 
             //
@@ -35,12 +35,12 @@ namespace Basic_Game_Template2
                 Refresh();
                 if (i==151)
                 {
-                    label3.Text = "Initializing Components...";
+                    progressInformationLabel.Text = "Initializing Components...";
                 }
 
                 if (i==325)
                 {
-                    label3.Text = "Retrieving Data...";
+                    progressInformationLabel.Text = "Retrieving Data...";
                 }
 
                 if (i == 461)

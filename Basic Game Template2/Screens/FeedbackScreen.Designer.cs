@@ -42,7 +42,7 @@
             this.terribleButton = new System.Windows.Forms.Button();
             this.mediocreButton = new System.Windows.Forms.Button();
             this.excellentButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.suggestionsLabel = new System.Windows.Forms.Label();
             this.feedbackTextBox = new System.Windows.Forms.TextBox();
             this.submitButton = new System.Windows.Forms.Button();
             this.appreciateLabel = new System.Windows.Forms.Label();
@@ -221,16 +221,16 @@
             this.excellentButton.Text = "Excellent";
             this.excellentButton.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // suggestionsLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.875F);
-            this.label1.Location = new System.Drawing.Point(355, 376);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(930, 37);
-            this.label1.TabIndex = 48;
-            this.label1.Text = "Do you have any suggestions to make this program even better?";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.suggestionsLabel.AutoSize = true;
+            this.suggestionsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.875F);
+            this.suggestionsLabel.Location = new System.Drawing.Point(355, 376);
+            this.suggestionsLabel.Name = "suggestionsLabel";
+            this.suggestionsLabel.Size = new System.Drawing.Size(930, 37);
+            this.suggestionsLabel.TabIndex = 48;
+            this.suggestionsLabel.Text = "Do you have any suggestions to make this program even better?";
+            this.suggestionsLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // feedbackTextBox
             // 
@@ -280,7 +280,7 @@
             this.Controls.Add(this.appreciateLabel);
             this.Controls.Add(this.submitButton);
             this.Controls.Add(this.feedbackTextBox);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.suggestionsLabel);
             this.Controls.Add(this.excellentButton);
             this.Controls.Add(this.mediocreButton);
             this.Controls.Add(this.terribleButton);
@@ -318,7 +318,7 @@
         private System.Windows.Forms.Button terribleButton;
         private System.Windows.Forms.Button mediocreButton;
         private System.Windows.Forms.Button excellentButton;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label suggestionsLabel;
         private System.Windows.Forms.TextBox feedbackTextBox;
         private System.Windows.Forms.Button submitButton;
         private System.Windows.Forms.Label appreciateLabel;

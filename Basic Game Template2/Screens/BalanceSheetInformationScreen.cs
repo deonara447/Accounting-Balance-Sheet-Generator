@@ -12,8 +12,11 @@ namespace Basic_Game_Template2
 {
     public partial class BalanceSheetInformationScreen : UserControl
     {
+        List<double> friendName = new List<double>();
+        List<string> freindName = new List<string>();
         public BalanceSheetInformationScreen()
         {
+
             InitializeComponent();
         }
 
@@ -47,9 +50,32 @@ namespace Basic_Game_Template2
             MainForm.ChangeScreen(this, "BalanceSheetTemplateScreen");
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void addCurrentAssetButton_Click(object sender, EventArgs e)
         {
+            
+            friendName.Add(Convert.ToDouble(addCurrentAssetsAccountAmountTextBox.Text));
+            
+            freindName.Add(addCurrentAssetsAccountNameTextBox.Text);
 
+            currentAssetsAccountInformationLabel.Text = "";
+            for (int i = 0; i < friendName.Count(); i++)
+            {
+                
+                currentAssetsAccountInformationLabel.Text += freindName[i] + " $" + friendName[i] + "\n";
+            }
+
+        }
+
+        private void removeCurrentAssetButton_Click(object sender, EventArgs e)
+        {
+            friendName.Remove(Convert.ToDouble(removeCurrentAssetsAccountAmountTextBox.Text));
+            freindName.Remove(Convert.ToString(removeCurrentAssetsAccountNameTextBox.Text));
+            currentAssetsAccountInformationLabel.Text = "";
+            for (int i = 0; i < friendName.Count(); i++)
+            {
+                
+                currentAssetsAccountInformationLabel.Text += freindName[i] + " $" + friendName[i] + "\n";
+            }
         }
     }
 }
