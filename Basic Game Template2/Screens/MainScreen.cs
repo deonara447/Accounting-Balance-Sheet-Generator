@@ -38,9 +38,12 @@ namespace Basic_Game_Template2
             MainForm.currentLiabilityNames.Clear();
             MainForm.longTermLiabilityAmounts.Clear();
             MainForm.longTermLiabilityNames.Clear();
-            MainForm.ChangeScreen(this, "BusinessInformationScreen");
 
             MainForm.reset = true;
+
+            MainForm.ChangeScreen(this, "BalanceSheetInformationScreen");
+
+            
         }
 
         private void closeButton_Click(object sender, EventArgs e)

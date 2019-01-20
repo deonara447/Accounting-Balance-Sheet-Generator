@@ -127,10 +127,12 @@ namespace Basic_Game_Template2
         {
             businessNameLabel.Text = MainForm.businessName;
             endOfMonthLabel.Text = MainForm.fiscalMonthEnd;
-            beginningEquityAmountLabel.Text = MainForm.beginningOfPeriod + "";
-            netIncomeAmountLabel.Text = MainForm.netIncome + "";
-            drawingsAmountLabel.Text = MainForm.drawings + "";
-            changeInEquityAmount.Text = MainForm.netIncome - MainForm.drawings + "";
+            beginningEquityAmountLabel.Text = MainForm.beginningOfPeriod.ToString("0.#0");
+            netIncomeAmountLabel.Text = MainForm.netIncome.ToString("0.#0");
+            drawingsAmountLabel.Text = MainForm.drawings.ToString("0.#0");
+            changeInEquityAmount.Text = (MainForm.netIncome - MainForm.drawings).ToString("0.#0") + "";
+            endEquityAmountLabel.Text = (MainForm.beginningOfPeriod + MainForm.netIncome - MainForm.drawings).ToString("0.#0");
+            totalLiabilitiesAndEquityAmountLabel.Text = (MainForm.beginningOfPeriod + MainForm.netIncome - MainForm.drawings + MainForm.longTermLiabilityAmounts.Sum() + MainForm.currentLiabilityAmounts.Sum()).ToString("0.#0");
 
             for (int i = 0; i < MainForm.currentAssetNames.Count(); i++)
             {
@@ -142,9 +144,9 @@ namespace Basic_Game_Template2
             for (int i = 0; i < MainForm.currentAssetAmounts.Count(); i++)
             {
 
-                currentAssetAmountsLabel.Text += MainForm.currentAssetAmounts[i].ToString("#.#0") + "\n";
+                currentAssetAmountsLabel.Text += MainForm.currentAssetAmounts[i].ToString("0.#0") + "\n";
             }
-            currentAssetAmountsLabel.Text += MainForm.currentAssetAmounts.Sum().ToString("#.#0");
+            currentAssetAmountsLabel.Text += MainForm.currentAssetAmounts.Sum().ToString("0.#0");
 
             for (int i = 0; i < MainForm.fixedAssetNames.Count(); i++)
             {
@@ -156,11 +158,11 @@ namespace Basic_Game_Template2
             for (int i = 0; i < MainForm.fixedAssetAmounts.Count(); i++)
             {
 
-                fixedAssetAmountsLabel.Text += MainForm.fixedAssetAmounts[i].ToString("#.#0") + "\n";
+                fixedAssetAmountsLabel.Text += MainForm.fixedAssetAmounts[i].ToString("0.#0") + "\n";
             }
-            fixedAssetAmountsLabel.Text += MainForm.fixedAssetAmounts.Sum().ToString("#.#0");
+            fixedAssetAmountsLabel.Text += MainForm.fixedAssetAmounts.Sum().ToString("0.#0");
 
-            TotalAssetAmountLabel.Text += MainForm.fixedAssetAmounts.Sum() + MainForm.currentAssetAmounts.Sum();
+            TotalAssetAmountLabel.Text += (MainForm.fixedAssetAmounts.Sum() + MainForm.currentAssetAmounts.Sum()).ToString("0.#0");
 
             for (int i = 0; i < MainForm.currentLiabilityNames.Count(); i++)
             {
@@ -172,9 +174,9 @@ namespace Basic_Game_Template2
             for (int i = 0; i < MainForm.currentLiabilityAmounts.Count(); i++)
             {
 
-                currentLiabilityAmountsLabel.Text += MainForm.currentLiabilityAmounts[i].ToString("#.#0") + "\n";
+                currentLiabilityAmountsLabel.Text += MainForm.currentLiabilityAmounts[i].ToString("0.#0") + "\n";
             }
-            currentLiabilityAmountsLabel.Text += MainForm.currentLiabilityAmounts.Sum().ToString("#.#0");
+            currentLiabilityAmountsLabel.Text += MainForm.currentLiabilityAmounts.Sum().ToString("0.#0");
 
 
             for (int i = 0; i < MainForm.longTermLiabilityNames.Count(); i++)
@@ -187,11 +189,11 @@ namespace Basic_Game_Template2
             for (int i = 0; i < MainForm.longTermLiabilityAmounts.Count(); i++)
             {
 
-                longTermLiabilityAmountsLabel.Text += MainForm.longTermLiabilityAmounts[i].ToString("#.#0") + "\n";
+                longTermLiabilityAmountsLabel.Text += MainForm.longTermLiabilityAmounts[i].ToString("0.#0") + "\n";
             }
-            longTermLiabilityAmountsLabel.Text += MainForm.longTermLiabilityAmounts.Sum().ToString("#.#0");
+            longTermLiabilityAmountsLabel.Text += MainForm.longTermLiabilityAmounts.Sum().ToString("0.#0");
 
-            totalLiabilitiesAmountLabel.Text += MainForm.longTermLiabilityAmounts.Sum() + MainForm.currentLiabilityAmounts.Sum();
+            totalLiabilitiesAmountLabel.Text += (MainForm.longTermLiabilityAmounts.Sum() + MainForm.currentLiabilityAmounts.Sum()).ToString("0.#0");
 
             
 
