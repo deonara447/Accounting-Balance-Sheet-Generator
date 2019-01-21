@@ -44,22 +44,14 @@ namespace Basic_Game_Template2
 
             businessNameTextBox.Text = "";
             fiscalMonthEndTextBox.Text = "(Month Day, Year)";
-            addCurrentAssetsAccountAmountTextBox.Text = "";
-            removeCurrentAssetsAccountAmountTextBox.Text = "";
-            addCurrentAssetsAccountNameTextBox.Text = "";
-            removeCurrentAssetsAccountNameTextBox.Text = "";
-            addFixedAssetsAccountAmountTextBox.Text = "";
-            removeFixedAssetsAccountAmountTextBox.Text = "";
-            addFixedAssetsAccountNameTextBox.Text = "";
-            removeFixedAssetsAccountNameTextBox.Text = "";
-            addCurrentLiabilitiesAccountAmountTextBox.Text = "";
-            removeCurrentLiabilitiesAccountAmountTextBox.Text = "";
-            addCurrentLiabilitiesAccountNameTextBox.Text = "";
-            removeCurrentLiabilitiesAccountNameTextBox.Text = "";
-            addLongTermLiabilitiesAccountAmountTextBox.Text = "";
-            removeLongTermLiabilitiesAccountAmountTextBox.Text = "";
-            addLongTermLiabilitiesAccountNameTextBox.Text = "";
-            removeLongTermLiabilitiesAccountNameTextBox.Text = "";
+            currentAssetsAccountAmountTextBox.Text = "";
+            currentAssetsAccountNameTextBox.Text = "";
+            fixedAssetsAccountAmountTextBox.Text = "";
+            fixedAssetsAccountNameTextBox.Text = "";
+            currentLiabilitiesAccountAmountTextBox.Text = "";
+            currentLiabilitiesAccountNameTextBox.Text = "";
+            longTermLiabilitiesAccountAmountTextBox.Text = "";
+            longTermLiabilitiesAccountNameTextBox.Text = "";
             beginningOfThePeriodTextBox.Text = "";
             netIncomeTextBox.Text = "";
             drawingsTextBox.Text = "";
@@ -87,103 +79,252 @@ namespace Basic_Game_Template2
 
         private void addCurrentAssetButton_Click(object sender, EventArgs e)
         {
-            
-            MainForm.currentAssetAmounts.Add(Convert.ToDouble(addCurrentAssetsAccountAmountTextBox.Text));
-
-            MainForm.currentAssetNames.Add(addCurrentAssetsAccountNameTextBox.Text);
-
-            currentAssetsAccountInformationLabel.Text = "";
-            for (int i = 0; i < MainForm.currentAssetAmounts.Count(); i++)
+            try
             {
-                
-                currentAssetsAccountInformationLabel.Text += MainForm.currentAssetNames[i] + " $" + MainForm.currentAssetAmounts[i] + "\n";
+                if (currentAssetsAccountNameTextBox.Text == "" || currentAssetsAccountAmountTextBox.Text == "")
+                {
+                    MessageBox.Show("All required textboxes must be filled in");
+                }
+                else
+                {
+                    if (MainForm.currentAssetAmounts.Count() == 2)
+                    {
+                        MessageBox.Show("You must download the PRO version in order to create more than two accounts in this section");
+                    }
+                    else
+                    {
+                        MainForm.currentAssetAmounts.Add(Convert.ToDouble(currentAssetsAccountAmountTextBox.Text));
+
+                        MainForm.currentAssetNames.Add(currentAssetsAccountNameTextBox.Text);
+
+                        currentAssetsAccountInformationLabel.Text = "";
+                        for (int i = 0; i < MainForm.currentAssetAmounts.Count(); i++)
+                        {
+
+                            currentAssetsAccountInformationLabel.Text += MainForm.currentAssetNames[i] + " " + MainForm.currentAssetAmounts[i].ToString("C") + "\n";
+                        }
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Account amount input must be a numerical value");
             }
 
         }
 
         private void removeCurrentAssetButton_Click(object sender, EventArgs e)
         {
-            MainForm.currentAssetAmounts.Remove(Convert.ToDouble(removeCurrentAssetsAccountAmountTextBox.Text));
-            MainForm.currentAssetNames.Remove(Convert.ToString(removeCurrentAssetsAccountNameTextBox.Text));
-            currentAssetsAccountInformationLabel.Text = "";
-            for (int i = 0; i < MainForm.currentAssetAmounts.Count(); i++)
+            try
             {
-                currentAssetsAccountInformationLabel.Text += MainForm.currentAssetNames[i] + " $" + MainForm.currentAssetAmounts[i] + "\n";
+                if (currentAssetsAccountNameTextBox.Text == "" || currentAssetsAccountAmountTextBox.Text == "")
+                {
+                    MessageBox.Show("All required textboxes must be filled in");
+                }
+                else
+                {
+
+                    MainForm.currentAssetAmounts.Remove(Convert.ToDouble(currentAssetsAccountAmountTextBox.Text));
+                    MainForm.currentAssetNames.Remove(Convert.ToString(currentAssetsAccountNameTextBox.Text));
+                    currentAssetsAccountInformationLabel.Text = "";
+                    for (int i = 0; i < MainForm.currentAssetAmounts.Count(); i++)
+                    {
+                        currentAssetsAccountInformationLabel.Text += MainForm.currentAssetNames[i] + " " + MainForm.currentAssetAmounts[i].ToString("C") + "\n";
+                    }
+                }
+
+            }
+            catch
+            {
+                MessageBox.Show("Account amount input must be a numerical value");
             }
         }
 
         private void addFixedAssetButton_Click(object sender, EventArgs e)
         {
-            MainForm.fixedAssetAmounts.Add(Convert.ToDouble(addFixedAssetsAccountAmountTextBox.Text));
+            try
+            {
+                if (fixedAssetsAccountNameTextBox.Text == "" || fixedAssetsAccountAmountTextBox.Text == "")
+                {
+                    MessageBox.Show("All required textboxes must be filled in");
+                }
+                else
+                {
+                    if (MainForm.fixedAssetAmounts.Count() == 2)
+                    {
+                        MessageBox.Show("You must download the PRO version in order to create more than two accounts in this section");
+                    }
+                    else
+                    {
+                        MainForm.fixedAssetAmounts.Add(Convert.ToDouble(fixedAssetsAccountAmountTextBox.Text));
 
-            MainForm.fixedAssetNames.Add(addFixedAssetsAccountNameTextBox.Text);
+            MainForm.fixedAssetNames.Add(fixedAssetsAccountNameTextBox.Text);
 
             fixedAssetsAccountInformationLabel.Text = "";
             for (int i = 0; i < MainForm.fixedAssetAmounts.Count(); i++)
             {
 
-                fixedAssetsAccountInformationLabel.Text += MainForm.fixedAssetNames[i] + " $" + MainForm.fixedAssetAmounts[i] + "\n";
+                fixedAssetsAccountInformationLabel.Text += MainForm.fixedAssetNames[i] + " " + MainForm.fixedAssetAmounts[i].ToString("C") + "\n";
             }
+                }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Account amount input must be a numerical value");
+            }
+
+
         }
+
 
         private void removeFixedAssetButton_Click(object sender, EventArgs e)
         {
-            MainForm.fixedAssetAmounts.Remove(Convert.ToDouble(removeFixedAssetsAccountAmountTextBox.Text));
-            MainForm.fixedAssetNames.Remove(Convert.ToString(removeFixedAssetsAccountNameTextBox.Text));
+            try
+            {
+                if (fixedAssetsAccountNameTextBox.Text == "" || fixedAssetsAccountAmountTextBox.Text == "")
+                {
+                    MessageBox.Show("All required textboxes must be filled in");
+                }
+                else
+                {
+                    MainForm.fixedAssetAmounts.Remove(Convert.ToDouble(fixedAssetsAccountAmountTextBox.Text));
+            MainForm.fixedAssetNames.Remove(Convert.ToString(fixedAssetsAccountNameTextBox.Text));
             fixedAssetsAccountInformationLabel.Text = "";
             for (int i = 0; i < MainForm.fixedAssetAmounts.Count(); i++)
             {
-                fixedAssetsAccountInformationLabel.Text += MainForm.fixedAssetNames[i] + " $" + MainForm.fixedAssetAmounts[i] + "\n";
+                fixedAssetsAccountInformationLabel.Text += MainForm.fixedAssetNames[i] + " " + MainForm.fixedAssetAmounts[i].ToString("C") + "\n";
+            }
+                }
+
+            }
+            catch
+            {
+                MessageBox.Show("Account amount input must be a numerical value");
             }
         }
 
         private void addCurrentLiabilityButton_Click(object sender, EventArgs e)
         {
-            MainForm.currentLiabilityAmounts.Add(Convert.ToDouble(addCurrentLiabilitiesAccountAmountTextBox.Text));
+            try
+            {
+                if (currentLiabilitiesAccountNameTextBox.Text == "" || currentLiabilitiesAccountAmountTextBox.Text == "")
+                {
+                    MessageBox.Show("All required textboxes must be filled in");
+                }
+                else
+                {
+                    if (MainForm.currentLiabilityAmounts.Count() == 2)
+                    {
+                        MessageBox.Show("You must download the PRO version in order to create more than two accounts in this section");
+                    }
+                    else
+                    {
+                        MainForm.currentLiabilityAmounts.Add(Convert.ToDouble(currentLiabilitiesAccountAmountTextBox.Text));
 
-            MainForm.currentLiabilityNames.Add(addCurrentLiabilitiesAccountNameTextBox.Text);
+            MainForm.currentLiabilityNames.Add(currentLiabilitiesAccountNameTextBox.Text);
 
             currentLiabilitiesAccountInformationLabel.Text = "";
             for (int i = 0; i < MainForm.currentLiabilityAmounts.Count(); i++)
             {
 
-                currentLiabilitiesAccountInformationLabel.Text += MainForm.currentLiabilityNames[i] + " $" + MainForm.currentLiabilityAmounts[i] + "\n";
+                currentLiabilitiesAccountInformationLabel.Text += MainForm.currentLiabilityNames[i] + " " + MainForm.currentLiabilityAmounts[i].ToString("C") + "\n";
+            }
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Account amount input must be a numerical value");
             }
         }
 
         private void removeCurrentLiabilityButton_Click(object sender, EventArgs e)
         {
-            MainForm.currentLiabilityAmounts.Remove(Convert.ToDouble(removeCurrentLiabilitiesAccountAmountTextBox.Text));
-            MainForm.currentLiabilityNames.Remove(Convert.ToString(removeCurrentLiabilitiesAccountNameTextBox.Text));
+            try
+            {
+                if (currentLiabilitiesAccountNameTextBox.Text == "" || currentLiabilitiesAccountAmountTextBox.Text == "")
+                {
+                    MessageBox.Show("All required textboxes must be filled in");
+                }
+                else
+                {
+                    MainForm.currentLiabilityAmounts.Remove(Convert.ToDouble(currentLiabilitiesAccountAmountTextBox.Text));
+            MainForm.currentLiabilityNames.Remove(Convert.ToString(currentLiabilitiesAccountNameTextBox.Text));
             currentLiabilitiesAccountInformationLabel.Text = "";
             for (int i = 0; i < MainForm.currentLiabilityAmounts.Count(); i++)
             {
-                currentLiabilitiesAccountInformationLabel.Text += MainForm.currentLiabilityNames[i] + " $" + MainForm.currentLiabilityAmounts[i] + "\n";
+                currentLiabilitiesAccountInformationLabel.Text += MainForm.currentLiabilityNames[i] + " " + MainForm.currentLiabilityAmounts[i].ToString("C") + "\n";
+            }
+                }
+
+            }
+            catch
+            {
+                MessageBox.Show("Account amount input must be a numerical value");
             }
         }
 
         private void addLongTermLiabilitiyButton_Click(object sender, EventArgs e)
         {
-            MainForm.longTermLiabilityAmounts.Add(Convert.ToDouble(addLongTermLiabilitiesAccountAmountTextBox.Text));
+            try
+            {
+                if (longTermLiabilitiesAccountNameTextBox.Text == "" || longTermLiabilitiesAccountAmountTextBox.Text == "")
+                {
+                    MessageBox.Show("All required textboxes must be filled in");
+                }
+                else
+                {
+                    if (MainForm.longTermLiabilityAmounts.Count() == 2)
+                    {
+                        MessageBox.Show("You must download the PRO version in order to create more than two accounts in this section");
+                    }
+                    else
+                    {
+                        MainForm.longTermLiabilityAmounts.Add(Convert.ToDouble(longTermLiabilitiesAccountAmountTextBox.Text));
 
-            MainForm.longTermLiabilityNames.Add(addLongTermLiabilitiesAccountNameTextBox.Text);
+                        MainForm.longTermLiabilityAmounts.Add(Convert.ToDouble(longTermLiabilitiesAccountAmountTextBox.Text));
+
+            MainForm.longTermLiabilityNames.Add(longTermLiabilitiesAccountNameTextBox.Text);
 
             longTermLiabilitiesAccountInformationLabel.Text = "";
             for (int i = 0; i < MainForm.longTermLiabilityAmounts.Count(); i++)
             {
 
-                longTermLiabilitiesAccountInformationLabel.Text += MainForm.longTermLiabilityNames[i] + " $" + MainForm.longTermLiabilityAmounts[i] + "\n";
+                longTermLiabilitiesAccountInformationLabel.Text += MainForm.longTermLiabilityNames[i] + " " + MainForm.longTermLiabilityAmounts[i].ToString("C") + "\n";
+            }
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Account amount input must be a numerical value");
             }
         }
 
         private void removeLongTermLiabilityButton_Click(object sender, EventArgs e)
         {
-            MainForm.longTermLiabilityAmounts.Remove(Convert.ToDouble(removeLongTermLiabilitiesAccountAmountTextBox.Text));
-            MainForm.longTermLiabilityNames.Remove(Convert.ToString(removeLongTermLiabilitiesAccountNameTextBox.Text));
+            try
+            {
+                if (longTermLiabilitiesAccountNameTextBox.Text == "" || longTermLiabilitiesAccountAmountTextBox.Text == "")
+                {
+                    MessageBox.Show("All required textboxes must be filled in");
+                }
+                else
+                {
+                    MainForm.longTermLiabilityAmounts.Remove(Convert.ToDouble(longTermLiabilitiesAccountAmountTextBox.Text));
+            MainForm.longTermLiabilityNames.Remove(Convert.ToString(longTermLiabilitiesAccountNameTextBox.Text));
             longTermLiabilitiesAccountInformationLabel.Text = "";
             for (int i = 0; i < MainForm.longTermLiabilityAmounts.Count(); i++)
             {
-                longTermLiabilitiesAccountInformationLabel.Text += MainForm.longTermLiabilityNames[i] + " $" + MainForm.longTermLiabilityAmounts[i] + "\n";
+                longTermLiabilitiesAccountInformationLabel.Text += MainForm.longTermLiabilityNames[i] + " " + MainForm.longTermLiabilityAmounts[i].ToString("C") + "\n";
+            }
+                }
+
+            }
+            catch
+            {
+                MessageBox.Show("Account amount input must be a numerical value");
             }
         }
 
@@ -201,12 +342,19 @@ namespace Basic_Game_Template2
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            MainForm.businessName = businessNameTextBox.Text;
-            MainForm.fiscalMonthEnd = fiscalMonthEndTextBox.Text;
-            MainForm.beginningOfPeriod = Convert.ToDouble(beginningOfThePeriodTextBox.Text);
-            MainForm.netIncome = Convert.ToDouble(netIncomeTextBox.Text);
-            MainForm.drawings = Convert.ToDouble(drawingsTextBox.Text);
-            MainForm.modifiedDate = dateLabel.Text;
+            try
+            {
+                MainForm.businessName = businessNameTextBox.Text;
+                MainForm.fiscalMonthEnd = fiscalMonthEndTextBox.Text;
+                MainForm.beginningOfPeriod = Convert.ToDouble(beginningOfThePeriodTextBox.Text);
+                MainForm.netIncome = Convert.ToDouble(netIncomeTextBox.Text);
+                MainForm.drawings = Convert.ToDouble(drawingsTextBox.Text);
+                MainForm.modifiedDate = dateLabel.Text;
+            }
+            catch
+            {
+                MessageBox.Show("Textboxes must be filled in and a numerical value wherever necessary");
+            }
             
            
         }
@@ -230,22 +378,12 @@ namespace Basic_Game_Template2
 
             businessNameTextBox.Text = "";
             fiscalMonthEndTextBox.Text = "(Month Day, Year)";
-            addCurrentAssetsAccountAmountTextBox.Text = "";
-            removeCurrentAssetsAccountAmountTextBox.Text = "";
-            addCurrentAssetsAccountNameTextBox.Text = "";
-            removeCurrentAssetsAccountNameTextBox.Text = "";
-            addFixedAssetsAccountAmountTextBox.Text = "";
-            removeFixedAssetsAccountAmountTextBox.Text = "";
-            addFixedAssetsAccountNameTextBox.Text = "";
-            removeFixedAssetsAccountNameTextBox.Text = "";
-            addCurrentLiabilitiesAccountAmountTextBox.Text = "";
-            removeCurrentLiabilitiesAccountAmountTextBox.Text = "";
-            addCurrentLiabilitiesAccountNameTextBox.Text = "";
-            removeCurrentLiabilitiesAccountNameTextBox.Text = "";
-            addLongTermLiabilitiesAccountAmountTextBox.Text = "";
-            removeLongTermLiabilitiesAccountAmountTextBox.Text = "";
-            addLongTermLiabilitiesAccountNameTextBox.Text = "";
-            removeLongTermLiabilitiesAccountNameTextBox.Text = "";
+            currentAssetsAccountAmountTextBox.Text = "";
+            fixedAssetsAccountAmountTextBox.Text = "";
+            fixedAssetsAccountNameTextBox.Text = "";
+            currentLiabilitiesAccountAmountTextBox.Text = "";
+            longTermLiabilitiesAccountAmountTextBox.Text = "";
+            longTermLiabilitiesAccountNameTextBox.Text = "";
             beginningOfThePeriodTextBox.Text = "";
             netIncomeTextBox.Text = "";
             drawingsTextBox.Text = "";
@@ -273,22 +411,13 @@ namespace Basic_Game_Template2
 
             businessNameTextBox.Text = "";
             fiscalMonthEndTextBox.Text = "(Month Day, Year)";
-            addCurrentAssetsAccountAmountTextBox.Text = "";
-            removeCurrentAssetsAccountAmountTextBox.Text = "";
-            addCurrentAssetsAccountNameTextBox.Text = "";
-            removeCurrentAssetsAccountNameTextBox.Text = "";
-            addFixedAssetsAccountAmountTextBox.Text = "";
-            removeFixedAssetsAccountAmountTextBox.Text = "";
-            addFixedAssetsAccountNameTextBox.Text = "";
-            removeFixedAssetsAccountNameTextBox.Text = "";
-            addCurrentLiabilitiesAccountAmountTextBox.Text = "";
-            removeCurrentLiabilitiesAccountAmountTextBox.Text = "";
-            addCurrentLiabilitiesAccountNameTextBox.Text = "";
-            removeCurrentLiabilitiesAccountNameTextBox.Text = "";
-            addLongTermLiabilitiesAccountAmountTextBox.Text = "";
-            removeLongTermLiabilitiesAccountAmountTextBox.Text = "";
-            addLongTermLiabilitiesAccountNameTextBox.Text = "";
-            removeLongTermLiabilitiesAccountNameTextBox.Text = "";
+            currentAssetsAccountAmountTextBox.Text = "";
+            fixedAssetsAccountAmountTextBox.Text = "";
+            fixedAssetsAccountNameTextBox.Text = "";
+            currentLiabilitiesAccountAmountTextBox.Text = "";
+            currentLiabilitiesAccountNameTextBox.Text = "";
+            longTermLiabilitiesAccountAmountTextBox.Text = "";
+            longTermLiabilitiesAccountNameTextBox.Text = "";
             beginningOfThePeriodTextBox.Text = "";
             netIncomeTextBox.Text = "";
             drawingsTextBox.Text = "";
@@ -310,25 +439,25 @@ namespace Basic_Game_Template2
                 for (int i = 0; i < MainForm.currentAssetAmounts.Count(); i++)
                 {
 
-                    currentAssetsAccountInformationLabel.Text += MainForm.currentAssetNames[i] + " $" + MainForm.currentAssetAmounts[i] + "\n";
+                    currentAssetsAccountInformationLabel.Text += MainForm.currentAssetNames[i] + " " + MainForm.currentAssetAmounts[i].ToString("C") + "\n";
                 }
 
                 for (int i = 0; i < MainForm.fixedAssetAmounts.Count(); i++)
                 {
 
-                    fixedAssetsAccountInformationLabel.Text += MainForm.fixedAssetNames[i] + " $" + MainForm.fixedAssetAmounts[i] + "\n";
+                    fixedAssetsAccountInformationLabel.Text += MainForm.fixedAssetNames[i] + " " + MainForm.fixedAssetAmounts[i].ToString("C") + "\n";
                 }
 
                 for (int i = 0; i < MainForm.currentLiabilityAmounts.Count(); i++)
                 {
 
-                    currentLiabilitiesAccountInformationLabel.Text += MainForm.currentLiabilityNames[i] + " $" + MainForm.currentLiabilityAmounts[i] + "\n";
+                    currentLiabilitiesAccountInformationLabel.Text += MainForm.currentLiabilityNames[i] + " " + MainForm.currentLiabilityAmounts[i].ToString("C") + "\n";
                 }
 
                 for (int i = 0; i < MainForm.longTermLiabilityAmounts.Count(); i++)
                 {
 
-                    longTermLiabilitiesAccountInformationLabel.Text += MainForm.longTermLiabilityNames[i] + " $" + MainForm.longTermLiabilityAmounts[i] + "\n";
+                    longTermLiabilitiesAccountInformationLabel.Text += MainForm.longTermLiabilityNames[i] + " " + MainForm.longTermLiabilityAmounts[i].ToString("C") + "\n";
                 }
 
             }
