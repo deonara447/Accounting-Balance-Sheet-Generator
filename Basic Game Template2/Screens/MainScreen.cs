@@ -12,7 +12,7 @@ namespace Basic_Game_Template2
 {
         public partial class MainScreen : UserControl
     {
-        int Min, Hour, Day, Month, Year;
+       
         
 
         public MainScreen()
@@ -74,12 +74,13 @@ namespace Basic_Game_Template2
 
         private void timeTimer_Tick(object sender, EventArgs e)
         {
+            int Min, Hour, Day, Month, Year;
             Min = DateTime.Now.Minute;
             Hour = DateTime.Now.Hour;
             Day = DateTime.Now.Day;
             Month = DateTime.Now.Month;
             Year = DateTime.Now.Year;
-            timeLabel.Text = Month + "/" + Day + "/" + Year + "  " + Hour + ":" + Min;
+            timeLabel.Text = Month.ToString("00") + "/" + Day.ToString("00") + "/" + Year.ToString("00") + "  " + Hour.ToString("00") + ":" + Min.ToString("00");
             Refresh();
 
 

@@ -129,6 +129,17 @@ namespace Basic_Game_Template2
 
         private void removeCurrentAssetButton_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show("Are you sure you want to remove this account?","gh",MessageBoxButtons.YesNo);
+           // if (DialogResult== result)
+           if (result == DialogResult.Yes)
+            {
+                
+            }
+            else
+            {
+
+            }
+           // if he 
             try
             {
                 if (currentAssetsAccountNameTextBox.Text == "" || currentAssetsAccountAmountTextBox.Text == "")
@@ -297,12 +308,13 @@ namespace Basic_Game_Template2
                     }
                     else
                     {
-                        MainForm.longTermLiabilityAmounts.Add(Convert.ToDouble(longTermLiabilitiesAccountAmountTextBox.Text));
+                        MainForm.longTermLiabilityAmounts.Add(Convert.ToDouble(longTermLiabilitiesAccountNameTextBox.Text));
 
                         MainForm.longTermLiabilityAmounts.Add(Convert.ToDouble(longTermLiabilitiesAccountAmountTextBox.Text));
 
             MainForm.longTermLiabilityNames.Add(longTermLiabilitiesAccountNameTextBox.Text);
 
+                    
             longTermLiabilitiesAccountInformationLabel.Text = "";
             for (int i = 0; i < MainForm.longTermLiabilityAmounts.Count(); i++)
             {
@@ -354,7 +366,7 @@ namespace Basic_Game_Template2
             int Year = DateTime.Now.Year;
 
             //Updates time and date
-            timeLabel.Text = Month + "/" + Day + "/" + Year + "  " + Hour + ":" + Min;
+            timeLabel.Text = Month.ToString("00") + "/" + Day.ToString("00") + "/" + Year.ToString("00") + "  " + Hour.ToString("00") + ":" + Min.ToString("00");
             dateLabel.Text = Month + "/" + Day + "/" + Year;
             Refresh();
         }
@@ -452,7 +464,7 @@ namespace Basic_Game_Template2
         {
             if (MainForm.reset == false)
             {
-                //
+                //Loads saved information onto the screen
                 businessNameTextBox.Text = MainForm.businessName;
                 fiscalMonthEndTextBox.Text = MainForm.fiscalMonthEnd;
                 beginningOfThePeriodTextBox.Text = MainForm.beginningOfPeriod + "";
@@ -486,6 +498,9 @@ namespace Basic_Game_Template2
             }
             else
             {
+                //nothing is loaded onto the screen and thus resets
+                
+                //so  next time it will not reset unless later told otherwise
                 MainForm.reset = false;
             }
         }

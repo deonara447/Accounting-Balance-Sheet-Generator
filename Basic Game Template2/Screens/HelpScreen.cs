@@ -39,7 +39,7 @@ namespace Basic_Game_Template2
             MainForm.currentLiabilityNames.Clear();
             MainForm.longTermLiabilityAmounts.Clear();
             MainForm.longTermLiabilityNames.Clear();
-            MainForm.ChangeScreen(this, "BusinessInformationScreen");
+            MainForm.ChangeScreen(this, "BalanceSheetInformationScreen");
 
             MainForm.reset = true;
         }
@@ -56,6 +56,7 @@ namespace Basic_Game_Template2
 
         private void HelpScreen_Load(object sender, EventArgs e)
         {
+            //shows help screen text
             informationLabel.Text = "Taskbar \n" +
                 "Home - The main screen of the program where all the program features are one click away! This is the screen you see once you log in \n" +
                 "New - Creates a new template \n" +
@@ -80,7 +81,7 @@ namespace Basic_Game_Template2
             int Day = DateTime.Now.Day;
             int Month = DateTime.Now.Month;
             int Year = DateTime.Now.Year;
-            timeLabel.Text = Month + "/" + Day + "/" + Year + "  " + Hour + ":" + Min;
+            timeLabel.Text = Month.ToString("00") + "/" + Day.ToString("00") + "/" + Year.ToString("00") + "  " + Hour.ToString("00") + ":" + Min.ToString("00");
             Refresh();
         }
 

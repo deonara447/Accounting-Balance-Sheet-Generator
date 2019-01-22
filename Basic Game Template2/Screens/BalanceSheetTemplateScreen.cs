@@ -19,11 +19,13 @@ namespace Basic_Game_Template2
 
         private void homeButton_Click(object sender, EventArgs e)
         {
+            //changes screen to 'main screen'
             MainForm.ChangeScreen(this, "MainScreen");
         }
 
         private void newButton_Click(object sender, EventArgs e)
         {
+            //Resets all variables and lists to their original states
             MainForm.businessName = "Untitled Template";
             MainForm.fiscalMonthEnd = "";
             MainForm.beginningOfPeriod = 0;
@@ -39,10 +41,11 @@ namespace Basic_Game_Template2
             MainForm.longTermLiabilityAmounts.Clear();
             MainForm.longTermLiabilityNames.Clear();
 
+            //so that when screen changes to 'business information screen' all data is reset
             MainForm.reset = true;
 
-
-            MainForm.ChangeScreen(this, "BusinessInformationScreen");
+            //change screen to 'business information screen'
+            MainForm.ChangeScreen(this, "BalanceSheetInformationScreen");
 
 
         }
@@ -64,6 +67,7 @@ namespace Basic_Game_Template2
 
         private void businessInformationButton_Click(object sender, EventArgs e)
         {
+            //changes screen to balance sheet information screen'
             MainForm.ChangeScreen(this, "BalanceSheetInformationScreen");
         }
 
@@ -74,7 +78,7 @@ namespace Basic_Game_Template2
             int Day = DateTime.Now.Day;
             int Month = DateTime.Now.Month;
             int Year = DateTime.Now.Year;
-            timeLabel.Text = Month + "/" + Day + "/" + Year + "  " + Hour + ":" + Min;
+            timeLabel.Text = Month.ToString("00") + "/" + Day.ToString("00") + "/" + Year.ToString("00") + "  " + Hour.ToString("00") + ":" + Min.ToString("00");
             Refresh();
         }
 
@@ -125,6 +129,7 @@ namespace Basic_Game_Template2
 
         private void BalanceSheetTemplateScreen_Load(object sender, EventArgs e)
         {
+            //loads balance sheet information and outputs it into a balance sheet
             businessNameLabel.Text = MainForm.businessName;
             endOfMonthLabel.Text = MainForm.fiscalMonthEnd;
             beginningEquityAmountLabel.Text = MainForm.beginningOfPeriod.ToString("0.00");
@@ -134,6 +139,7 @@ namespace Basic_Game_Template2
             endEquityAmountLabel.Text = (MainForm.beginningOfPeriod + MainForm.netIncome - MainForm.drawings).ToString("0.00");
             totalLiabilitiesAndEquityAmountLabel.Text = (MainForm.beginningOfPeriod + MainForm.netIncome - MainForm.drawings + MainForm.longTermLiabilityAmounts.Sum() + MainForm.currentLiabilityAmounts.Sum()).ToString("0.00");
 
+            //lists assets and liabilities
             for (int i = 0; i < MainForm.currentAssetNames.Count(); i++)
             {
 

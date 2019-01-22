@@ -20,12 +20,13 @@ namespace Basic_Game_Template2
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //program starts 'loading'
             LoginButton.Visible = false;
             progressInformationLabel.Visible = true;
             progressBox.Visible = true;
             loadingbarLabel.Visible = true;
 
-            //
+            //mimicking an actual 'loading' screen
             for (int i = 489; i <= 490; i++)
 
             {
@@ -52,11 +53,13 @@ namespace Basic_Game_Template2
 
 
             }
+            //screen changes to 'main screen' once done loading
             MainForm.ChangeScreen(this, "MainScreen");
         }
 
         private void LoginScreen_Load(object sender, EventArgs e)
         {
+            //To pre-set template name and date modified
             MainForm.businessName = "Untitled Template";
             MainForm.modifiedDate = "1/19/19";
 

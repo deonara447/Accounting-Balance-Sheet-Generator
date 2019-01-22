@@ -38,7 +38,7 @@ namespace Basic_Game_Template2
             MainForm.currentLiabilityNames.Clear();
             MainForm.longTermLiabilityAmounts.Clear();
             MainForm.longTermLiabilityNames.Clear();
-            MainForm.ChangeScreen(this, "BusinessInformationScreen");
+            MainForm.ChangeScreen(this, "BalanceSheetInformationScreen");
 
             MainForm.reset = true;
         }
@@ -55,6 +55,7 @@ namespace Basic_Game_Template2
 
         private void submitButton_Click(object sender, EventArgs e)
         {
+            //Removes textbox text and shows a message telling the user that their feedback has been 'sent'
             appreciateLabel.Visible = true;
             feedbackTextBox.Text = "";
         }
@@ -66,7 +67,7 @@ namespace Basic_Game_Template2
             int Day = DateTime.Now.Day;
             int Month = DateTime.Now.Month;
             int Year = DateTime.Now.Year;
-            timeLabel.Text = Month + "/" + Day + "/" + Year + "  " + Hour + ":" + Min;
+            timeLabel.Text = Month.ToString("00") + "/" + Day.ToString("00") + "/" + Year.ToString("00") + "  " + Hour.ToString("00") + ":" + Min.ToString("00");
             Refresh();
         }
     }
