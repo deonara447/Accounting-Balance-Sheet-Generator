@@ -21,11 +21,13 @@ namespace Basic_Game_Template2
 
         private void homeButton_Click(object sender, EventArgs e)
         {
+            //changes screen to the 'main screen'
             MainForm.ChangeScreen(this, "MainScreen");
         }
 
         private void newButton_Click(object sender, EventArgs e)
         {
+            //Resets all variables and lists to their original states
             MainForm.businessName = "Untitled Template";
             MainForm.fiscalMonthEnd = "";
             MainForm.beginningOfPeriod = 0;
@@ -40,8 +42,8 @@ namespace Basic_Game_Template2
             MainForm.currentLiabilityNames.Clear();
             MainForm.longTermLiabilityAmounts.Clear();
             MainForm.longTermLiabilityNames.Clear();
-            MainForm.ChangeScreen(this, "BalanceSheetInformationScreen");
 
+            //Resets all textboxes and output labels to their original states
             businessNameTextBox.Text = "";
             fiscalMonthEndTextBox.Text = "(Month Day, Year)";
             currentAssetsAccountAmountTextBox.Text = "";
@@ -59,48 +61,59 @@ namespace Basic_Game_Template2
 
         private void closeButton_Click(object sender, EventArgs e)
         {
+            //Closes the program
             Application.Exit();
         }
 
         private void feedbackButton_Click(object sender, EventArgs e)
         {
+            //Change screen to 'feedback screen'
             MainForm.ChangeScreen(this, "FeedbackScreen");
         }
 
         private void helpButton_Click(object sender, EventArgs e)
         {
+            //Change screen to 'help screen'
             MainForm.ChangeScreen(this, "HelpScreen");
         }
 
         private void balanceSheetButton_Click(object sender, EventArgs e)
         {
+            //changes screen to 'balance sheet template screen'
             MainForm.ChangeScreen(this, "BalanceSheetTemplateScreen");
         }
 
         private void addCurrentAssetButton_Click(object sender, EventArgs e)
         {
+            //so program will not crash if textbox inputs are not numerical values
             try
             {
+                //ensuring that both the account name and amount textboxes are filled in
                 if (currentAssetsAccountNameTextBox.Text == "" || currentAssetsAccountAmountTextBox.Text == "")
                 {
+                    //Shows error screen informing user that not all textboxes are filled in
                     MessageBox.Show("All required textboxes must be filled in");
                 }
                 else
                 {
+                    //Ensuring that only two accounts are allowed in this section
                     if (MainForm.currentAssetAmounts.Count() == 2)
                     {
+                        //Shows error screen informing user that they cannot create more than two accounts in this section
                         MessageBox.Show("You must download the PRO version in order to create more than two accounts in this section");
                     }
                     else
                     {
+                        //Adds textbox inputs to their lists
                         MainForm.currentAssetAmounts.Add(Convert.ToDouble(currentAssetsAccountAmountTextBox.Text));
-
                         MainForm.currentAssetNames.Add(currentAssetsAccountNameTextBox.Text);
 
+                        //Makes label blank
                         currentAssetsAccountInformationLabel.Text = "";
+
+                        //Displays all the current asset names and account amounts
                         for (int i = 0; i < MainForm.currentAssetAmounts.Count(); i++)
                         {
-
                             currentAssetsAccountInformationLabel.Text += MainForm.currentAssetNames[i] + " " + MainForm.currentAssetAmounts[i].ToString("C") + "\n";
                         }
                     }
@@ -108,6 +121,7 @@ namespace Basic_Game_Template2
             }
             catch
             {
+                //Shows error screen informing the user that the textbox input must be a number
                 MessageBox.Show("Account amount input must be a numerical value");
             }
 
@@ -123,9 +137,11 @@ namespace Basic_Game_Template2
                 }
                 else
                 {
-
+                    //Removes textbox accounts from their lists
                     MainForm.currentAssetAmounts.Remove(Convert.ToDouble(currentAssetsAccountAmountTextBox.Text));
                     MainForm.currentAssetNames.Remove(Convert.ToString(currentAssetsAccountNameTextBox.Text));
+
+                    //Shows updated account names and amounts
                     currentAssetsAccountInformationLabel.Text = "";
                     for (int i = 0; i < MainForm.currentAssetAmounts.Count(); i++)
                     {
@@ -330,11 +346,14 @@ namespace Basic_Game_Template2
 
         private void timeTimer_Tick(object sender, EventArgs e)
         {
+            //Creates integers holding time values
             int Min = DateTime.Now.Minute;
             int Hour = DateTime.Now.Hour;
             int Day = DateTime.Now.Day;
             int Month = DateTime.Now.Month;
             int Year = DateTime.Now.Year;
+
+            //Updates time and date
             timeLabel.Text = Month + "/" + Day + "/" + Year + "  " + Hour + ":" + Min;
             dateLabel.Text = Month + "/" + Day + "/" + Year;
             Refresh();
@@ -344,6 +363,7 @@ namespace Basic_Game_Template2
         {
             try
             {
+                //saving business information (so that it can be transfered between screen)
                 MainForm.businessName = businessNameTextBox.Text;
                 MainForm.fiscalMonthEnd = fiscalMonthEndTextBox.Text;
                 MainForm.beginningOfPeriod = Convert.ToDouble(beginningOfThePeriodTextBox.Text);
@@ -353,6 +373,7 @@ namespace Basic_Game_Template2
             }
             catch
             {
+                //Shows error screen informing user that the textboxes must be filled in and a numerical value in some instances
                 MessageBox.Show("Textboxes must be filled in and a numerical value wherever necessary");
             }
             
@@ -361,6 +382,7 @@ namespace Basic_Game_Template2
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
+            //resets all variable and list values
             MainForm.businessName = "Untitled Template";
             MainForm.fiscalMonthEnd = "";
             MainForm.beginningOfPeriod = 0;
@@ -376,6 +398,7 @@ namespace Basic_Game_Template2
             MainForm.longTermLiabilityAmounts.Clear();
             MainForm.longTermLiabilityNames.Clear();
 
+            //resets all textbox and list values
             businessNameTextBox.Text = "";
             fiscalMonthEndTextBox.Text = "(Month Day, Year)";
             currentAssetsAccountAmountTextBox.Text = "";
@@ -388,12 +411,14 @@ namespace Basic_Game_Template2
             netIncomeTextBox.Text = "";
             drawingsTextBox.Text = "";
 
+            //changes screen to 'main screen'
             MainForm.ChangeScreen(this, "MainScreen");
 
         }
 
         private void clearButton_Click(object sender, EventArgs e)
         {
+            //same as delete except you do not change screens
             MainForm.businessName = "Untitled Template";
             MainForm.fiscalMonthEnd = "";
             MainForm.beginningOfPeriod = 0;
@@ -421,15 +446,13 @@ namespace Basic_Game_Template2
             beginningOfThePeriodTextBox.Text = "";
             netIncomeTextBox.Text = "";
             drawingsTextBox.Text = "";
-
-
         }
 
         private void BalanceSheetInformationScreen_Load(object sender, EventArgs e)
         {
             if (MainForm.reset == false)
             {
-
+                //
                 businessNameTextBox.Text = MainForm.businessName;
                 fiscalMonthEndTextBox.Text = MainForm.fiscalMonthEnd;
                 beginningOfThePeriodTextBox.Text = MainForm.beginningOfPeriod + "";
