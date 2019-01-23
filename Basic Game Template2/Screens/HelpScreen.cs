@@ -16,8 +16,7 @@ namespace Basic_Game_Template2
         {
             InitializeComponent();
         }
-
-
+        
         private void homeButton_Click(object sender, EventArgs e)
         {
             MainForm.ChangeScreen(this, "MainScreen");

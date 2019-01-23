@@ -9,11 +9,26 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using GameSystemServices;
 
+/*
+Created By: Deo Narayan
+Date: January 24, 2018
+Description: This program, Balance Sheet Generator, is used to create a balance sheet 
+for the user. It does this by inputting business information, calculating account
+values, and finally outputting a balance sheet. This program consists of a Home Screen,
+a Balance Sheet Information Screen, a Balance Sheet template Screen, a Feedback Screen 
+(where users are allowed to provide input and suggestions to make this program better),
+a Help Screen, and a Login Screen. Unfortunately this is not the PRO version and thus
+certain features such as printing and adding more than two account per balance sheet 
+section is not possible.
+*/
+
 namespace Basic_Game_Template2
 {
     public partial class MainForm : Form
     {
         bool fullScreen = false;  // true: program runs fullscreen || false: program runs in window
+
+        //creates global variables
         public static List<double> currentAssetAmounts = new List<double>();
         public static List<string> currentAssetNames = new List<string>();
         public static List<double> fixedAssetAmounts = new List<double>();
@@ -22,7 +37,7 @@ namespace Basic_Game_Template2
         public static List<string> currentLiabilityNames = new List<string>();
         public static List<double> longTermLiabilityAmounts = new List<double>();
         public static List<string> longTermLiabilityNames = new List<string>();
-
+        
         public static string businessName;
         public static string fiscalMonthEnd;
         public static double beginningOfPeriod;
@@ -32,7 +47,6 @@ namespace Basic_Game_Template2
         public static string modifiedDate;
 
         public static bool reset = true;
-
 
         public MainForm()
         {
@@ -98,16 +112,11 @@ namespace Basic_Game_Template2
                 case "BalanceSheetTemplateScreen":
                     ns = new BalanceSheetTemplateScreen();
                     break;
-
             }
-
             //centres the control on the screen
             ns.Location = new Point((f.Width - ns.Width) / 2, (f.Height - ns.Height) / 2);
-
             f.Controls.Add(ns);
             ns.Focus();
-
-            
         }
     }
 }

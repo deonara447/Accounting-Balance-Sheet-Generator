@@ -675,6 +675,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.currentAssetsAccountInformationLabel);
             this.Controls.Add(this.dateLabel);
             this.Controls.Add(this.timeLabel);
             this.Controls.Add(this.longTermLiabilitiesAccountInformationLabel);
@@ -692,7 +693,6 @@
             this.Controls.Add(this.currentLiabilitiesAccountNameTextBox);
             this.Controls.Add(this.removeCurrentLiabilityButton);
             this.Controls.Add(this.addCurrentLiabilityButton);
-            this.Controls.Add(this.currentAssetsAccountInformationLabel);
             this.Controls.Add(this.currentAssetsAccountAmountTextBox);
             this.Controls.Add(this.currentAssetsAccountNameTextBox);
             this.Controls.Add(this.removeCurrentAssetButton);

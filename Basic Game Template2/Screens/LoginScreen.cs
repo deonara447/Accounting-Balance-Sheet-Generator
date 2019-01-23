@@ -27,13 +27,12 @@ namespace Basic_Game_Template2
             loadingbarLabel.Visible = true;
 
             //mimicking an actual 'loading' screen
-            for (int i = 489; i <= 490; i++)
-
+            for (int i = 1; i <= 490; i++)
             {
-
                 loadingbarLabel.Width++;
                 Thread.Sleep(10);
                 Refresh();
+
                 if (i==151)
                 {
                     progressInformationLabel.Text = "Initializing Components...";
@@ -49,10 +48,8 @@ namespace Basic_Game_Template2
                     Thread.Sleep(5000);
                     Refresh();
                 }
-
-
-
             }
+
             //screen changes to 'main screen' once done loading
             MainForm.ChangeScreen(this, "MainScreen");
         }
@@ -62,7 +59,6 @@ namespace Basic_Game_Template2
             //To pre-set template name and date modified
             MainForm.businessName = "Untitled Template";
             MainForm.modifiedDate = "1/19/19";
-
         }
     }
 }

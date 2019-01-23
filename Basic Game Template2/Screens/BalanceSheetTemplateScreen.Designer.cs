@@ -408,7 +408,7 @@
             // 
             this.currentAssetNamesLabel.AutoSize = true;
             this.currentAssetNamesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.currentAssetNamesLabel.Location = new System.Drawing.Point(361, 317);
+            this.currentAssetNamesLabel.Location = new System.Drawing.Point(361, 316);
             this.currentAssetNamesLabel.Name = "currentAssetNamesLabel";
             this.currentAssetNamesLabel.Size = new System.Drawing.Size(0, 25);
             this.currentAssetNamesLabel.TabIndex = 127;
@@ -438,7 +438,7 @@
             // 
             this.fixedAssetNamesLabel.AutoSize = true;
             this.fixedAssetNamesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fixedAssetNamesLabel.Location = new System.Drawing.Point(366, 415);
+            this.fixedAssetNamesLabel.Location = new System.Drawing.Point(360, 415);
             this.fixedAssetNamesLabel.Name = "fixedAssetNamesLabel";
             this.fixedAssetNamesLabel.Size = new System.Drawing.Size(0, 25);
             this.fixedAssetNamesLabel.TabIndex = 130;
@@ -539,7 +539,7 @@
             // totalLiabilitiesLabel
             // 
             this.totalLiabilitiesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalLiabilitiesLabel.Location = new System.Drawing.Point(365, 758);
+            this.totalLiabilitiesLabel.Location = new System.Drawing.Point(359, 758);
             this.totalLiabilitiesLabel.Name = "totalLiabilitiesLabel";
             this.totalLiabilitiesLabel.Size = new System.Drawing.Size(177, 25);
             this.totalLiabilitiesLabel.TabIndex = 144;
@@ -571,7 +571,7 @@
             // 
             this.longTermLiabilityNamesLabel.AutoSize = true;
             this.longTermLiabilityNamesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.longTermLiabilityNamesLabel.Location = new System.Drawing.Point(372, 678);
+            this.longTermLiabilityNamesLabel.Location = new System.Drawing.Point(362, 682);
             this.longTermLiabilityNamesLabel.Name = "longTermLiabilityNamesLabel";
             this.longTermLiabilityNamesLabel.Size = new System.Drawing.Size(0, 25);
             this.longTermLiabilityNamesLabel.TabIndex = 141;
@@ -579,7 +579,7 @@
             // 
             // LongTermLiabilitiesLabel
             // 
-            this.LongTermLiabilitiesLabel.Location = new System.Drawing.Point(367, 650);
+            this.LongTermLiabilitiesLabel.Location = new System.Drawing.Point(362, 650);
             this.LongTermLiabilitiesLabel.Name = "LongTermLiabilitiesLabel";
             this.LongTermLiabilitiesLabel.Size = new System.Drawing.Size(971, 28);
             this.LongTermLiabilitiesLabel.TabIndex = 140;
@@ -601,7 +601,7 @@
             // 
             this.currentLiabilityNamesLabel.AutoSize = true;
             this.currentLiabilityNamesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.currentLiabilityNamesLabel.Location = new System.Drawing.Point(367, 580);
+            this.currentLiabilityNamesLabel.Location = new System.Drawing.Point(362, 580);
             this.currentLiabilityNamesLabel.Name = "currentLiabilityNamesLabel";
             this.currentLiabilityNamesLabel.Size = new System.Drawing.Size(0, 25);
             this.currentLiabilityNamesLabel.TabIndex = 138;
@@ -609,7 +609,7 @@
             // 
             // currentLiabilitiesLabel
             // 
-            this.currentLiabilitiesLabel.Location = new System.Drawing.Point(364, 554);
+            this.currentLiabilitiesLabel.Location = new System.Drawing.Point(361, 555);
             this.currentLiabilitiesLabel.Name = "currentLiabilitiesLabel";
             this.currentLiabilitiesLabel.Size = new System.Drawing.Size(971, 28);
             this.currentLiabilitiesLabel.TabIndex = 137;
@@ -619,7 +619,7 @@
             // capitalLabel
             // 
             this.capitalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.capitalLabel.Location = new System.Drawing.Point(367, 780);
+            this.capitalLabel.Location = new System.Drawing.Point(361, 780);
             this.capitalLabel.Name = "capitalLabel";
             this.capitalLabel.Size = new System.Drawing.Size(177, 25);
             this.capitalLabel.TabIndex = 147;
@@ -629,7 +629,7 @@
             // beginningEquityLabel
             // 
             this.beginningEquityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.beginningEquityLabel.Location = new System.Drawing.Point(367, 802);
+            this.beginningEquityLabel.Location = new System.Drawing.Point(361, 802);
             this.beginningEquityLabel.Name = "beginningEquityLabel";
             this.beginningEquityLabel.Size = new System.Drawing.Size(300, 25);
             this.beginningEquityLabel.TabIndex = 148;
@@ -639,7 +639,7 @@
             // netIncomeLabel
             // 
             this.netIncomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.netIncomeLabel.Location = new System.Drawing.Point(367, 824);
+            this.netIncomeLabel.Location = new System.Drawing.Point(361, 824);
             this.netIncomeLabel.Name = "netIncomeLabel";
             this.netIncomeLabel.Size = new System.Drawing.Size(300, 25);
             this.netIncomeLabel.TabIndex = 149;
@@ -649,7 +649,7 @@
             // drawingsLabel
             // 
             this.drawingsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.drawingsLabel.Location = new System.Drawing.Point(367, 846);
+            this.drawingsLabel.Location = new System.Drawing.Point(361, 846);
             this.drawingsLabel.Name = "drawingsLabel";
             this.drawingsLabel.Size = new System.Drawing.Size(300, 25);
             this.drawingsLabel.TabIndex = 150;
@@ -659,7 +659,7 @@
             // changeInEquityLabel
             // 
             this.changeInEquityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.changeInEquityLabel.Location = new System.Drawing.Point(367, 868);
+            this.changeInEquityLabel.Location = new System.Drawing.Point(361, 868);
             this.changeInEquityLabel.Name = "changeInEquityLabel";
             this.changeInEquityLabel.Size = new System.Drawing.Size(300, 25);
             this.changeInEquityLabel.TabIndex = 151;
@@ -669,7 +669,7 @@
             // endOfPeriodEquity
             // 
             this.endOfPeriodEquity.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.endOfPeriodEquity.Location = new System.Drawing.Point(367, 889);
+            this.endOfPeriodEquity.Location = new System.Drawing.Point(361, 889);
             this.endOfPeriodEquity.Name = "endOfPeriodEquity";
             this.endOfPeriodEquity.Size = new System.Drawing.Size(300, 25);
             this.endOfPeriodEquity.TabIndex = 152;
@@ -679,7 +679,7 @@
             // totalEquityLiabilityLabel
             // 
             this.totalEquityLiabilityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalEquityLiabilityLabel.Location = new System.Drawing.Point(366, 912);
+            this.totalEquityLiabilityLabel.Location = new System.Drawing.Point(360, 912);
             this.totalEquityLiabilityLabel.Name = "totalEquityLiabilityLabel";
             this.totalEquityLiabilityLabel.Size = new System.Drawing.Size(300, 25);
             this.totalEquityLiabilityLabel.TabIndex = 153;
@@ -729,7 +729,7 @@
             // netIncomeDollarSignLabel
             // 
             this.netIncomeDollarSignLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.netIncomeDollarSignLabel.Location = new System.Drawing.Point(680, 824);
+            this.netIncomeDollarSignLabel.Location = new System.Drawing.Point(682, 824);
             this.netIncomeDollarSignLabel.Name = "netIncomeDollarSignLabel";
             this.netIncomeDollarSignLabel.Size = new System.Drawing.Size(24, 22);
             this.netIncomeDollarSignLabel.TabIndex = 158;

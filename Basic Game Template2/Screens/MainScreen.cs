@@ -12,15 +12,10 @@ namespace Basic_Game_Template2
 {
         public partial class MainScreen : UserControl
     {
-       
-        
-
         public MainScreen()
         {
             InitializeComponent();
         }
-        
-        
         
         private void newButton_Click_1(object sender, EventArgs e)
         {
@@ -42,14 +37,11 @@ namespace Basic_Game_Template2
             MainForm.reset = true;
 
             MainForm.ChangeScreen(this, "BalanceSheetInformationScreen");
-
-            
         }
 
         private void closeButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
-
         }
 
         private void MainScreen_Load(object sender, EventArgs e)
@@ -82,10 +74,6 @@ namespace Basic_Game_Template2
             Year = DateTime.Now.Year;
             timeLabel.Text = Month.ToString("00") + "/" + Day.ToString("00") + "/" + Year.ToString("00") + "  " + Hour.ToString("00") + ":" + Min.ToString("00");
             Refresh();
-
-
-
-            
         }
     }
 }

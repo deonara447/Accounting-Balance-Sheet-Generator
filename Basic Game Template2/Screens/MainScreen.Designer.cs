@@ -183,7 +183,7 @@
             // 
             this.balanceSheetInformationButton.Location = new System.Drawing.Point(239, 215);
             this.balanceSheetInformationButton.Name = "balanceSheetInformationButton";
-            this.balanceSheetInformationButton.Size = new System.Drawing.Size(590, 57);
+            this.balanceSheetInformationButton.Size = new System.Drawing.Size(1161, 57);
             this.balanceSheetInformationButton.TabIndex = 24;
             this.balanceSheetInformationButton.Text = "Untitled Document";
             this.balanceSheetInformationButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
