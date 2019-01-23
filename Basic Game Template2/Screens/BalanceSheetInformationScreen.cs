@@ -116,6 +116,9 @@ namespace Basic_Game_Template2
                         {
                             currentAssetsAccountInformationLabel.Text += MainForm.currentAssetNames[i] + " " + MainForm.currentAssetAmounts[i].ToString("C") + "\n";
                         }
+                        currentAssetsAccountAmountTextBox.Text = "";
+                        currentAssetsAccountNameTextBox.Text = "";
+
                     }
                 }
             }
@@ -129,41 +132,38 @@ namespace Basic_Game_Template2
 
         private void removeCurrentAssetButton_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to remove this account?","gh",MessageBoxButtons.YesNo);
-           // if (DialogResult== result)
-           if (result == DialogResult.Yes)
+            //so user must confirm removal
+            DialogResult result = MessageBox.Show("Are you sure you want to remove this account?", "", MessageBoxButtons.YesNo);
+            //will only proceed to remove is user clicks yes
+            if (result == DialogResult.Yes)
             {
-                
-            }
-            else
-            {
-
-            }
-           // if he 
-            try
-            {
-                if (currentAssetsAccountNameTextBox.Text == "" || currentAssetsAccountAmountTextBox.Text == "")
+                try
                 {
-                    MessageBox.Show("All required textboxes must be filled in");
-                }
-                else
-                {
-                    //Removes textbox accounts from their lists
-                    MainForm.currentAssetAmounts.Remove(Convert.ToDouble(currentAssetsAccountAmountTextBox.Text));
-                    MainForm.currentAssetNames.Remove(Convert.ToString(currentAssetsAccountNameTextBox.Text));
-
-                    //Shows updated account names and amounts
-                    currentAssetsAccountInformationLabel.Text = "";
-                    for (int i = 0; i < MainForm.currentAssetAmounts.Count(); i++)
+                    if (currentAssetsAccountNameTextBox.Text == "" || currentAssetsAccountAmountTextBox.Text == "")
                     {
-                        currentAssetsAccountInformationLabel.Text += MainForm.currentAssetNames[i] + " " + MainForm.currentAssetAmounts[i].ToString("C") + "\n";
+                        MessageBox.Show("All required textboxes must be filled in");
                     }
-                }
+                    else
+                    {
+                        //Removes textbox accounts from their lists
+                        MainForm.currentAssetAmounts.Remove(Convert.ToDouble(currentAssetsAccountAmountTextBox.Text));
+                        MainForm.currentAssetNames.Remove(Convert.ToString(currentAssetsAccountNameTextBox.Text));
 
-            }
-            catch
-            {
-                MessageBox.Show("Account amount input must be a numerical value");
+                        //Shows updated account names and amounts
+                        currentAssetsAccountInformationLabel.Text = "";
+                        for (int i = 0; i < MainForm.currentAssetAmounts.Count(); i++)
+                        {
+                            currentAssetsAccountInformationLabel.Text += MainForm.currentAssetNames[i] + " " + MainForm.currentAssetAmounts[i].ToString("C") + "\n";
+                        }
+                        currentAssetsAccountAmountTextBox.Text = "";
+                        currentAssetsAccountNameTextBox.Text = "";
+                    }
+
+                }
+                catch
+                {
+                    MessageBox.Show("Account amount input must be a numerical value");
+                }
             }
         }
 
@@ -185,15 +185,17 @@ namespace Basic_Game_Template2
                     {
                         MainForm.fixedAssetAmounts.Add(Convert.ToDouble(fixedAssetsAccountAmountTextBox.Text));
 
-            MainForm.fixedAssetNames.Add(fixedAssetsAccountNameTextBox.Text);
+                        MainForm.fixedAssetNames.Add(fixedAssetsAccountNameTextBox.Text);
 
-            fixedAssetsAccountInformationLabel.Text = "";
-            for (int i = 0; i < MainForm.fixedAssetAmounts.Count(); i++)
-            {
+                        fixedAssetsAccountInformationLabel.Text = "";
+                        for (int i = 0; i < MainForm.fixedAssetAmounts.Count(); i++)
+                        {
 
-                fixedAssetsAccountInformationLabel.Text += MainForm.fixedAssetNames[i] + " " + MainForm.fixedAssetAmounts[i].ToString("C") + "\n";
-            }
-                }
+                            fixedAssetsAccountInformationLabel.Text += MainForm.fixedAssetNames[i] + " " + MainForm.fixedAssetAmounts[i].ToString("C") + "\n";
+                        }
+                        fixedAssetsAccountAmountTextBox.Text = "";
+                        fixedAssetsAccountNameTextBox.Text = "";
+                    }
                 }
             }
             catch
@@ -207,27 +209,33 @@ namespace Basic_Game_Template2
 
         private void removeFixedAssetButton_Click(object sender, EventArgs e)
         {
-            try
+            DialogResult result = MessageBox.Show("Are you sure you want to remove this account?", "", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
             {
-                if (fixedAssetsAccountNameTextBox.Text == "" || fixedAssetsAccountAmountTextBox.Text == "")
+                try
                 {
-                    MessageBox.Show("All required textboxes must be filled in");
-                }
-                else
-                {
-                    MainForm.fixedAssetAmounts.Remove(Convert.ToDouble(fixedAssetsAccountAmountTextBox.Text));
-            MainForm.fixedAssetNames.Remove(Convert.ToString(fixedAssetsAccountNameTextBox.Text));
-            fixedAssetsAccountInformationLabel.Text = "";
-            for (int i = 0; i < MainForm.fixedAssetAmounts.Count(); i++)
-            {
-                fixedAssetsAccountInformationLabel.Text += MainForm.fixedAssetNames[i] + " " + MainForm.fixedAssetAmounts[i].ToString("C") + "\n";
-            }
-                }
+                    if (fixedAssetsAccountNameTextBox.Text == "" || fixedAssetsAccountAmountTextBox.Text == "")
+                    {
+                        MessageBox.Show("All required textboxes must be filled in");
+                    }
+                    else
+                    {
+                        MainForm.fixedAssetAmounts.Remove(Convert.ToDouble(fixedAssetsAccountAmountTextBox.Text));
+                        MainForm.fixedAssetNames.Remove(Convert.ToString(fixedAssetsAccountNameTextBox.Text));
+                        fixedAssetsAccountInformationLabel.Text = "";
+                        for (int i = 0; i < MainForm.fixedAssetAmounts.Count(); i++)
+                        {
+                            fixedAssetsAccountInformationLabel.Text += MainForm.fixedAssetNames[i] + " " + MainForm.fixedAssetAmounts[i].ToString("C") + "\n";
+                        }
+                        fixedAssetsAccountAmountTextBox.Text = "";
+                        fixedAssetsAccountNameTextBox.Text = "";
+                    }
 
-            }
-            catch
-            {
-                MessageBox.Show("Account amount input must be a numerical value");
+                }
+                catch
+                {
+                    MessageBox.Show("Account amount input must be a numerical value");
+                }
             }
         }
 
@@ -249,14 +257,16 @@ namespace Basic_Game_Template2
                     {
                         MainForm.currentLiabilityAmounts.Add(Convert.ToDouble(currentLiabilitiesAccountAmountTextBox.Text));
 
-            MainForm.currentLiabilityNames.Add(currentLiabilitiesAccountNameTextBox.Text);
+                        MainForm.currentLiabilityNames.Add(currentLiabilitiesAccountNameTextBox.Text);
 
-            currentLiabilitiesAccountInformationLabel.Text = "";
-            for (int i = 0; i < MainForm.currentLiabilityAmounts.Count(); i++)
-            {
+                        currentLiabilitiesAccountInformationLabel.Text = "";
+                        for (int i = 0; i < MainForm.currentLiabilityAmounts.Count(); i++)
+                        {
 
-                currentLiabilitiesAccountInformationLabel.Text += MainForm.currentLiabilityNames[i] + " " + MainForm.currentLiabilityAmounts[i].ToString("C") + "\n";
-            }
+                            currentLiabilitiesAccountInformationLabel.Text += MainForm.currentLiabilityNames[i] + " " + MainForm.currentLiabilityAmounts[i].ToString("C") + "\n";
+                        }
+                        currentLiabilitiesAccountAmountTextBox.Text = "";
+                        currentLiabilitiesAccountNameTextBox.Text = "";
                     }
                 }
             }
@@ -268,32 +278,39 @@ namespace Basic_Game_Template2
 
         private void removeCurrentLiabilityButton_Click(object sender, EventArgs e)
         {
-            try
+            DialogResult result = MessageBox.Show("Are you sure you want to remove this account?", "", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
             {
-                if (currentLiabilitiesAccountNameTextBox.Text == "" || currentLiabilitiesAccountAmountTextBox.Text == "")
+                try
                 {
-                    MessageBox.Show("All required textboxes must be filled in");
-                }
-                else
-                {
-                    MainForm.currentLiabilityAmounts.Remove(Convert.ToDouble(currentLiabilitiesAccountAmountTextBox.Text));
-            MainForm.currentLiabilityNames.Remove(Convert.ToString(currentLiabilitiesAccountNameTextBox.Text));
-            currentLiabilitiesAccountInformationLabel.Text = "";
-            for (int i = 0; i < MainForm.currentLiabilityAmounts.Count(); i++)
-            {
-                currentLiabilitiesAccountInformationLabel.Text += MainForm.currentLiabilityNames[i] + " " + MainForm.currentLiabilityAmounts[i].ToString("C") + "\n";
-            }
-                }
+                    if (currentLiabilitiesAccountNameTextBox.Text == "" || currentLiabilitiesAccountAmountTextBox.Text == "")
+                    {
+                        MessageBox.Show("All required textboxes must be filled in");
+                    }
+                    else
+                    {
+                        MainForm.currentLiabilityAmounts.Remove(Convert.ToDouble(currentLiabilitiesAccountAmountTextBox.Text));
+                        MainForm.currentLiabilityNames.Remove(Convert.ToString(currentLiabilitiesAccountNameTextBox.Text));
+                        currentLiabilitiesAccountInformationLabel.Text = "";
+                        for (int i = 0; i < MainForm.currentLiabilityAmounts.Count(); i++)
+                        {
+                            currentLiabilitiesAccountInformationLabel.Text += MainForm.currentLiabilityNames[i] + " " + MainForm.currentLiabilityAmounts[i].ToString("C") + "\n";
+                        }
+                        currentLiabilitiesAccountAmountTextBox.Text = "";
+                        currentLiabilitiesAccountNameTextBox.Text = "";
+                    }
 
-            }
-            catch
-            {
-                MessageBox.Show("Account amount input must be a numerical value");
+                }
+                catch
+                {
+                    MessageBox.Show("Account amount input must be a numerical value");
+                }
             }
         }
 
         private void addLongTermLiabilitiyButton_Click(object sender, EventArgs e)
         {
+
             try
             {
                 if (longTermLiabilitiesAccountNameTextBox.Text == "" || longTermLiabilitiesAccountAmountTextBox.Text == "")
@@ -312,47 +329,58 @@ namespace Basic_Game_Template2
 
                         MainForm.longTermLiabilityAmounts.Add(Convert.ToDouble(longTermLiabilitiesAccountAmountTextBox.Text));
 
-            MainForm.longTermLiabilityNames.Add(longTermLiabilitiesAccountNameTextBox.Text);
+                        MainForm.longTermLiabilityNames.Add(longTermLiabilitiesAccountNameTextBox.Text);
 
-                    
-            longTermLiabilitiesAccountInformationLabel.Text = "";
-            for (int i = 0; i < MainForm.longTermLiabilityAmounts.Count(); i++)
-            {
 
-                longTermLiabilitiesAccountInformationLabel.Text += MainForm.longTermLiabilityNames[i] + " " + MainForm.longTermLiabilityAmounts[i].ToString("C") + "\n";
-            }
+                        longTermLiabilitiesAccountInformationLabel.Text = "";
+                        for (int i = 0; i < MainForm.longTermLiabilityAmounts.Count(); i++)
+                        {
+
+                            longTermLiabilitiesAccountInformationLabel.Text += MainForm.longTermLiabilityNames[i] + " " + MainForm.longTermLiabilityAmounts[i].ToString("C") + "\n";
+                        }
+                        longTermLiabilitiesAccountAmountTextBox.Text = "";
+                        longTermLiabilitiesAccountNameTextBox.Text = "";
                     }
                 }
+
+
             }
             catch
             {
                 MessageBox.Show("Account amount input must be a numerical value");
             }
+
         }
 
         private void removeLongTermLiabilityButton_Click(object sender, EventArgs e)
         {
-            try
+            DialogResult result = MessageBox.Show("Are you sure you want to remove this account?", "", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
             {
-                if (longTermLiabilitiesAccountNameTextBox.Text == "" || longTermLiabilitiesAccountAmountTextBox.Text == "")
+                try
                 {
-                    MessageBox.Show("All required textboxes must be filled in");
-                }
-                else
-                {
-                    MainForm.longTermLiabilityAmounts.Remove(Convert.ToDouble(longTermLiabilitiesAccountAmountTextBox.Text));
-            MainForm.longTermLiabilityNames.Remove(Convert.ToString(longTermLiabilitiesAccountNameTextBox.Text));
-            longTermLiabilitiesAccountInformationLabel.Text = "";
-            for (int i = 0; i < MainForm.longTermLiabilityAmounts.Count(); i++)
-            {
-                longTermLiabilitiesAccountInformationLabel.Text += MainForm.longTermLiabilityNames[i] + " " + MainForm.longTermLiabilityAmounts[i].ToString("C") + "\n";
-            }
-                }
+                    if (longTermLiabilitiesAccountNameTextBox.Text == "" || longTermLiabilitiesAccountAmountTextBox.Text == "")
+                    {
+                        MessageBox.Show("All required textboxes must be filled in");
+                    }
+                    else
+                    {
+                        MainForm.longTermLiabilityAmounts.Remove(Convert.ToDouble(longTermLiabilitiesAccountAmountTextBox.Text));
+                        MainForm.longTermLiabilityNames.Remove(Convert.ToString(longTermLiabilitiesAccountNameTextBox.Text));
+                        longTermLiabilitiesAccountInformationLabel.Text = "";
+                        for (int i = 0; i < MainForm.longTermLiabilityAmounts.Count(); i++)
+                        {
+                            longTermLiabilitiesAccountInformationLabel.Text += MainForm.longTermLiabilityNames[i] + " " + MainForm.longTermLiabilityAmounts[i].ToString("C") + "\n";
+                        }
+                        longTermLiabilitiesAccountAmountTextBox.Text = "";
+                        longTermLiabilitiesAccountNameTextBox.Text = "";
+                    }
 
-            }
-            catch
-            {
-                MessageBox.Show("Account amount input must be a numerical value");
+                }
+                catch
+                {
+                    MessageBox.Show("Account amount input must be a numerical value");
+                }
             }
         }
 
@@ -382,14 +410,15 @@ namespace Basic_Game_Template2
                 MainForm.netIncome = Convert.ToDouble(netIncomeTextBox.Text);
                 MainForm.drawings = Convert.ToDouble(drawingsTextBox.Text);
                 MainForm.modifiedDate = dateLabel.Text;
+                MessageBox.Show("Your information has been saved");
             }
             catch
             {
                 //Shows error screen informing user that the textboxes must be filled in and a numerical value in some instances
                 MessageBox.Show("Textboxes must be filled in and a numerical value wherever necessary");
             }
-            
-           
+
+
         }
 
         private void deleteButton_Click(object sender, EventArgs e)
@@ -499,7 +528,7 @@ namespace Basic_Game_Template2
             else
             {
                 //nothing is loaded onto the screen and thus resets
-                
+
                 //so  next time it will not reset unless later told otherwise
                 MainForm.reset = false;
             }
