@@ -205,7 +205,7 @@ namespace Basic_Game_Template2
 
 
         }
-
+        //
 
         private void removeFixedAssetButton_Click(object sender, EventArgs e)
         {
