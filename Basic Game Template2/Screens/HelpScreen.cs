@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Basic_Game_Template2
+namespace DeoNarayanICS3UFinalProject
 {
     public partial class HelpScreen : UserControl
     {

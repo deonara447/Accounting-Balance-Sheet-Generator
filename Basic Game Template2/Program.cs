@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Basic_Game_Template2
+namespace DeoNarayanICS3UFinalProject
 {
     static class Program
     {

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Basic_Game_Template2.Properties
+namespace DeoNarayanICS3UFinalProject.Properties
 {
 
 

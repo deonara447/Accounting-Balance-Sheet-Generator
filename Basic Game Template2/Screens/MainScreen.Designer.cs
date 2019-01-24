@@ -1,4 +1,4 @@
-﻿namespace Basic_Game_Template2
+﻿namespace DeoNarayanICS3UFinalProject
 {
     partial class MainScreen
     {

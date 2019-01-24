@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 
-namespace Basic_Game_Template2
+namespace DeoNarayanICS3UFinalProject
 {
     public partial class LoginScreen : UserControl
     {
