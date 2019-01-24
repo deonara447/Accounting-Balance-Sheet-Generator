@@ -27,7 +27,7 @@ namespace Basic_Game_Template2
             loadingbarLabel.Visible = true;
 
             //mimicking an actual 'loading' screen
-            for (int i = 1; i <= 490; i++)
+            for (int i = 490; i <= 490; i++)
             {
                 loadingbarLabel.Width++;
                 Thread.Sleep(10);
@@ -52,13 +52,6 @@ namespace Basic_Game_Template2
 
             //screen changes to 'main screen' once done loading
             MainForm.ChangeScreen(this, "MainScreen");
-        }
-
-        private void LoginScreen_Load(object sender, EventArgs e)
-        {
-            //To pre-set template name and date modified
-            MainForm.businessName = "Untitled Template";
-            MainForm.modifiedDate = "1/19/19";
         }
     }
 }

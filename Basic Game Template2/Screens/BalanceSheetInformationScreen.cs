@@ -429,11 +429,11 @@ namespace Basic_Game_Template2
         {
             //resets all variable and list values
             MainForm.businessName = "Untitled Template";
-            MainForm.fiscalMonthEnd = "";
+            MainForm.fiscalMonthEnd = "Unknown";
             MainForm.beginningOfPeriod = 0;
             MainForm.netIncome = 0;
             MainForm.drawings = 0;
-            MainForm.modifiedDate = "1/19/19";
+            MainForm.modifiedDate = "Unknown";
             MainForm.currentAssetAmounts.Clear();
             MainForm.currentAssetNames.Clear();
             MainForm.fixedAssetAmounts.Clear();
@@ -446,10 +446,12 @@ namespace Basic_Game_Template2
             //resets all textbox and list values
             businessNameTextBox.Text = "";
             fiscalMonthEndTextBox.Text = "(Month Day, Year)";
-            currentAssetsAccountAmountTextBox.Text = "";
+            currentAssetsAccountNameTextBox.Text = "(Account Name)";
+            currentAssetsAccountAmountTextBox.Text = "(Amount)";
             fixedAssetsAccountAmountTextBox.Text = "";
             fixedAssetsAccountNameTextBox.Text = "";
             currentLiabilitiesAccountAmountTextBox.Text = "";
+            currentLiabilitiesAccountNameTextBox.Text = "";
             longTermLiabilitiesAccountAmountTextBox.Text = "";
             longTermLiabilitiesAccountNameTextBox.Text = "";
             beginningOfThePeriodTextBox.Text = "";
@@ -464,11 +466,11 @@ namespace Basic_Game_Template2
         {
             //same as delete except you do not change screens
             MainForm.businessName = "Untitled Template";
-            MainForm.fiscalMonthEnd = "";
+            MainForm.fiscalMonthEnd = "Unknown";
             MainForm.beginningOfPeriod = 0;
             MainForm.netIncome = 0;
             MainForm.drawings = 0;
-            MainForm.modifiedDate = "1/19/19";
+            MainForm.modifiedDate = "Unknown";
             MainForm.currentAssetAmounts.Clear();
             MainForm.currentAssetNames.Clear();
             MainForm.fixedAssetAmounts.Clear();
@@ -480,7 +482,8 @@ namespace Basic_Game_Template2
 
             businessNameTextBox.Text = "";
             fiscalMonthEndTextBox.Text = "(Month Day, Year)";
-            currentAssetsAccountAmountTextBox.Text = "";
+            currentAssetsAccountNameTextBox.Text = "(Account Name)";
+            currentAssetsAccountAmountTextBox.Text = "(Amount)";
             fixedAssetsAccountAmountTextBox.Text = "";
             fixedAssetsAccountNameTextBox.Text = "";
             currentLiabilitiesAccountAmountTextBox.Text = "";
@@ -526,11 +529,20 @@ namespace Basic_Game_Template2
 
             else
             {
+                //instructions in textboxes
+                currentAssetsAccountNameTextBox.Text = "(Account Name)";
+                currentAssetsAccountAmountTextBox.Text = "(Amount)";
+
                 //nothing is loaded onto the screen and thus resets
 
                 //so  next time it will not reset unless later told otherwise
                 MainForm.reset = false;
             }
+        }
+
+        private void printButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("You must download the PRO version in order to print this balance sheet");
         }
     }
 }

@@ -319,6 +319,7 @@
             this.printButton.TabIndex = 73;
             this.printButton.Text = "Print";
             this.printButton.UseVisualStyleBackColor = false;
+            this.printButton.Click += new System.EventHandler(this.printButton_Click);
             // 
             // clearButton
             // 

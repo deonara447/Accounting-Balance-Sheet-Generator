@@ -20,11 +20,11 @@ namespace Basic_Game_Template2
         private void newButton_Click_1(object sender, EventArgs e)
         {
             MainForm.businessName = "Untitled Template";
-            MainForm.fiscalMonthEnd = "";
+            MainForm.fiscalMonthEnd = "Unknown";
             MainForm.beginningOfPeriod = 0;
             MainForm.netIncome = 0;
             MainForm.drawings = 0;
-            MainForm.modifiedDate = "1/19/19";
+            MainForm.modifiedDate = "Unknown";
             MainForm.currentAssetAmounts.Clear();
             MainForm.currentAssetNames.Clear();
             MainForm.fixedAssetAmounts.Clear();

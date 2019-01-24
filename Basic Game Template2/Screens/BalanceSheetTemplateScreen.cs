@@ -27,11 +27,11 @@ namespace Basic_Game_Template2
         {
             //Resets all variables and lists to their original states
             MainForm.businessName = "Untitled Template";
-            MainForm.fiscalMonthEnd = "";
+            MainForm.fiscalMonthEnd = "Unknown";
             MainForm.beginningOfPeriod = 0;
             MainForm.netIncome = 0;
             MainForm.drawings = 0;
-            MainForm.modifiedDate = "1/19/19";
+            MainForm.modifiedDate = "Unknown";
             MainForm.currentAssetAmounts.Clear();
             MainForm.currentAssetNames.Clear();
             MainForm.fixedAssetAmounts.Clear();
@@ -85,11 +85,11 @@ namespace Basic_Game_Template2
         private void clearButton_Click(object sender, EventArgs e)
         {
             MainForm.businessName = "Untitled Template";
-            MainForm.fiscalMonthEnd = "";
+            MainForm.fiscalMonthEnd = "Unknown";
             MainForm.beginningOfPeriod = 0;
             MainForm.netIncome = 0;
             MainForm.drawings = 0;
-            MainForm.modifiedDate = "1/19/19";
+            MainForm.modifiedDate = "Unknown";
             MainForm.currentAssetAmounts.Clear();
             MainForm.currentAssetNames.Clear();
             MainForm.fixedAssetAmounts.Clear();
@@ -105,11 +105,11 @@ namespace Basic_Game_Template2
         private void deleteButton_Click(object sender, EventArgs e)
         {
             MainForm.businessName = "Untitled Template";
-            MainForm.fiscalMonthEnd = "";
+            MainForm.fiscalMonthEnd = "Unknown";
             MainForm.beginningOfPeriod = 0;
             MainForm.netIncome = 0;
             MainForm.drawings = 0;
-            MainForm.modifiedDate = "1/19/19";
+            MainForm.modifiedDate = "Unknown";
             MainForm.currentAssetAmounts.Clear();
             MainForm.currentAssetNames.Clear();
             MainForm.fixedAssetAmounts.Clear();
@@ -118,7 +118,6 @@ namespace Basic_Game_Template2
             MainForm.currentLiabilityNames.Clear();
             MainForm.longTermLiabilityAmounts.Clear();
             MainForm.longTermLiabilityNames.Clear();
-            MainForm.ChangeScreen(this, "MainScreen");
 
             MainForm.reset = true;
 
@@ -195,6 +194,11 @@ namespace Basic_Game_Template2
 
             longTermLiabilityAmountsLabel.Text += MainForm.longTermLiabilityAmounts.Sum().ToString("0.00");
             totalLiabilitiesAmountLabel.Text += (MainForm.longTermLiabilityAmounts.Sum() + MainForm.currentLiabilityAmounts.Sum()).ToString("0.00");
+        }
+
+        private void printButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("You must download the PRO version in order to print this balance sheet");
         }
     }
 }

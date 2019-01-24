@@ -38,13 +38,13 @@ namespace Basic_Game_Template2
         public static List<double> longTermLiabilityAmounts = new List<double>();
         public static List<string> longTermLiabilityNames = new List<string>();
         
-        public static string businessName;
-        public static string fiscalMonthEnd;
+        public static string businessName = "Untitled Template";
+        public static string fiscalMonthEnd = "Unknown";
         public static double beginningOfPeriod;
         public static double netIncome;
         public static double drawings;
 
-        public static string modifiedDate;
+        public static string modifiedDate = "Unknown";
 
         public static bool reset = true;
 
