@@ -43,7 +43,7 @@ namespace Basic_Game_Template2
 
             MainForm.ChangeScreen(this, "BalanceSheetInformationScreen");
         }
-
+        //
         private void closeButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
